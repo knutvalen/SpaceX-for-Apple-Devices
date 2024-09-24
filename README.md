@@ -1,5 +1,5 @@
 # SpaceX Launches
-Proposed solution for [The Frontend Developer Challenge](https://github.com/knutvalen/coding-challenge-web).
+Proposed solution for [The Frontend Developer Challenge](https://github.com/knutvalen/coding-challenge-frontend).
 
 ## Get started
 
