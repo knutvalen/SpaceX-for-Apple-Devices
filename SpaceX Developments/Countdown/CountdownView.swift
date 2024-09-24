@@ -24,7 +24,6 @@ struct CountdownView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Countdown to next launch")
                         .font(.title2)
-                        .fontWeight(.medium)
 
                     Text(formatCountdown(timeInSeconds: timeInSeconds))
                         .font(.largeTitle)
