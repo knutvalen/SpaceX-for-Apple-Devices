@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC2689E82CD279F2000004ED /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC2689E72CD279F2000004ED /* CachedAsyncImage */; };
+		CC271D0C2CD24CB50011F12A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC271D0B2CD24CB50011F12A /* CachedAsyncImage */; };
+		CC60947B2CD2C73B00356157 /* SpaceX Developments.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CC2689962CD27944000004ED /* SpaceX Developments.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC60947C2CD2C73B00356157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC271CB92CD240AC0011F12A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC2689952CD27944000004ED;
+			remoteInfo = "watchOS SpaceX Developments Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC60947E2CD2C73B00356157 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CC60947B2CD2C73B00356157 /* SpaceX Developments.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CC2689962CD27944000004ED /* SpaceX Developments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Developments.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC271CC12CD240AC0011F12A /* SpaceX Developments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Developments.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CC2689E52CD2798E000004ED /* Exceptions for "SpaceX Developments" folder in "watchOS SpaceX Developments Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				API/ApiService.swift,
+				API/Endpoint.swift,
+				API/HttpLogger.swift,
+				API/HttpService.swift,
+				AppState.swift,
+				Assets.xcassets,
+				Colors.xcassets,
+				ContentView.swift,
+				CountdownView.swift,
+				"extensions/Date+toLaunch.swift",
+				LaunchDetailsView.swift,
+				LaunchDetailsViewModel.swift,
+				LaunchesView.swift,
+				LaunchViewModel.swift,
+				MainTheme.swift,
+				models/AppError.swift,
+				models/BuildConfiguration.swift,
+				models/DatePrecision.swift,
+				models/DetailMode.swift,
+				models/HTTPMethod.swift,
+				models/LaunchDetails.swift,
+				models/LaunchOverview.swift,
+				models/NavigationDestination.swift,
+				models/NewsArticle.swift,
+				models/Webcast.swift,
+				models/WebcastType.swift,
+				NewsView.swift,
+				NewsViewModel.swift,
+				NextLaunchView.swift,
+				PreviousLaunchesView.swift,
+				SpaceX_DevelopmentsApp.swift,
+				ThemeManager.swift,
+				ThemeProtocol.swift,
+			);
+			target = CC2689952CD27944000004ED /* watchOS SpaceX Developments Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CC2689972CD27944000004ED /* watchOS SpaceX Developments Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "watchOS SpaceX Developments Watch App";
+			sourceTree = "<group>";
+		};
+		CC271CC32CD240AC0011F12A /* SpaceX Developments */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CC2689E52CD2798E000004ED /* Exceptions for "SpaceX Developments" folder in "watchOS SpaceX Developments Watch App" target */,
+			);
+			path = "SpaceX Developments";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC2689932CD27944000004ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2689E82CD279F2000004ED /* CachedAsyncImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC271CBE2CD240AC0011F12A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC271D0C2CD24CB50011F12A /* CachedAsyncImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC2689E62CD279F2000004ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC271CB82CD240AC0011F12A = {
+			isa = PBXGroup;
+			children = (
+				CC271CC32CD240AC0011F12A /* SpaceX Developments */,
+				CC2689972CD27944000004ED /* watchOS SpaceX Developments Watch App */,
+				CC2689E62CD279F2000004ED /* Frameworks */,
+				CC271CC22CD240AC0011F12A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC271CC22CD240AC0011F12A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC271CC12CD240AC0011F12A /* SpaceX Developments.app */,
+				CC2689962CD27944000004ED /* SpaceX Developments.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC2689952CD27944000004ED /* watchOS SpaceX Developments Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC2689C12CD27945000004ED /* Build configuration list for PBXNativeTarget "watchOS SpaceX Developments Watch App" */;
+			buildPhases = (
+				CC2689922CD27944000004ED /* Sources */,
+				CC2689932CD27944000004ED /* Frameworks */,
+				CC2689942CD27944000004ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CC2689972CD27944000004ED /* watchOS SpaceX Developments Watch App */,
+			);
+			name = "watchOS SpaceX Developments Watch App";
+			packageProductDependencies = (
+				CC2689E72CD279F2000004ED /* CachedAsyncImage */,
+			);
+			productName = "watchOS SpaceX Developments Watch App";
+			productReference = CC2689962CD27944000004ED /* SpaceX Developments.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC271CC02CD240AC0011F12A /* SpaceX Developments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC271CE52CD240AD0011F12A /* Build configuration list for PBXNativeTarget "SpaceX Developments" */;
+			buildPhases = (
+				CC271CBD2CD240AC0011F12A /* Sources */,
+				CC271CBE2CD240AC0011F12A /* Frameworks */,
+				CC271CBF2CD240AC0011F12A /* Resources */,
+				CC60947E2CD2C73B00356157 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC60947D2CD2C73B00356157 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CC271CC32CD240AC0011F12A /* SpaceX Developments */,
+			);
+			name = "SpaceX Developments";
+			packageProductDependencies = (
+				CC271D0B2CD24CB50011F12A /* CachedAsyncImage */,
+			);
+			productName = "SpaceX Developments";
+			productReference = CC271CC12CD240AC0011F12A /* SpaceX Developments.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC271CB92CD240AC0011F12A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					CC2689952CD27944000004ED = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					CC271CC02CD240AC0011F12A = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = CC271CBC2CD240AC0011F12A /* Build configuration list for PBXProject "SpaceX Developments" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC271CB82CD240AC0011F12A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CC271D0A2CD24CB50011F12A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CC271CC22CD240AC0011F12A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC271CC02CD240AC0011F12A /* SpaceX Developments */,
+				CC2689952CD27944000004ED /* watchOS SpaceX Developments Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC2689942CD27944000004ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC271CBF2CD240AC0011F12A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC2689922CD27944000004ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC271CBD2CD240AC0011F12A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC60947D2CD2C73B00356157 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC2689952CD27944000004ED /* watchOS SpaceX Developments Watch App */;
+			targetProxy = CC60947C2CD2C73B00356157 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC2689BB2CD27945000004ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS SpaceX Developments Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "watchOS-SpaceX-Developments-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "watchOS SpaceX Developments";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "dev.knutvalen.SpaceX-Developments";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.SpaceX-Developments.watchkitapp";
+				PRODUCT_NAME = "SpaceX Developments";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		CC2689BC2CD27945000004ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS SpaceX Developments Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "watchOS-SpaceX-Developments-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "watchOS SpaceX Developments";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "dev.knutvalen.SpaceX-Developments";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.SpaceX-Developments.watchkitapp";
+				PRODUCT_NAME = "SpaceX Developments";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		CC271CE32CD240AD0011F12A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC271CE42CD240AD0011F12A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC271CE62CD240AD0011F12A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon DEV";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SpaceX Developments/SpaceX Developments.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpaceX Developments/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpaceX-Developments-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.SpaceX-Developments";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC271CE72CD240AD0011F12A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SpaceX Developments/SpaceX Developments.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpaceX Developments/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpaceX-Developments-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.SpaceX-Developments";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC2689C12CD27945000004ED /* Build configuration list for PBXNativeTarget "watchOS SpaceX Developments Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC2689BB2CD27945000004ED /* Debug */,
+				CC2689BC2CD27945000004ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC271CBC2CD240AC0011F12A /* Build configuration list for PBXProject "SpaceX Developments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC271CE32CD240AD0011F12A /* Debug */,
+				CC271CE42CD240AD0011F12A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC271CE52CD240AD0011F12A /* Build configuration list for PBXNativeTarget "SpaceX Developments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC271CE62CD240AD0011F12A /* Debug */,
+				CC271CE72CD240AD0011F12A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC271D0A2CD24CB50011F12A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC2689E72CD279F2000004ED /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC271D0A2CD24CB50011F12A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		CC271D0B2CD24CB50011F12A /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC271D0A2CD24CB50011F12A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CC271CB92CD240AC0011F12A /* Project object */;
+}
