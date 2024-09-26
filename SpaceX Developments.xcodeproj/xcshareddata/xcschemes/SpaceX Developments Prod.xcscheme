@@ -13,8 +13,13 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES"
             buildForAnalyzing = "YES">
-            <AutocreatedTestPlanReference>
-            </AutocreatedTestPlanReference>
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CC4F0DD72C98346B00101B68"
+               BuildableName = "SpaceX Developments.app"
+               BlueprintName = "SpaceX Developments"
+               ReferencedContainer = "container:SpaceX Developments.xcodeproj">
+            </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -22,13 +27,8 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES"
             buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC4F0DD72C98346B00101B68"
-               BuildableName = "SpaceX Launches.app"
-               BlueprintName = "SpaceX Launches"
-               ReferencedContainer = "container:SpaceX Launches.xcodeproj">
-            </BuildableReference>
+            <AutocreatedTestPlanReference>
+            </AutocreatedTestPlanReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
@@ -38,9 +38,33 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CC4F0DE72C98346C00101B68"
+               BuildableName = "SpaceX DevelopmentsTests.xctest"
+               BlueprintName = "SpaceX DevelopmentsTests"
+               ReferencedContainer = "container:SpaceX Developments.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CC4F0DF12C98346C00101B68"
+               BuildableName = "SpaceX DevelopmentsUITests.xctest"
+               BlueprintName = "SpaceX DevelopmentsUITests"
+               ReferencedContainer = "container:SpaceX Developments.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Development"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -54,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC4F0DD72C98346B00101B68"
-            BuildableName = "SpaceX Launches.app"
-            BlueprintName = "SpaceX Launches"
-            ReferencedContainer = "container:SpaceX Launches.xcodeproj">
+            BuildableName = "SpaceX Developments.app"
+            BlueprintName = "SpaceX Developments"
+            ReferencedContainer = "container:SpaceX Developments.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC4F0DD72C98346B00101B68"
-            BuildableName = "SpaceX Launches.app"
-            BlueprintName = "SpaceX Launches"
-            ReferencedContainer = "container:SpaceX Launches.xcodeproj">
+            BuildableName = "SpaceX Developments.app"
+            BlueprintName = "SpaceX Developments"
+            ReferencedContainer = "container:SpaceX Developments.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

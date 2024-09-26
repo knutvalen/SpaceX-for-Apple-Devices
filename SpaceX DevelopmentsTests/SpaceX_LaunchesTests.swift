@@ -5,7 +5,7 @@
 //  Created by Knut Valen on 16/09/2024.
 //
 
-@testable import SpaceX_Launches
+@testable import SpaceX_Developments
 import XCTest
 
 final class SpaceX_LaunchesTests: XCTestCase {
