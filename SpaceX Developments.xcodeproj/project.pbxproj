@@ -74,6 +74,7 @@
 		CC4FC69D2CA15CD4005EE4C1 /* CountdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewModel.swift; sourceTree = "<group>"; };
 		CC4FC6A12CA18274005EE4C1 /* HTTPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLogger.swift; sourceTree = "<group>"; };
 		CC4FC6A32CA29E2A005EE4C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SpaceX-Developments-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CCD7DD912C9B02B4004BD230 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		CCD7DD952C9B040A004BD230 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		CC4F0DDA2C98346B00101B68 /* SpaceX Developments */ = {
 			isa = PBXGroup;
 			children = (
+				CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */,
 				CC4260442C9C5AA70084BB56 /* models */,
 				CC4260412C9C5A010084BB56 /* API */,
 				CC4F0DDD2C98346B00101B68 /* ContentView.swift */,
@@ -461,6 +463,7 @@
 				DEVELOPMENT_TEAM = 938SKSW69G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpaceX-Developments-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -646,6 +649,7 @@
 				DEVELOPMENT_TEAM = 938SKSW69G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpaceX-Developments-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -676,6 +680,7 @@
 				DEVELOPMENT_TEAM = 938SKSW69G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpaceX-Developments-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
