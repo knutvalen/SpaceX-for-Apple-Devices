@@ -8,7 +8,7 @@ Proposed solution for [The Frontend Developer Challenge](https://github.com/knut
 
 2. Run the app using command + R.
 
-Formatted using [SwiftFormat](https://github.com/nicklockwood/SwiftFormat): `swiftformat .`.
+Format with [SwiftFormat](https://github.com/nicklockwood/SwiftFormat): `swiftformat .`.
 
 ## Continuous Integration & Continuous Deployment
 
