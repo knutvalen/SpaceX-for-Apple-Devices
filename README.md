@@ -1,10 +1,10 @@
-# SpaceX Launches
+# SpaceX Developments
 
 Proposed solution for [The Frontend Developer Challenge](https://github.com/knutvalen/coding-challenge-frontend).
 
 ## Get started
 
-1. Open `SpaceX Launches.xcodeproj`.
+1. Open `SpaceX Developments.xcodeproj`.
 
 2. Run the app using command + R.
 
