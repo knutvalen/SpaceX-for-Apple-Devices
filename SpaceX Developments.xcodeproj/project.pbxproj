@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC11697B2C9DB9E3003E86B7 /* BuildEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11697A2C9DB9E3003E86B7 /* BuildEnvironment.swift */; };
+		CC3A72472CA6956F004A3A01 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3A72462CA6956F004A3A01 /* LaunchesView.swift */; };
 		CC4260432C9C5A2C0084BB56 /* SpaceXApiInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4260422C9C5A2C0084BB56 /* SpaceXApiInterface.swift */; };
 		CC4260462C9C5AB90084BB56 /* NextLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4260452C9C5AB90084BB56 /* NextLaunch.swift */; };
 		CC4260482C9C5C140084BB56 /* DatePrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4260472C9C5C140084BB56 /* DatePrecision.swift */; };
@@ -30,6 +31,8 @@
 		CCD7DD942C9B0340004BD230 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */; };
 		CCD7DD962C9B040A004BD230 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD952C9B040A004BD230 /* ThemeManager.swift */; };
 		CCD7DD982C9B044F004BD230 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD972C9B044F004BD230 /* MainTheme.swift */; };
+		CCFABF5D2CA96CD10016F435 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABF5C2CA96CD10016F435 /* NewsView.swift */; };
+		CCFABF5F2CA96D840016F435 /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABF5E2CA96D840016F435 /* NextLaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		CC11697A2C9DB9E3003E86B7 /* BuildEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildEnvironment.swift; sourceTree = "<group>"; };
+		CC3A72462CA6956F004A3A01 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
 		CC4260422C9C5A2C0084BB56 /* SpaceXApiInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXApiInterface.swift; sourceTree = "<group>"; };
 		CC4260452C9C5AB90084BB56 /* NextLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunch.swift; sourceTree = "<group>"; };
 		CC4260472C9C5C140084BB56 /* DatePrecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePrecision.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		CCD7DD952C9B040A004BD230 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CCD7DD972C9B044F004BD230 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		CCFABF5C2CA96CD10016F435 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CCFABF5E2CA96D840016F435 /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,12 +139,12 @@
 		CC4F0DCF2C98346B00101B68 = {
 			isa = PBXGroup;
 			children = (
-				CC4FC6A32CA29E2A005EE4C1 /* README.md */,
 				CC4FC69A2CA14E39005EE4C1 /* .gitignore */,
+				CC4FC6A32CA29E2A005EE4C1 /* README.md */,
+				CC4F0DD92C98346B00101B68 /* Products */,
 				CC4F0DDA2C98346B00101B68 /* SpaceX Developments */,
 				CC4F0DEB2C98346C00101B68 /* SpaceX DevelopmentsTests */,
 				CC4F0DF52C98346C00101B68 /* SpaceX DevelopmentsUITests */,
-				CC4F0DD92C98346B00101B68 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,17 +162,20 @@
 			isa = PBXGroup;
 			children = (
 				CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */,
-				CC4260442C9C5AA70084BB56 /* models */,
-				CC4260412C9C5A010084BB56 /* API */,
 				CC4F0DDD2C98346B00101B68 /* ContentView.swift */,
+				CC3A72462CA6956F004A3A01 /* LaunchesView.swift */,
+				CCD7DD972C9B044F004BD230 /* MainTheme.swift */,
+				CCFABF5C2CA96CD10016F435 /* NewsView.swift */,
+				CCFABF5E2CA96D840016F435 /* NextLaunchView.swift */,
 				CC4F0DDB2C98346B00101B68 /* SpaceX_LaunchesApp.swift */,
+				CCD7DD952C9B040A004BD230 /* ThemeManager.swift */,
+				CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */,
 				CC4F0DDF2C98346C00101B68 /* Assets.xcassets */,
 				CCD7DD912C9B02B4004BD230 /* Colors.xcassets */,
+				CC4260412C9C5A010084BB56 /* API */,
 				CC4F0E052C995B9C00101B68 /* Countdown */,
+				CC4260442C9C5AA70084BB56 /* models */,
 				CC4F0DE12C98346C00101B68 /* Preview Content */,
-				CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */,
-				CCD7DD952C9B040A004BD230 /* ThemeManager.swift */,
-				CCD7DD972C9B044F004BD230 /* MainTheme.swift */,
 			);
 			path = "SpaceX Developments";
 			sourceTree = "<group>";
@@ -339,13 +348,16 @@
 				CC4FC69E2CA15CD4005EE4C1 /* CountdownViewModel.swift in Sources */,
 				CC42604E2C9C5FA60084BB56 /* SpaceXApiService.swift in Sources */,
 				CC4260502C9C605F0084BB56 /* AppError.swift in Sources */,
+				CC3A72472CA6956F004A3A01 /* LaunchesView.swift in Sources */,
 				CC4F0E072C995BC900101B68 /* CountdownView.swift in Sources */,
 				CC4F0DDE2C98346B00101B68 /* ContentView.swift in Sources */,
 				CCD7DD962C9B040A004BD230 /* ThemeManager.swift in Sources */,
 				CC42604A2C9C5D8C0084BB56 /* Webcast.swift in Sources */,
+				CCFABF5D2CA96CD10016F435 /* NewsView.swift in Sources */,
 				CC11697B2C9DB9E3003E86B7 /* BuildEnvironment.swift in Sources */,
 				CC4F0DDC2C98346B00101B68 /* SpaceX_LaunchesApp.swift in Sources */,
 				CC4FC69C2CA156DB005EE4C1 /* HTTPMethod.swift in Sources */,
+				CCFABF5F2CA96D840016F435 /* NextLaunchView.swift in Sources */,
 				CC4260432C9C5A2C0084BB56 /* SpaceXApiInterface.swift in Sources */,
 				CC4260462C9C5AB90084BB56 /* NextLaunch.swift in Sources */,
 				CC4FC6A22CA18274005EE4C1 /* HTTPLogger.swift in Sources */,
@@ -470,6 +482,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,6 +669,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -687,6 +701,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

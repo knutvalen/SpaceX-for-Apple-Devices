@@ -11,4 +11,5 @@ enum DatePrecision: String, Codable {
     case Second
     case Minute
     case Hour
+    case Month
 }

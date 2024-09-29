@@ -39,7 +39,7 @@ struct CountdownView: View {
 
 private func formatCountdown(timeInSeconds: Int) -> String {
     if timeInSeconds <= 0 {
-        return "🚀 Launched"
+        return "Launched"
     }
 
     let days = timeInSeconds / (60 * 60 * 24)
