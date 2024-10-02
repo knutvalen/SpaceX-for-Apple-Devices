@@ -12,4 +12,5 @@ import SwiftUI
  */
 protocol ThemeProtocol {
     var cardColor: Color { get }
+    var shadowColor: Color { get }
 }

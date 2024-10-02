@@ -9,17 +9,21 @@ import SwiftUI
 
 struct LaunchesView: View {
     @StateObject private var themeManager = ThemeManager()
-    
+
     var body: some View {
         NavigationSplitView {
-            Text("SpaceX Launches").font(.largeTitle)
-            
-            List {
+            VStack(alignment: .leading, spacing: 32) {
                 CountdownView()
                     .environmentObject(themeManager)
-                
+                    .padding(-8)
+
                 NextLaunchView()
+                    .environmentObject(themeManager)
+                    .padding(-8)
+
+                Spacer()
             }
+            .padding()
         } detail: {
             Text("Select a launch")
         }

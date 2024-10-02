@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Selection = .launches
-    
+
     enum Selection {
         case launches
         case news

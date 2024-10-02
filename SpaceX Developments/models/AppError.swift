@@ -12,4 +12,5 @@ enum AppError: Error {
     case invalidPath
     case response(Error)
     case decoding(Error)
+    case netPrecision(String)
 }
