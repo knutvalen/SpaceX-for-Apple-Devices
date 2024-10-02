@@ -12,18 +12,20 @@ struct LaunchesView: View {
 
     var body: some View {
         NavigationSplitView {
-            VStack(alignment: .leading, spacing: 32) {
+            List {
                 CountdownView()
                     .environmentObject(themeManager)
-                    .padding(-8)
-
+                    .listRowSeparator(.hidden)
+                    .padding(.horizontal, -16)
+                
                 NextLaunchView()
                     .environmentObject(themeManager)
-                    .padding(-8)
-
-                Spacer()
+                    .listRowSeparator(.hidden)
+                    .padding(.horizontal, -16)
+                    
             }
-            .padding()
+            .listStyle(.inset)
+            .navigationTitle("Launches")
         } detail: {
             Text("Select a launch")
         }

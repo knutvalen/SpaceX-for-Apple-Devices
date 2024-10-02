@@ -15,20 +15,14 @@ struct NextLaunchView: View {
         HStack {
             if let nextLaunch = viewModel.nextLaunch {
                 VStack(spacing: 24) {
-                    HStack {
+                    NavigationLink {
+                        LaunchDetailsView()
+                            .environmentObject(
+                                LaunchDetailsViewModel(launchId: nextLaunch.id)
+                            )
+                    } label: {
                         Text("Next launch")
                             .font(.title2)
-
-                        Spacer()
-
-                        NavigationLink {
-                            LaunchDetailsView()
-                                .environmentObject(
-                                    LaunchDetailsViewModel(launchId: nextLaunch.id)
-                                )
-                        } label: {
-                            Text("DETAILS")
-                        }
                     }
 
                     HStack {
@@ -69,7 +63,7 @@ struct NextLaunchView: View {
                 Spacer()
             }
         }
-        .padding()
+        .padding(12)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)

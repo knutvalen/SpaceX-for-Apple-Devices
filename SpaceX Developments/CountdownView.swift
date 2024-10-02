@@ -23,7 +23,7 @@ struct CountdownView: View {
             if let timeInSeconds = viewModel.timeLeft {
                 VStack(alignment: .leading, spacing: 16) {
                     if let name = viewModel.nextLaunch?.name {
-                        Text("Countdown: \(name)")
+                        Text(name)
                             .font(.title2)
                     } else {
                         Text("Countdown to next launch")
@@ -37,7 +37,7 @@ struct CountdownView: View {
                 Spacer()
             }
         }
-        .padding()
+        .padding(12)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
