@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var themeManager = ThemeManager()
+    @State private var selection: Selection = .launches
+
+    enum Selection {
+        case launches
+        case news
+    }
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                CountdownView()
-                    .environmentObject(themeManager)
+        TabView(selection: $selection) {
+            Tab("Launches", image: "rocket-template", value: Selection.launches) {
+                LaunchesView()
             }
-        } detail: {
-            Text("Select a launch")
+            Tab("News", systemImage: "newspaper", value: Selection.launches) {
+                NewsView()
+            }
         }
+        .tabViewStyle(.sidebarAdaptable)
     }
 }
 

@@ -9,4 +9,5 @@ import Foundation
 
 protocol SpaceXApiInterface {
     func getNextLaunch(completion: @escaping (Result<NextLaunch, AppError>) -> Void)
+    func getLaunchDetails(for launchId: String, completion: @escaping (Result<LaunchDetails, AppError>) -> Void)
 }

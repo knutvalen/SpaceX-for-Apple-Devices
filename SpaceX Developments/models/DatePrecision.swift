@@ -8,7 +8,8 @@
 import Foundation
 
 enum DatePrecision: String, Codable {
-    case Second
-    case Minute
-    case Hour
+    case second = "Second"
+    case minute = "Minute"
+    case hour = "Hour"
+    case month = "Month"
 }
