@@ -17,12 +17,11 @@ struct LaunchesView: View {
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, -16)
-                
+
                 NextLaunchView()
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, -16)
-                    
             }
             .listStyle(.inset)
             .navigationTitle("Launches")

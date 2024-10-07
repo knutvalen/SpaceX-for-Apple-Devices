@@ -23,6 +23,8 @@ struct NextLaunchView: View {
                     } label: {
                         Text("Next launch")
                             .font(.title2)
+
+                        Spacer()
                     }
 
                     HStack {
@@ -63,7 +65,7 @@ struct NextLaunchView: View {
                 Spacer()
             }
         }
-        .padding(12)
+        .padding(16)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)

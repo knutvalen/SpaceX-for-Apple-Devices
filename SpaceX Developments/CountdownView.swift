@@ -37,7 +37,7 @@ struct CountdownView: View {
                 Spacer()
             }
         }
-        .padding(12)
+        .padding(16)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
