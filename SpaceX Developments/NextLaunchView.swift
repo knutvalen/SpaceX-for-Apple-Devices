@@ -9,18 +9,13 @@ import SwiftUI
 
 struct NextLaunchView: View {
     @EnvironmentObject private var themeManager: ThemeManager
-    @ObservedObject private var viewModel = NextLaunchViewModel()
+    @ObservedObject var viewModel: NextLaunchViewModel
 
     var body: some View {
         HStack {
             if let nextLaunch = viewModel.nextLaunch {
                 VStack(spacing: 24) {
-                    NavigationLink {
-                        LaunchDetailsView()
-                            .environmentObject(
-                                LaunchDetailsViewModel(launchId: nextLaunch.id)
-                            )
-                    } label: {
+                    HStack {
                         Text("Next launch")
                             .font(.title2)
 
@@ -73,6 +68,6 @@ struct NextLaunchView: View {
 }
 
 #Preview {
-    NextLaunchView()
+    NextLaunchView(viewModel: .init())
         .environmentObject(ThemeManager())
 }

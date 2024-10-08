@@ -32,7 +32,7 @@ public class HTTPLogger {
         self.prettyPrintBody = prettyPrintBody
     }
 
-    func intercept(request: inout URLRequest) {
+    func intercept(request: URLRequest) {
         let now = Date()
         let requestMethod = request.httpMethod ?? "NO-OP"
         let requestUrl = request.url?.absoluteString ?? "NO URL"

@@ -8,24 +8,41 @@
 import SwiftUI
 
 struct LaunchDetailsView: View {
-    @EnvironmentObject var viewModel: LaunchDetailsViewModel
+    @StateObject private var viewModel = LaunchDetailsViewModel()
+    @State var launchId: String?
 
     var body: some View {
-        if let launchDetails = viewModel.launchDetails {
-            VStack {
-                Text(launchDetails.mission.name)
-                    .font(.headline)
-                    .padding()
+        if let launch = viewModel.launchDetails,
+           launch.id == launchId
+        {
+            List {
+                HStack {
+                    Text("Name")
+                    Spacer()
+                    Text(launch.name)
+                }
+                HStack {
+                    Text("Status")
+                    Spacer()
+                    Text(launch.status.name)
+                }
             }
+            .listStyle(.inset)
+            .navigationTitle("Launch details")
         } else {
-            Spacer()
-            ProgressView()
-            Spacer()
+            VStack {
+                Spacer()
+                ProgressView()
+                Spacer()
+            }.onAppear {
+                if let id = launchId {
+                    viewModel.getLaunchDetails(for: id)
+                }
+            }
         }
     }
 }
 
 #Preview {
-    let viewModel = LaunchDetailsViewModel(launchId: "123456")
-    LaunchDetailsView().environmentObject(viewModel)
+    LaunchDetailsView(launchId: "9d576892-dcf0-472b-92d1-37053ff549ab")
 }

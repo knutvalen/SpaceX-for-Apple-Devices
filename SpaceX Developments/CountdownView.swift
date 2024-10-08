@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CountdownView: View {
     @EnvironmentObject private var themeManager: ThemeManager
-    @ObservedObject private var viewModel = NextLaunchViewModel()
+    @ObservedObject var viewModel: NextLaunchViewModel
 
     var body: some View {
         HStack {
@@ -65,5 +65,6 @@ private func formatCountdown(timeInSeconds: Int) -> String {
 }
 
 #Preview {
-    CountdownView().environmentObject(ThemeManager())
+    CountdownView(viewModel: .init())
+        .environmentObject(ThemeManager())
 }

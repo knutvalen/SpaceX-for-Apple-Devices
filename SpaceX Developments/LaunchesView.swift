@@ -8,29 +8,38 @@
 import SwiftUI
 
 struct LaunchesView: View {
-    @StateObject private var themeManager = ThemeManager()
+    private var themeManager = ThemeManager()
+    @ObservedObject private var viewModel = NextLaunchViewModel()
 
     var body: some View {
         NavigationSplitView {
             List {
-                CountdownView()
+                CountdownView(viewModel: viewModel)
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, -16)
 
-                NextLaunchView()
+                NextLaunchView(viewModel: viewModel)
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, -16)
+                    .listRowSeparator(.hidden)
+                    .background(
+                        NavigationLink(destination: LaunchDetailsView(launchId: viewModel.nextLaunch?.id), label: {
+                            EmptyView()
+                        })
+                        .opacity(0)
+                    )
             }
             .listStyle(.inset)
             .navigationTitle("Launches")
         } detail: {
-            Text("Select a launch")
+            ContentUnavailableView("Select a launch", image: "rocket-template")
         }
     }
 }
 
 #Preview {
-    LaunchesView().environmentObject(ThemeManager())
+    LaunchesView()
+        .environmentObject(ThemeManager())
 }
