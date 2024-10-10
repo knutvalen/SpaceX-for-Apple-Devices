@@ -11,6 +11,16 @@ struct LaunchDetailsView: View {
     @StateObject private var viewModel = LaunchDetailsViewModel()
     @State var launchId: String
 
+    private func minWidthClamp() -> CGFloat {
+        let calc = UIScreen.main.bounds.width - 80
+
+        if calc < 300 {
+            return calc
+        } else {
+            return 300
+        }
+    }
+
     var body: some View {
         if let launch = viewModel.launchDetails,
            launch.id == launchId
@@ -26,15 +36,15 @@ struct LaunchDetailsView: View {
                                 image
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(maxWidth: 300, maxHeight: 300)
+                                    .frame(width: minWidthClamp(), height: minWidthClamp())
                             case .failure:
                                 Image(systemName: "photo")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(maxWidth: 300, maxHeight: 300)
+                                    .frame(width: minWidthClamp(), height: minWidthClamp())
                             case .empty:
                                 ProgressView()
-                                    .frame(maxWidth: 300, maxHeight: 300)
+                                    .frame(width: minWidthClamp(), height: minWidthClamp())
                             @unknown default:
                                 EmptyView()
                             }
