@@ -18,18 +18,13 @@ struct LaunchesView: View {
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, -16)
+                    .buttonStyle(.plain)
 
                 NextLaunchView(viewModel: viewModel)
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, -16)
-                    .listRowSeparator(.hidden)
-                    .background(
-                        NavigationLink(destination: LaunchDetailsView(launchId: viewModel.nextLaunch?.id), label: {
-                            EmptyView()
-                        })
-                        .opacity(0)
-                    )
+                    .buttonStyle(.plain)
             }
             .listStyle(.inset)
             .navigationTitle("Launches")

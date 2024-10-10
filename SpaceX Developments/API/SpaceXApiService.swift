@@ -11,8 +11,7 @@ let baseURL: String = buildConfiguration == .development ? "https://lldev.thespa
 let version: String = "2.3.0"
 let httpLogger: HTTPLogger = .init(simpleLog: false, redactableHeaders: [], redactHeaders: false, hideBody: false, prettyPrintBody: true)
 
-@Observable
-class SpaceXApiService: SpaceXApiInterface {
+class SpaceXApiService: SpaceXApiInterface, ObservableObject {
     func getLaunchDetails(for launchId: String, completion: @escaping (Result<LaunchDetails, AppError>) -> Void) {
         guard var url = URL(string: "\(baseURL)/\(version)/launches/\(launchId)") else {
             completion(.failure(AppError.invalidPath))

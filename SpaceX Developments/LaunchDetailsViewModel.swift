@@ -24,4 +24,25 @@ class LaunchDetailsViewModel: ObservableObject {
             }
         }
     }
+
+    func getLaunchDate() -> String? {
+        guard let launchDetails else { return nil }
+
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+
+        if launchDetails.netPrecision == .hour {
+            formatter.setLocalizedDateFormatFromTemplate("MMMdyh")
+        }
+
+        if launchDetails.netPrecision == .minute {
+            formatter.setLocalizedDateFormatFromTemplate("MMMdyhm")
+        }
+
+        if launchDetails.netPrecision == .second {
+            formatter.setLocalizedDateFormatFromTemplate("MMMdyhms")
+        }
+
+        return formatter.string(from: launchDetails.net)
+    }
 }
