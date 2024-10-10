@@ -8,14 +8,12 @@
 import Foundation
 
 let baseURL: String = buildConfiguration == .development ? "https://lldev.thespacedevs.com" : "https://ll.thespacedevs.com"
-let version: String = "2.2.0"
-
+let version: String = "2.3.0"
 let httpLogger: HTTPLogger = .init(simpleLog: false, redactableHeaders: [], redactHeaders: false, hideBody: false, prettyPrintBody: true)
 
-@Observable
-class SpaceXApiService: SpaceXApiInterface {
+class SpaceXApiService: SpaceXApiInterface, ObservableObject {
     func getLaunchDetails(for launchId: String, completion: @escaping (Result<LaunchDetails, AppError>) -> Void) {
-        guard var url = URL(string: "\(baseURL)/\(version)/launch/\(launchId)") else {
+        guard var url = URL(string: "\(baseURL)/\(version)/launches/\(launchId)") else {
             completion(.failure(AppError.invalidPath))
             return
         }
@@ -26,14 +24,14 @@ class SpaceXApiService: SpaceXApiInterface {
 
         let request = createRequest(url: url, httpMethod: .get)
 
+        httpLogger.intercept(request: request)
+
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let response = response as? HTTPURLResponse else {
                 return
             }
 
-            if buildConfiguration == .development {
-                httpLogger.intercept(data: data, response: response, error: error)
-            }
+            httpLogger.intercept(data: data, response: response, error: error)
 
             guard let data else {
                 if let error {
@@ -46,31 +44,35 @@ class SpaceXApiService: SpaceXApiInterface {
 
             do {
                 if let dataAsJson = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
-                    let launchDetailsJson = [
+                    var launchDetailsJson = [
                         "id": dataAsJson.value(forKey: "id"),
                         "lastUpdated": dataAsJson.value(forKey: "last_updated"),
                         "launchServiceProvider": [
-                            "name": dataAsJson.value(forKey: "launch_service_provider.name"),
-                            "description": dataAsJson.value(forKey: "launch_service_provider.description"),
-                            "url": dataAsJson.value(forKey: "launch_service_provider.info_url"),
-                            "logo": dataAsJson.value(forKey: "launch_service_provider.logo_url"),
+                            "name": dataAsJson.value(forKeyPath: "launch_service_provider.name"),
+                            "description": dataAsJson.value(forKeyPath: "launch_service_provider.description"),
+                            "url": dataAsJson.value(forKeyPath: "launch_service_provider.info_url"),
+                            "logo": dataAsJson.value(forKeyPath: "launch_service_provider.logo.image_url"),
                         ],
                         "name": dataAsJson.value(forKey: "name"),
                         "net": dataAsJson.value(forKey: "net"),
-                        "netPrecision": dataAsJson.value(forKey: "net_precision.name"),
+                        "netPrecision": dataAsJson.value(forKeyPath: "net_precision.name"),
                         "status": [
-                            "name": dataAsJson.value(forKey: "status.name"),
-                            "description": dataAsJson.value(forKey: "status.description"),
+                            "name": dataAsJson.value(forKeyPath: "status.name"),
+                            "description": dataAsJson.value(forKeyPath: "status.description"),
                         ],
-                        "webcasts": dataAsJson.value(forKey: "vidURLs"),
+                        "webcasts": dataAsJson.value(forKey: "vid_urls"),
                         "mission": [
-                            "description": dataAsJson.value(forKey: "mission.description"),
-                            "name": dataAsJson.value(forKey: "mission.name"),
-                            "orbit": dataAsJson.value(forKey: "mission.orbit.name"),
-                            "type": dataAsJson.value(forKey: "mission.type"),
+                            "description": dataAsJson.value(forKeyPath: "mission.description"),
+                            "name": dataAsJson.value(forKeyPath: "mission.name"),
+                            "orbit": dataAsJson.value(forKeyPath: "mission.orbit.name"),
+                            "type": dataAsJson.value(forKeyPath: "mission.type"),
                         ],
-                        "patch": dataAsJson.value(forKey: "mission_patches.0.image_url"),
                     ]
+
+                    if let missionPatches = dataAsJson.value(forKey: "mission_patches") as? [NSDictionary] {
+                        let patch = missionPatches.first?.value(forKey: "image_url") as? String
+                        launchDetailsJson.merge(["patch": patch]) { _, new in new }
+                    }
 
                     let launchDetailsJsonData = try JSONSerialization.data(withJSONObject: launchDetailsJson, options: [])
 
@@ -83,11 +85,11 @@ class SpaceXApiService: SpaceXApiInterface {
             } catch {
                 completion(.failure(AppError.decoding(error)))
             }
-        }
+        }.resume()
     }
 
     func getNextLaunch(completion: @escaping (Result<NextLaunch, AppError>) -> Void) {
-        guard var url = URL(string: "\(baseURL)/\(version)/launch/upcoming") else {
+        guard var url = URL(string: "\(baseURL)/\(version)/launches/upcoming") else {
             completion(.failure(AppError.invalidPath))
             return
         }
@@ -101,14 +103,14 @@ class SpaceXApiService: SpaceXApiInterface {
 
         let request = createRequest(url: url, httpMethod: .get)
 
+        httpLogger.intercept(request: request)
+
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let response = response as? HTTPURLResponse else {
                 return
             }
 
-            if buildConfiguration == .development {
-                httpLogger.intercept(data: data, response: response, error: error)
-            }
+            httpLogger.intercept(data: data, response: response, error: error)
 
             guard let data else {
                 if let error {

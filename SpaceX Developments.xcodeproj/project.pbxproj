@@ -28,6 +28,7 @@
 		CC4FC6A22CA18274005EE4C1 /* HTTPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4FC6A12CA18274005EE4C1 /* HTTPLogger.swift */; };
 		CCA0AFBD2CAC10C600118BD0 /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */; };
 		CCA0AFBF2CAC196900118BD0 /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0AFBE2CAC196900118BD0 /* LaunchDetailsViewModel.swift */; };
+		CCA588CB2CB7EF2900464DF7 /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA588CA2CB7EF2900464DF7 /* Date+toLaunch.swift */; };
 		CCD7DD922C9B02B4004BD230 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD7DD912C9B02B4004BD230 /* Colors.xcassets */; };
 		CCD7DD942C9B0340004BD230 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */; };
 		CCD7DD962C9B040A004BD230 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD952C9B040A004BD230 /* ThemeManager.swift */; };
@@ -82,6 +83,7 @@
 		CC4FC6A32CA29E2A005EE4C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetails.swift; sourceTree = SOURCE_ROOT; };
 		CCA0AFBE2CAC196900118BD0 /* LaunchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModel.swift; sourceTree = "<group>"; };
+		CCA588CA2CB7EF2900464DF7 /* Date+toLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toLaunch.swift"; sourceTree = "<group>"; };
 		CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SpaceX-Developments-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CCD7DD912C9B02B4004BD230 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		CC4F0DDA2C98346B00101B68 /* SpaceX Developments */ = {
 			isa = PBXGroup;
 			children = (
+				CCA588C92CB7EEDF00464DF7 /* extensions */,
 				CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */,
 				CC4F0DDD2C98346B00101B68 /* ContentView.swift */,
 				CC4F0E062C995BC900101B68 /* CountdownView.swift */,
@@ -213,6 +216,14 @@
 				CC4F0DF82C98346C00101B68 /* SpaceX_LaunchesUITestsLaunchTests.swift */,
 			);
 			path = "SpaceX DevelopmentsUITests";
+			sourceTree = "<group>";
+		};
+		CCA588C92CB7EEDF00464DF7 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCA588CA2CB7EF2900464DF7 /* Date+toLaunch.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				CC4260502C9C605F0084BB56 /* AppError.swift in Sources */,
 				CCDFD0D22CAC0FBC009A9978 /* LaunchDetailsView.swift in Sources */,
 				CC3A72472CA6956F004A3A01 /* LaunchesView.swift in Sources */,
+				CCA588CB2CB7EF2900464DF7 /* Date+toLaunch.swift in Sources */,
 				CC4F0E072C995BC900101B68 /* CountdownView.swift in Sources */,
 				CC4F0DDE2C98346B00101B68 /* ContentView.swift in Sources */,
 				CCD7DD962C9B040A004BD230 /* ThemeManager.swift in Sources */,
