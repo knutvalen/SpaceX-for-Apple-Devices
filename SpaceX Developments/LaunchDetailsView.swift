@@ -9,53 +9,118 @@ import SwiftUI
 
 struct LaunchDetailsView: View {
     @StateObject private var viewModel = LaunchDetailsViewModel()
-    @State var launchId: String?
+    @State var launchId: String
 
     var body: some View {
         if let launch = viewModel.launchDetails,
            launch.id == launchId
         {
-            if let patch = launch.patch {
-                AsyncImage(url: URL(string: patch)) { phase in
-                    switch phase {
-                    case let .success(image):
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 300, maxHeight: 300)
-                    case .failure:
-                        Image(systemName: "photo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 300, maxHeight: 300)
-                    case .empty:
-                        ProgressView()
-                            .frame(maxWidth: 300, maxHeight: 300)
-                    @unknown default:
-                        EmptyView()
-                    }
-                }
-            }
-
             List {
-                HStack {
+                if let patch = launch.patch {
+                    HStack {
+                        Spacer()
+
+                        AsyncImage(url: URL(string: patch)) { phase in
+                            switch phase {
+                            case let .success(image):
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 300, maxHeight: 300)
+                            case .failure:
+                                Image(systemName: "photo")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 300, maxHeight: 300)
+                            case .empty:
+                                ProgressView()
+                                    .frame(maxWidth: 300, maxHeight: 300)
+                            @unknown default:
+                                EmptyView()
+                            }
+                        }
+
+                        Spacer()
+                    }
+                    .listRowSeparator(.hidden)
+                }
+
+                HStack(alignment: .top) {
                     Text("Name")
                     Spacer()
                     Text(launch.name)
                 }
 
-                HStack {
+                HStack(alignment: .top) {
                     Text("Status")
                     Spacer()
                     Text(launch.status.name)
                 }
 
-                if let launchDate = viewModel.getLaunchDate() {
-                    HStack {
+                if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
+                    HStack(alignment: .top) {
                         Text("Launch date")
                         Spacer()
                         Text(launchDate)
                     }
+
+                    HStack(alignment: .top) {
+                        Text("Launch date precision")
+                        Spacer()
+                        Text(launch.netPrecision.rawValue)
+                    }
+                }
+
+                HStack(alignment: .top) {
+                    Text("Webcasts")
+                    Spacer()
+
+                    if launch.webcasts.isEmpty {
+                        Text("No webcasts available")
+                    } else {
+                        List(launch.webcasts) { webcast in
+                            if let url = URL(string: webcast.url) {
+                                HStack(alignment: .top) {
+                                    Spacer()
+                                    Image(systemName: "arrow.up.forward.app")
+                                    Link(webcast.type.name, destination: url)
+                                        .buttonStyle(.borderless)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                HStack(alignment: .top) {
+                    Text("Mission name")
+                    Spacer()
+                    Text(launch.mission.name)
+                }
+
+                HStack(alignment: .top) {
+                    Text("Mission type")
+                    Spacer()
+                    Text(launch.mission.type)
+                }
+
+                if let missionDescription = launch.mission.description {
+                    HStack(alignment: .top) {
+                        Text("Mission description")
+                        Spacer()
+                        Text(missionDescription)
+                    }
+                }
+
+                HStack(alignment: .top) {
+                    Text("Orbit")
+                    Spacer()
+                    Text(launch.mission.orbit)
+                }
+
+                HStack(alignment: .top) {
+                    Text("Details updated")
+                    Spacer()
+                    Text(launch.lastUpdated.formatted(.relative(presentation: .named)))
                 }
             }
             .listStyle(.inset)
@@ -66,9 +131,7 @@ struct LaunchDetailsView: View {
                 ProgressView()
                 Spacer()
             }.onAppear {
-                if let id = launchId {
-                    viewModel.getLaunchDetails(for: id)
-                }
+                viewModel.getLaunchDetails(for: launchId)
             }
         }
     }

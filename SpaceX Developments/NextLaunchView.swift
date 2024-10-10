@@ -19,7 +19,7 @@ struct NextLaunchView: View {
     var body: some View {
         NavigationStack(path: $path) {
             HStack {
-                if let nextLaunch = viewModel.nextLaunch {
+                if let launch = viewModel.nextLaunch {
                     VStack(spacing: 24) {
                         HStack {
                             Text("Next launch")
@@ -35,40 +35,34 @@ struct NextLaunchView: View {
                             .buttonStyle(.borderedProminent)
                             .navigationDestination(for: NavigationDestination.self) { view in
                                 if view == .details {
-                                    LaunchDetailsView(launchId: viewModel.nextLaunch?.id)
+                                    LaunchDetailsView(launchId: launch.id)
                                 }
                             }
                         }
 
                         HStack {
                             Text("Name")
-
                             Spacer()
-
-                            Text(nextLaunch.name)
+                            Text(launch.name)
                         }
 
-                        if let launchDate = viewModel.getLaunchDate() {
+                        if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
                             HStack {
                                 Text("Launch date")
-
                                 Spacer()
-
                                 Text(launchDate)
                             }
                         }
 
-                        if let webcast = viewModel.nextLaunch?.webcast,
+                        if let webcast = launch.webcast,
                            let url = URL(string: webcast.url)
                         {
                             HStack {
                                 Text("Webcast")
-
                                 Spacer()
-
                                 Image(systemName: "arrow.up.forward.app")
-
                                 Link(webcast.type.name, destination: url)
+                                    .buttonStyle(.borderless)
                             }
                         }
                     }

@@ -17,27 +17,6 @@ class NextLaunchViewModel: ObservableObject {
         getNextLaunch()
     }
 
-    func getLaunchDate() -> String? {
-        guard let nextLaunch else { return nil }
-
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US")
-
-        if nextLaunch.netPrecision == .hour {
-            formatter.setLocalizedDateFormatFromTemplate("MMMdyh")
-        }
-
-        if nextLaunch.netPrecision == .minute {
-            formatter.setLocalizedDateFormatFromTemplate("MMMdyhm")
-        }
-
-        if nextLaunch.netPrecision == .second {
-            formatter.setLocalizedDateFormatFromTemplate("MMMdyhms")
-        }
-
-        return formatter.string(from: nextLaunch.net)
-    }
-
     private func getNextLaunch() {
         api.getNextLaunch { (result: Result<NextLaunch, AppError>) in
             switch result {
