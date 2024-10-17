@@ -1,10 +1,3 @@
-//
-//  NewsView.swift
-//  SpaceX Developments
-//
-//  Created by Knut Valen on 29/09/2024.
-//
-
 import SwiftUI
 
 struct NewsView: View {

@@ -1,46 +1,51 @@
-//
-//  CountdownView.swift
-//  SpaceX Launches
-//
-//  Created by Knut Valen on 17/09/2024.
-//
-
 import Foundation
 import SwiftUI
 
 struct CountdownView: View {
     @EnvironmentObject private var themeManager: ThemeManager
-    @ObservedObject var viewModel: NextLaunchViewModel
+    @ObservedObject var viewModel: LaunchViewModel
+    @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
-        HStack {
-            if viewModel.timeLeft == nil {
-                Spacer()
-                ProgressView()
-                Spacer()
-            }
+        VStack {
+            if let launch = viewModel.nextLaunch {
+                HStack {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text(launch.name)
+                            .font(.title2)
 
-            if let timeInSeconds = viewModel.timeLeft {
-                VStack(alignment: .leading, spacing: 16) {
-                    if let name = viewModel.nextLaunch?.name {
-                        Text(name)
-                            .font(.title2)
-                    } else {
-                        Text("Countdown to next launch")
-                            .font(.title2)
+                        if let timeInSeconds = viewModel.timeLeft {
+                            Text(formatCountdown(timeInSeconds: timeInSeconds))
+                                .font(.largeTitle)
+                                .bold()
+                        } else {
+                            ProgressView()
+                                .controlSize(.large)
+                        }
                     }
 
-                    Text(formatCountdown(timeInSeconds: timeInSeconds))
-                        .font(.largeTitle)
+                    Spacer()
                 }
+            } else {
+                HStack {
+                    Spacer()
 
-                Spacer()
+                    ProgressView()
+                        .controlSize(.large)
+
+                    Spacer()
+                }
             }
         }
         .padding(16)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .active && viewModel.timeLeft != nil {
+                viewModel.getNextLaunch(ignoreCache: false)
+            }
+        }
     }
 }
 

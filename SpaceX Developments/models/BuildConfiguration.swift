@@ -1,10 +1,3 @@
-//
-//  BuildConfiguration.swift
-//  SpaceX Launches
-//
-//  Created by Knut Valen on 20/09/2024.
-//
-
 import Foundation
 
 enum BuildConfiguration {

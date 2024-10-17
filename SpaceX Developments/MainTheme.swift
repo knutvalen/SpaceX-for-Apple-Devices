@@ -1,10 +1,3 @@
-//
-//  MainTheme.swift
-//  SpaceX Launches
-//
-//  Created by Knut Valen on 18/09/2024.
-//
-
 import SwiftUI
 
 /**
@@ -14,4 +7,6 @@ struct MainTheme: ThemeProtocol {
     var shadowColor: Color { return Color("shadowColor") }
 
     var cardColor: Color { return Color("cardColor") }
+
+    var listDividerColor: Color { return Color("listDividerColor") }
 }
