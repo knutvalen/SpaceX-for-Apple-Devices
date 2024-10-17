@@ -9,12 +9,8 @@ import SwiftUI
 
 struct NextLaunchView: View {
     @EnvironmentObject private var themeManager: ThemeManager
-    @ObservedObject var viewModel: NextLaunchViewModel
+    @ObservedObject var viewModel: LaunchViewModel
     @State private var path = NavigationPath()
-
-    enum NavigationDestination {
-        case details
-    }
 
     var body: some View {
         NavigationStack(path: $path) {

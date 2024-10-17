@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LaunchDetailsViewModel: ObservableObject {
-    let api = SpaceXApiService()
     @Published var launchDetails: LaunchDetails?
+    @StateObject var appState = AppState.singleton
 
     func getLaunchDetails(for launchId: String) {
         debugPrint("getLaunchDetails(for: \(launchId))")
-        api.getLaunchDetails(for: launchId) { (result: Result<LaunchDetails, AppError>) in
+        appState.api.getLaunchDetails(for: launchId) { (result: Result<LaunchDetails, AppError>) in
             switch result {
             case let .success(launchDetails):
                 DispatchQueue.main.async {

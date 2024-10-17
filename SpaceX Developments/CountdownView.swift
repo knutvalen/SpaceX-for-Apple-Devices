@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CountdownView: View {
     @EnvironmentObject private var themeManager: ThemeManager
-    @ObservedObject var viewModel: NextLaunchViewModel
+    @ObservedObject var viewModel: LaunchViewModel
 
     var body: some View {
         HStack {

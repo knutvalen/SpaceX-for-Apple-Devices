@@ -1,24 +1,28 @@
 //
-//  NextLaunchViewModel.swift
+//  LaunchViewModel.swift
 //  SpaceX Developments
 //
 //  Created by Knut Valen on 01/10/2024.
 //
 
 import Foundation
+import SwiftUI
 
-class NextLaunchViewModel: ObservableObject {
-    let api = SpaceXApiService()
+class LaunchViewModel: ObservableObject {
+    @StateObject var appState = AppState.singleton
     var countdown: Timer?
     @Published var nextLaunch: NextLaunch?
     @Published var timeLeft: Int?
+    let initialLimit = 10
+    var limit: Int
 
     init() {
+        limit = initialLimit
         getNextLaunch()
     }
 
     private func getNextLaunch() {
-        api.getNextLaunch { (result: Result<NextLaunch, AppError>) in
+        appState.api.getNextLaunch { (result: Result<NextLaunch, AppError>) in
             switch result {
             case let .success(nextLaunch):
 
@@ -46,4 +50,11 @@ class NextLaunchViewModel: ObservableObject {
             }
         }
     }
+
+    private func loadMore() {
+        limit += initialLimit
+        getPreviousLaunches()
+    }
+
+    private func getPreviousLaunches() {}
 }

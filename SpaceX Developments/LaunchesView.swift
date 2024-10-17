@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LaunchesView: View {
     private var themeManager = ThemeManager()
-    @ObservedObject private var viewModel = NextLaunchViewModel()
+    @ObservedObject private var viewModel = LaunchViewModel()
 
     var body: some View {
         NavigationSplitView {
@@ -21,6 +21,12 @@ struct LaunchesView: View {
                     .buttonStyle(.plain)
 
                 NextLaunchView(viewModel: viewModel)
+                    .environmentObject(themeManager)
+                    .listRowSeparator(.hidden)
+                    .padding(.horizontal, -16)
+                    .buttonStyle(.plain)
+
+                PreviousLaunchesView(viewModel: viewModel)
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, -16)
