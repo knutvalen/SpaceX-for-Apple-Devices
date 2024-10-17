@@ -10,7 +10,7 @@ import Foundation
 enum AppError: Error {
     case noData
     case invalidPath
-    case response(Error)
+    case response(Error?)
     case decoding(Error)
     case netPrecision(String)
 }

@@ -7,85 +7,71 @@
 
 import Foundation
 
-let baseURL: String = buildConfiguration == .development ? "https://lldev.thespacedevs.com" : "https://ll.thespacedevs.com"
-let version: String = "2.3.0"
-let httpLogger: HTTPLogger = .init(simpleLog: false, redactableHeaders: [], redactHeaders: false, hideBody: false, prettyPrintBody: true)
+class SpaceXApiService: ObservableObject {
+    let baseURL: String = buildConfiguration == .development ? "https://lldev.thespacedevs.com" : "https://ll.thespacedevs.com"
+    let version: String = "2.3.0"
+    let httpLogger: HttpLogger = .init(simpleLog: false, redactableHeaders: [], redactHeaders: false, hideBody: false, prettyPrintBody: true)
+    let httpService: HttpService
 
-class SpaceXApiService: SpaceXApiInterface, ObservableObject {
+    init(httpService: HttpService) {
+        self.httpService = httpService
+    }
+
     func getLaunchDetails(for launchId: String, completion: @escaping (Result<LaunchDetails, AppError>) -> Void) {
-        guard var url = URL(string: "\(baseURL)/\(version)/launches/\(launchId)") else {
-            completion(.failure(AppError.invalidPath))
-            return
-        }
-
-        url.append(queryItems: [
-            URLQueryItem(name: "mode", value: "detailed"),
-        ])
-
-        let request = createRequest(url: url, httpMethod: .get)
-
-        httpLogger.intercept(request: request)
-
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let response = response as? HTTPURLResponse else {
-                return
+        httpService.request(
+            endpoint: .launchDetails(for: launchId),
+            method: .get
+        ) { result in
+            if case let .failure(error) = result {
+                return completion(.failure(error))
             }
 
-            httpLogger.intercept(data: data, response: response, error: error)
+            if case let .success(data) = result {
+                do {
+                    if let dataAsJson = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                        var launchDetailsJson = [
+                            "id": dataAsJson.value(forKey: "id"),
+                            "lastUpdated": dataAsJson.value(forKey: "last_updated"),
+                            "launchServiceProvider": [
+                                "name": dataAsJson.value(forKeyPath: "launch_service_provider.name"),
+                                "description": dataAsJson.value(forKeyPath: "launch_service_provider.description"),
+                                "url": dataAsJson.value(forKeyPath: "launch_service_provider.info_url"),
+                                "logo": dataAsJson.value(forKeyPath: "launch_service_provider.logo.image_url"),
+                            ],
+                            "name": dataAsJson.value(forKey: "name"),
+                            "net": dataAsJson.value(forKey: "net"),
+                            "netPrecision": dataAsJson.value(forKeyPath: "net_precision.name"),
+                            "status": [
+                                "name": dataAsJson.value(forKeyPath: "status.name"),
+                                "description": dataAsJson.value(forKeyPath: "status.description"),
+                            ],
+                            "webcasts": dataAsJson.value(forKey: "vid_urls"),
+                            "mission": [
+                                "description": dataAsJson.value(forKeyPath: "mission.description"),
+                                "name": dataAsJson.value(forKeyPath: "mission.name"),
+                                "orbit": dataAsJson.value(forKeyPath: "mission.orbit.name"),
+                                "type": dataAsJson.value(forKeyPath: "mission.type"),
+                            ],
+                        ]
 
-            guard let data else {
-                if let error {
-                    completion(.failure(AppError.response(error)))
-                } else {
-                    completion(.failure(AppError.noData))
-                }
-                return
-            }
+                        if let missionPatches = dataAsJson.value(forKey: "mission_patches") as? [NSDictionary] {
+                            let patch = missionPatches.first?.value(forKey: "image_url") as? String
+                            launchDetailsJson.merge(["patch": patch]) { _, new in new }
+                        }
 
-            do {
-                if let dataAsJson = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
-                    var launchDetailsJson = [
-                        "id": dataAsJson.value(forKey: "id"),
-                        "lastUpdated": dataAsJson.value(forKey: "last_updated"),
-                        "launchServiceProvider": [
-                            "name": dataAsJson.value(forKeyPath: "launch_service_provider.name"),
-                            "description": dataAsJson.value(forKeyPath: "launch_service_provider.description"),
-                            "url": dataAsJson.value(forKeyPath: "launch_service_provider.info_url"),
-                            "logo": dataAsJson.value(forKeyPath: "launch_service_provider.logo.image_url"),
-                        ],
-                        "name": dataAsJson.value(forKey: "name"),
-                        "net": dataAsJson.value(forKey: "net"),
-                        "netPrecision": dataAsJson.value(forKeyPath: "net_precision.name"),
-                        "status": [
-                            "name": dataAsJson.value(forKeyPath: "status.name"),
-                            "description": dataAsJson.value(forKeyPath: "status.description"),
-                        ],
-                        "webcasts": dataAsJson.value(forKey: "vid_urls"),
-                        "mission": [
-                            "description": dataAsJson.value(forKeyPath: "mission.description"),
-                            "name": dataAsJson.value(forKeyPath: "mission.name"),
-                            "orbit": dataAsJson.value(forKeyPath: "mission.orbit.name"),
-                            "type": dataAsJson.value(forKeyPath: "mission.type"),
-                        ],
-                    ]
+                        let launchDetailsJsonData = try JSONSerialization.data(withJSONObject: launchDetailsJson, options: [])
 
-                    if let missionPatches = dataAsJson.value(forKey: "mission_patches") as? [NSDictionary] {
-                        let patch = missionPatches.first?.value(forKey: "image_url") as? String
-                        launchDetailsJson.merge(["patch": patch]) { _, new in new }
+                        let decoder = JSONDecoder()
+                        decoder.dateDecodingStrategy = .iso8601
+
+                        let launchDetails = try decoder.decode(LaunchDetails.self, from: launchDetailsJsonData)
+                        completion(.success(launchDetails))
                     }
-
-                    let launchDetailsJsonData = try JSONSerialization.data(withJSONObject: launchDetailsJson, options: [])
-
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .iso8601
-
-                    let launchDetails = try decoder.decode(LaunchDetails.self, from: launchDetailsJsonData)
-                    completion(.success(launchDetails))
+                } catch {
+                    completion(.failure(AppError.decoding(error)))
                 }
-            } catch {
-                completion(.failure(AppError.decoding(error)))
             }
-        }.resume()
+        }
     }
 
     func getNextLaunch(completion: @escaping (Result<NextLaunch, AppError>) -> Void) {
@@ -110,7 +96,7 @@ class SpaceXApiService: SpaceXApiInterface, ObservableObject {
                 return
             }
 
-            httpLogger.intercept(data: data, response: response, error: error)
+            self.httpLogger.intercept(data: data, response: response, error: error)
 
             guard let data else {
                 if let error {
@@ -149,6 +135,8 @@ class SpaceXApiService: SpaceXApiInterface, ObservableObject {
 
         }.resume()
     }
+
+    func getPreviousLaunches() {}
 }
 
 private func createRequest(url: URL, httpMethod: HTTPMethod) -> URLRequest {
