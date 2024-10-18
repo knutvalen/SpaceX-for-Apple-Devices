@@ -10,10 +10,11 @@ import SwiftUI
 struct NextLaunchView: View {
     @EnvironmentObject private var themeManager: ThemeManager
     @ObservedObject var viewModel: LaunchViewModel
-    @State private var path = NavigationPath()
+    @Binding var selected: String?
+    @Binding var preferredCompactColumn: NavigationSplitViewColumn
 
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack {
             HStack {
                 if let launch = viewModel.nextLaunch {
                     VStack(spacing: 24) {
@@ -24,16 +25,12 @@ struct NextLaunchView: View {
                             Spacer()
 
                             Button {
-                                path.append(NavigationDestination.details)
+                                selected = launch.id
+                                preferredCompactColumn = .detail
                             } label: {
                                 Text("Details")
                             }
                             .buttonStyle(.borderedProminent)
-                            .navigationDestination(for: NavigationDestination.self) { view in
-                                if view == .details {
-                                    LaunchDetailsView(launchId: launch.id)
-                                }
-                            }
                         }
 
                         HStack {
@@ -77,6 +74,6 @@ struct NextLaunchView: View {
 }
 
 #Preview {
-    NextLaunchView(viewModel: .init())
+    NextLaunchView(viewModel: LaunchViewModel(), selected: .constant(nil), preferredCompactColumn: .constant(NavigationSplitViewColumn.sidebar))
         .environmentObject(ThemeManager())
 }

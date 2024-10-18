@@ -12,5 +12,4 @@ enum AppError: Error {
     case invalidURL
     case response(Error?)
     case decoding(Error)
-    case netPrecision(String)
 }

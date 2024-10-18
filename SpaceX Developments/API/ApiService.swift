@@ -88,7 +88,7 @@ final class ApiService: ObservableObject {
                         let nextLaunchJson = [
                             "id": firstResult.value(forKey: "id"),
                             "name": firstResult.value(forKey: "name"),
-                            "webcast": firstResult.value(forKey: "vidURLs.0"),
+                            "webcast": firstResult.value(forKey: "vid_urls.0"),
                             "netPrecision": firstResult.value(forKeyPath: "net_precision.name"),
                             "net": firstResult.value(forKey: "net"),
                         ]

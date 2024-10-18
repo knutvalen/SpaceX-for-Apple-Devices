@@ -11,7 +11,7 @@ struct Endpoint {
     let version = "2.3.0"
     let path: String
     let queryItems: [URLQueryItem]
-    
+
     var url: URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -27,7 +27,7 @@ struct Endpoint {
             queryItems: [URLQueryItem(name: "mode", value: "detailed")]
         )
     }
-    
+
     static func nextLaunch() -> Endpoint {
         return Endpoint(
             path: "launches/upcoming",

@@ -23,7 +23,7 @@ class HttpService: ObservableObject {
         guard let url = endpoint.url else {
             return completion(.failure(AppError.invalidURL))
         }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
 
