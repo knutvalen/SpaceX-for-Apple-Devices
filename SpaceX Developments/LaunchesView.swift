@@ -22,11 +22,15 @@ struct LaunchesView: View {
                     .padding(.horizontal, -16)
                     .buttonStyle(.plain)
 
-                NextLaunchView(viewModel: viewModel, selected: $selected, preferredCompactColumn: $preferredColumn)
-                    .environmentObject(themeManager)
-                    .listRowSeparator(.hidden)
-                    .padding(.horizontal, -16)
-                    .buttonStyle(.plain)
+                NextLaunchView(
+                    viewModel: viewModel,
+                    selected: $selected,
+                    preferredCompactColumn: $preferredColumn
+                )
+                .environmentObject(themeManager)
+                .listRowSeparator(.hidden)
+                .padding(.horizontal, -16)
+                .buttonStyle(.plain)
 
                 PreviousLaunchesView(viewModel: viewModel)
                     .environmentObject(themeManager)

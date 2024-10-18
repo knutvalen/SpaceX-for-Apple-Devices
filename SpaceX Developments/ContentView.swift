@@ -24,7 +24,7 @@ struct ContentView: View {
                 NewsView()
             }
         }
-        .tabViewStyle(.sidebarAdaptable)
+        .tabViewStyle(.automatic)
     }
 }
 
