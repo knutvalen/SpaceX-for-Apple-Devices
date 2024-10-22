@@ -1,10 +1,3 @@
-//
-//  LaunchDetails.swift
-//  SpaceX Developments
-//
-//  Created by Knut Valen on 01/10/2024.
-//
-
 import Foundation
 
 struct LaunchDetails: Decodable {

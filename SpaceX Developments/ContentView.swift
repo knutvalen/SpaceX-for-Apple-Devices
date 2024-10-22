@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  SpaceX Launches
-//
-//  Created by Knut Valen on 16/09/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -24,7 +17,7 @@ struct ContentView: View {
                 NewsView()
             }
         }
-        .tabViewStyle(.sidebarAdaptable)
+        .tabViewStyle(.automatic)
     }
 }
 

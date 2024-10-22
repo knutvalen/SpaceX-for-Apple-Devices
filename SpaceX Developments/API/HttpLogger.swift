@@ -1,13 +1,6 @@
-//
-//  HTTPLogger.swift
-//  SpaceX Launches
-//
-//  Created by Knut Valen on 23/09/2024.
-//
-
 import Foundation
 
-public class HTTPLogger {
+class HttpLogger {
     private var dateFormatter: DateFormatter
     private var simpleLog: Bool
     private var redactableHeaders: [String] = []

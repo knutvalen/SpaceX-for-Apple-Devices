@@ -1,15 +1,8 @@
-//
-//  LaunchDetailsView.swift
-//  SpaceX Developments
-//
-//  Created by Knut Valen on 01/10/2024.
-//
-
 import SwiftUI
 
 struct LaunchDetailsView: View {
     @StateObject private var viewModel = LaunchDetailsViewModel()
-    @State var launchId: String
+    @Binding var launchId: String
 
     private func minWidthClamp() -> CGFloat {
         let calc = UIScreen.main.bounds.width - 80
@@ -44,6 +37,7 @@ struct LaunchDetailsView: View {
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
                             case .empty:
                                 ProgressView()
+                                    .controlSize(.large)
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
                             @unknown default:
                                 EmptyView()
@@ -88,13 +82,15 @@ struct LaunchDetailsView: View {
                     if launch.webcasts.isEmpty {
                         Text("No webcasts available")
                     } else {
-                        List(launch.webcasts) { webcast in
-                            if let url = URL(string: webcast.url) {
-                                HStack(alignment: .top) {
-                                    Spacer()
-                                    Image(systemName: "arrow.up.forward.app")
-                                    Link(webcast.type.name, destination: url)
-                                        .buttonStyle(.borderless)
+                        VStack(spacing: 16) {
+                            ForEach(launch.webcasts) { webcast in
+                                if let url = URL(string: webcast.url) {
+                                    HStack(alignment: .top) {
+                                        Spacer()
+                                        Image(systemName: "arrow.up.forward.app")
+                                        Link(webcast.type.name, destination: url)
+                                            .buttonStyle(.borderless)
+                                    }
                                 }
                             }
                         }
@@ -130,23 +126,38 @@ struct LaunchDetailsView: View {
                 HStack(alignment: .top) {
                     Text("Details updated")
                     Spacer()
-                    Text(launch.lastUpdated.formatted(.relative(presentation: .named)))
+                    Text(
+                        Date.RelativeFormatStyle(
+                            presentation: .named,
+                            capitalizationContext: .beginningOfSentence
+                        )
+                        .format(launch.lastUpdated)
+                    )
                 }
             }
             .listStyle(.inset)
             .navigationTitle("Launch details")
+            .refreshable {
+                viewModel.getLaunchDetails(for: launchId, ignoreCache: true)
+            }
+//            .onChange(of: viewModel.launchDetails, initial: false) {
+//                debugPrint(debugTag, "Launch details updated")
+//            }
         } else {
             VStack {
                 Spacer()
+
                 ProgressView()
+                    .controlSize(.large)
+
                 Spacer()
-            }.onAppear {
-                viewModel.getLaunchDetails(for: launchId)
+            }.onChange(of: launchId, initial: true) {
+                viewModel.getLaunchDetails(for: launchId, ignoreCache: false)
             }
         }
     }
 }
 
 #Preview {
-    LaunchDetailsView(launchId: "9d576892-dcf0-472b-92d1-37053ff549ab")
+    LaunchDetailsView(launchId: .constant("9d576892-dcf0-472b-92d1-37053ff549ab"))
 }
