@@ -144,16 +144,16 @@
 		CC4260442C9C5AA70084BB56 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */,
+				CC42604F2C9C605F0084BB56 /* AppError.swift */,
 				CC11697A2C9DB9E3003E86B7 /* BuildConfiguration.swift */,
-				CC4260452C9C5AB90084BB56 /* LaunchOverview.swift */,
 				CC4260472C9C5C140084BB56 /* DatePrecision.swift */,
+				CCF6C1BA2CC6D2ED0095DB23 /* DetailMode.swift */,
+				CC4FC69B2CA156DB005EE4C1 /* HTTPMethod.swift */,
+				CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */,
+				CC4260452C9C5AB90084BB56 /* LaunchOverview.swift */,
+				CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */,
 				CC4260492C9C5D8C0084BB56 /* Webcast.swift */,
 				CC42604B2C9C5DA40084BB56 /* WebcastType.swift */,
-				CC42604F2C9C605F0084BB56 /* AppError.swift */,
-				CC4FC69B2CA156DB005EE4C1 /* HTTPMethod.swift */,
-				CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */,
-				CCF6C1BA2CC6D2ED0095DB23 /* DetailMode.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -669,6 +669,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;

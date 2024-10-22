@@ -14,7 +14,6 @@ class HttpService: ObservableObject {
         ignoreCache: Bool,
         completion: @escaping (Result<Data, AppError>) -> Void
     ) {
-        debugPrint(debugTag, "ignoreCache: \(ignoreCache)")
         guard let url = endpoint.url else {
             return completion(.failure(AppError.invalidURL))
         }

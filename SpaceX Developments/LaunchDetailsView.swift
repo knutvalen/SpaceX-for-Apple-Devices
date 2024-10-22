@@ -140,9 +140,6 @@ struct LaunchDetailsView: View {
             .refreshable {
                 viewModel.getLaunchDetails(for: launchId, ignoreCache: true)
             }
-//            .onChange(of: viewModel.launchDetails, initial: false) {
-//                debugPrint(debugTag, "Launch details updated")
-//            }
         } else {
             VStack {
                 Spacer()

@@ -35,9 +35,9 @@ struct PreviousLaunchesView: View {
                                     selected = launch.id
                                     preferredCompactColumn = .detail
                                 } label: {
-                                    Image("rocket-template")
+                                    Text("Details")
                                 }
-                                .buttonStyle(.bordered)
+                                .buttonStyle(.borderedProminent)
                             }
 
                             if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
