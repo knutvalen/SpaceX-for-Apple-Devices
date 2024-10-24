@@ -3,7 +3,7 @@ import SwiftUI
 struct NextLaunchView: View {
     @EnvironmentObject private var themeManager: ThemeManager
     @ObservedObject var viewModel: LaunchViewModel
-    @Binding var selected: String?
+    @Binding var launchId: String?
     @Binding var preferredCompactColumn: NavigationSplitViewColumn
 
     var body: some View {
@@ -16,7 +16,7 @@ struct NextLaunchView: View {
 
                 if let launch = viewModel.nextLaunch {
                     Button {
-                        selected = launch.id
+                        launchId = launch.id
                         preferredCompactColumn = .detail
                     } label: {
                         Text("Details")
@@ -70,7 +70,7 @@ struct NextLaunchView: View {
 #Preview {
     NextLaunchView(
         viewModel: LaunchViewModel(),
-        selected: .constant(nil),
+        launchId: .constant(nil),
         preferredCompactColumn: .constant(NavigationSplitViewColumn.sidebar)
     )
     .environmentObject(ThemeManager())

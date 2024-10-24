@@ -93,6 +93,7 @@
 		CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		CCD7DD952C9B040A004BD230 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CCD7DD972C9B044F004BD230 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		CCDA0C532CCA1F6300B5CA67 /* SpaceX Developments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SpaceX Developments.entitlements"; sourceTree = "<group>"; };
 		CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
 		CCF30AA62CB805A400DD06A1 /* PreviousLaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLaunchesView.swift; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 		CC4F0DDA2C98346B00101B68 /* SpaceX Developments */ = {
 			isa = PBXGroup;
 			children = (
+				CCDA0C532CCA1F6300B5CA67 /* SpaceX Developments.entitlements */,
 				CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */,
 				CCF6C1B02CC121320095DB23 /* AppState.swift */,
 				CC4F0DDD2C98346B00101B68 /* ContentView.swift */,
@@ -505,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SpaceX Developments/SpaceX Developments.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpaceX Developments/Preview Content\"";
@@ -694,6 +697,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SpaceX Developments/SpaceX Developments.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpaceX Developments/Preview Content\"";
@@ -726,6 +730,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SpaceX Developments/SpaceX Developments.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpaceX Developments/Preview Content\"";
