@@ -18,6 +18,9 @@ struct ContentView: View {
             }
         }
         .tabViewStyle(.automatic)
+        .onOpenURL { url in
+            debugPrint(debugTag, "Opened URL: \(url)")
+        }
     }
 }
 
