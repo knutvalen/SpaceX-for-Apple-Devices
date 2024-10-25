@@ -5,6 +5,7 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:spacex.knutvalen.dev?mode=developer</string>
+		<string>applinks:spacex.knutvalen.dev</string>
 	</array>
 </dict>
 </plist>
