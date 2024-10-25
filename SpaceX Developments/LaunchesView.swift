@@ -50,7 +50,7 @@ struct LaunchesView: View {
                 if let id = urlComponents.queryItems?.first(where: { $0.name == "id" })?.value {
                     launchId = id
                     preferredColumn = .detail
-                } else {
+                } else if urlComponents.path.isEmpty {
                     preferredColumn = .sidebar
                 }
             }

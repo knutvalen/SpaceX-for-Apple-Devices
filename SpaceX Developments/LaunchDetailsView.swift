@@ -3,6 +3,7 @@ import SwiftUI
 struct LaunchDetailsView: View {
     @StateObject private var viewModel = LaunchDetailsViewModel()
     @Binding var launchId: String
+    @Environment(\.openURL) private var openURL
 
     private func minWidthClamp() -> CGFloat {
         let calc = UIScreen.main.bounds.width - 80
@@ -26,19 +27,18 @@ struct LaunchDetailsView: View {
                         AsyncImage(url: URL(string: patch)) { phase in
                             switch phase {
                             case let .success(image):
-                                image
-                                    .resizable()
+                                image.resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
+
                             case .failure:
-                                Image(systemName: "photo")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: minWidthClamp(), height: minWidthClamp())
+                                EmptyView()
+
                             case .empty:
                                 ProgressView()
                                     .controlSize(.regular)
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
+
                             @unknown default:
                                 EmptyView()
                             }
@@ -46,7 +46,6 @@ struct LaunchDetailsView: View {
 
                         Spacer()
                     }
-                    .listRowSeparator(.hidden)
                 }
 
                 HStack(alignment: .top) {
@@ -87,9 +86,16 @@ struct LaunchDetailsView: View {
                                 if let url = URL(string: webcast.url) {
                                     HStack(alignment: .top) {
                                         Spacer()
-                                        Image(systemName: "arrow.up.forward.app")
-                                        Link(webcast.type.name, destination: url)
-                                            .buttonStyle(.borderless)
+
+                                        Button {
+                                            openURL(url)
+                                        } label: {
+                                            HStack {
+                                                Image(systemName: "arrow.up.forward.app")
+                                                Text(webcast.type.name)
+                                            }
+                                        }
+                                        .buttonStyle(.borderless)
                                     }
                                 }
                             }
@@ -136,7 +142,6 @@ struct LaunchDetailsView: View {
                 }
             }
             .listStyle(.inset)
-            .navigationTitle("Launch details")
             .refreshable {
                 viewModel.getLaunchDetails(for: launchId, ignoreCache: true)
             }
