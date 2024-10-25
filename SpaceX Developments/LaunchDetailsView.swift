@@ -37,7 +37,7 @@ struct LaunchDetailsView: View {
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
                             case .empty:
                                 ProgressView()
-                                    .controlSize(.large)
+                                    .controlSize(.regular)
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
                             @unknown default:
                                 EmptyView()

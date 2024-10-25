@@ -12,27 +12,27 @@ struct LaunchesView: View {
                 CountdownView(viewModel: viewModel)
                     .environmentObject(themeManager)
                     .listRowSeparator(.hidden)
-                    .padding(.horizontal, -16)
+                    .padding(.horizontal, -8)
                     .buttonStyle(.plain)
 
                 NextLaunchView(
                     viewModel: viewModel,
-                    selected: $launchId,
+                    launchId: $launchId,
                     preferredCompactColumn: $preferredColumn
                 )
                 .environmentObject(themeManager)
                 .listRowSeparator(.hidden)
-                .padding(.horizontal, -16)
+                .padding(.horizontal, -8)
                 .buttonStyle(.plain)
 
                 PreviousLaunchesView(
                     viewModel: viewModel,
-                    selected: $launchId,
+                    launchId: $launchId,
                     preferredCompactColumn: $preferredColumn
                 )
                 .environmentObject(themeManager)
                 .listRowSeparator(.hidden)
-                .padding(.horizontal, -16)
+                .padding(.horizontal, -8)
                 .buttonStyle(.plain)
             }
             .listStyle(.inset)
@@ -41,6 +41,19 @@ struct LaunchesView: View {
                 viewModel.getPreviousLaunches(ignoreCache: true)
             }
             .navigationTitle("Launches")
+            .onOpenURL { url in
+                guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                    debugPrint("Invalid URL: \(url.absoluteString)")
+                    return
+                }
+
+                if let id = urlComponents.queryItems?.first(where: { $0.name == "id" })?.value {
+                    launchId = id
+                    preferredColumn = .detail
+                } else {
+                    preferredColumn = .sidebar
+                }
+            }
         } detail: {
             ZStack {
                 if let id = Binding($launchId) {
