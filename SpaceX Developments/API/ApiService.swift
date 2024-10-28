@@ -1,7 +1,22 @@
 import Foundation
 
-final class ApiService: ObservableObject {
+final class ApiService: ObservableObject { // TODO: rewrite to use async await because we need to use await in refreshable
     let httpService: HttpService
+
+    let dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .custom { decoder in
+        let container = try decoder.singleValueContainer()
+        let dateString = try container.decode(String.self)
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime]
+
+        if let date = formatter.date(from: dateString) { return date }
+
+        formatter.formatOptions.insert(.withFractionalSeconds)
+
+        if let date = formatter.date(from: dateString) { return date }
+
+        throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string \(dateString)")
+    }
 
     init(httpService: HttpService) {
         self.httpService = httpService
@@ -13,10 +28,6 @@ final class ApiService: ObservableObject {
             method: .get,
             ignoreCache: ignoreCache
         ) { result in
-            if case let .failure(error) = result {
-                return completion(.failure(error))
-            }
-
             if case let .success(data) = result {
                 do {
                     if let dataAsJson = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
@@ -53,7 +64,7 @@ final class ApiService: ObservableObject {
                         let launchDetailsJsonData = try JSONSerialization.data(withJSONObject: launchDetailsJson, options: [])
 
                         let decoder = JSONDecoder()
-                        decoder.dateDecodingStrategy = .iso8601
+                        decoder.dateDecodingStrategy = self.dateDecodingStrategy
 
                         let launchDetails = try decoder.decode(LaunchDetails.self, from: launchDetailsJsonData)
                         completion(.success(launchDetails))
@@ -61,6 +72,10 @@ final class ApiService: ObservableObject {
                 } catch {
                     completion(.failure(AppError.decoding(error)))
                 }
+            }
+
+            if case let .failure(error) = result {
+                return completion(.failure(error))
             }
         }
     }
@@ -87,7 +102,7 @@ final class ApiService: ObservableObject {
                         let nextLaunchJsonData = try JSONSerialization.data(withJSONObject: nextLaunchJson)
 
                         let decoder = JSONDecoder()
-                        decoder.dateDecodingStrategy = .iso8601
+                        decoder.dateDecodingStrategy = self.dateDecodingStrategy
 
                         let nextLaunch = try decoder.decode(LaunchOverview.self, from: nextLaunchJsonData)
                         completion(.success(nextLaunch))
@@ -125,7 +140,7 @@ final class ApiService: ObservableObject {
                             let launchJsonData = try JSONSerialization.data(withJSONObject: launchJson)
 
                             let decoder = JSONDecoder()
-                            decoder.dateDecodingStrategy = .iso8601
+                            decoder.dateDecodingStrategy = self.dateDecodingStrategy
 
                             let launch = try decoder.decode(LaunchOverview.self, from: launchJsonData)
                             return launch
@@ -136,6 +151,64 @@ final class ApiService: ObservableObject {
                 } catch {
                     return completion(.failure(AppError.decoding(error)))
                 }
+            }
+
+            if case let .failure(error) = result {
+                return completion(.failure(error))
+            }
+        }
+    }
+
+    func getNewsArticles(limit: Int, ignoreCache: Bool, completion: @escaping (Result<[NewsArticle], AppError>) -> Void) {
+        httpService.request(
+            endpoint: .newsArticles(limit: limit),
+            method: .get,
+            ignoreCache: ignoreCache
+        ) { result in
+            if case let .success(data) = result {
+                do {
+                    if let dataAsJson = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary,
+                       let results = dataAsJson.value(forKey: "results") as? [NSDictionary]
+                    {
+                        let news: [NewsArticle] = try results.map { result in
+                            var newsArticleJson = [
+                                "id": result.value(forKey: "id"),
+                                "title": result.value(forKey: "title"),
+                                "newsUrl": result.value(forKey: "url"),
+                                "imageUrl": result.value(forKey: "image_url"),
+                                "newsSite": result.value(forKey: "news_site"),
+                                "summary": result.value(forKey: "summary"),
+                                "publishedAt": result.value(forKey: "published_at"),
+                                "updatedAt": result.value(forKey: "updated_at"),
+                                "featured": result.value(forKey: "featured"),
+                                "launches": result.value(forKey: "launches"),
+                            ]
+
+                            if let launches = result.value(forKey: "launches") as? [NSDictionary] {
+                                let ids = launches.map { launch in
+                                    launch.value(forKey: "launch_id")
+                                }
+                                newsArticleJson.merge(["launches": ids]) { _, new in new }
+                            }
+
+                            let newsArticleJsonData = try JSONSerialization.data(withJSONObject: newsArticleJson, options: [])
+
+                            let decoder = JSONDecoder()
+                            decoder.dateDecodingStrategy = self.dateDecodingStrategy
+
+                            let newsArticle = try decoder.decode(NewsArticle.self, from: newsArticleJsonData)
+                            return newsArticle
+                        }
+
+                        completion(.success(news))
+                    }
+                } catch {
+                    return completion(.failure(AppError.decoding(error)))
+                }
+            }
+
+            if case let .failure(error) = result {
+                return completion(.failure(error))
             }
         }
     }

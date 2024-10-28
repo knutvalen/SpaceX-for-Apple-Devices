@@ -34,6 +34,8 @@
 		CCD7DD982C9B044F004BD230 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD972C9B044F004BD230 /* MainTheme.swift */; };
 		CCDFD0D02CABCAAD009A9978 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */; };
 		CCDFD0D22CAC0FBC009A9978 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */; };
+		CCE345862CCBD9D80067A880 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE345852CCBD9D80067A880 /* NewsViewModel.swift */; };
+		CCE345882CCBDA380067A880 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE345872CCBDA380067A880 /* NewsArticle.swift */; };
 		CCF30AA72CB805A400DD06A1 /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF30AA62CB805A400DD06A1 /* PreviousLaunchesView.swift */; };
 		CCF30AA92CB805E500DD06A1 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */; };
 		CCF30AAB2CB8097400DD06A1 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF30AAA2CB8097400DD06A1 /* HttpService.swift */; };
@@ -96,6 +98,8 @@
 		CCDA0C532CCA1F6300B5CA67 /* SpaceX Developments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SpaceX Developments.entitlements"; sourceTree = "<group>"; };
 		CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
+		CCE345852CCBD9D80067A880 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		CCE345872CCBDA380067A880 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		CCF30AA62CB805A400DD06A1 /* PreviousLaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLaunchesView.swift; sourceTree = "<group>"; };
 		CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
 		CCF30AAA2CB8097400DD06A1 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */,
 				CC4260492C9C5D8C0084BB56 /* Webcast.swift */,
 				CC42604B2C9C5DA40084BB56 /* WebcastType.swift */,
+				CCE345872CCBDA380067A880 /* NewsArticle.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */,
 				CCD7DD972C9B044F004BD230 /* MainTheme.swift */,
 				CCFABF5C2CA96CD10016F435 /* NewsView.swift */,
+				CCE345852CCBD9D80067A880 /* NewsViewModel.swift */,
 				CCFABF5E2CA96D840016F435 /* NextLaunchView.swift */,
 				CCF30AA62CB805A400DD06A1 /* PreviousLaunchesView.swift */,
 				CC4F0DDB2C98346B00101B68 /* SpaceX_DevelopmentsApp.swift */,
@@ -381,6 +387,7 @@
 				CCA0AFBD2CAC10C600118BD0 /* LaunchDetails.swift in Sources */,
 				CC4260502C9C605F0084BB56 /* AppError.swift in Sources */,
 				CCDFD0D22CAC0FBC009A9978 /* LaunchDetailsView.swift in Sources */,
+				CCE345862CCBD9D80067A880 /* NewsViewModel.swift in Sources */,
 				CC3A72472CA6956F004A3A01 /* LaunchesView.swift in Sources */,
 				CCA588CB2CB7EF2900464DF7 /* Date+toLaunch.swift in Sources */,
 				CCF6C1B32CC140FA0095DB23 /* Endpoint.swift in Sources */,
@@ -398,6 +405,7 @@
 				CCA0AFBF2CAC196900118BD0 /* LaunchDetailsViewModel.swift in Sources */,
 				CC4FC6A22CA18274005EE4C1 /* HttpLogger.swift in Sources */,
 				CC4260482C9C5C140084BB56 /* DatePrecision.swift in Sources */,
+				CCE345882CCBDA380067A880 /* NewsArticle.swift in Sources */,
 				CCF6C1BB2CC6D2ED0095DB23 /* DetailMode.swift in Sources */,
 				CCF30AA92CB805E500DD06A1 /* NavigationDestination.swift in Sources */,
 				CCD7DD982C9B044F004BD230 /* MainTheme.swift in Sources */,

@@ -19,6 +19,7 @@ struct NextLaunchView: View {
                         launchId = launch.id
                         preferredCompactColumn = .detail
                     } label: {
+                        Image("rocket-template")
                         Text("Details")
                     }
                     .buttonStyle(.borderedProminent)

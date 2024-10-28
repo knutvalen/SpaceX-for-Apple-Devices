@@ -70,6 +70,6 @@ private func formatCountdown(timeInSeconds: Int) -> String {
 }
 
 #Preview {
-    CountdownView(viewModel: .init())
+    CountdownView(viewModel: LaunchViewModel())
         .environmentObject(ThemeManager())
 }
