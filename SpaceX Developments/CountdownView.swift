@@ -16,7 +16,7 @@ struct CountdownView: View {
 
                         if let timeInSeconds = viewModel.timeLeft {
                             Text(formatCountdown(timeInSeconds: timeInSeconds))
-                                .font(.largeTitle)
+                                .font(.title)
                                 .bold()
                         } else {
                             ProgressView()
