@@ -4,7 +4,7 @@ struct PreviousLaunchesView: View {
     @EnvironmentObject private var themeManager: ThemeManager
     @ObservedObject var viewModel: LaunchViewModel
     @Binding var launchId: String?
-    @Binding var preferredCompactColumn: NavigationSplitViewColumn
+    @Binding var preferredColumn: NavigationSplitViewColumn
 
     var body: some View {
         VStack(spacing: 24) {
@@ -33,7 +33,7 @@ struct PreviousLaunchesView: View {
                                 #if !os(watchOS)
                                     Button {
                                         launchId = launch.id
-                                        preferredCompactColumn = .detail
+                                        preferredColumn = .detail
                                     } label: {
                                         Image("rocket-template")
                                         Text("Details")
@@ -56,7 +56,7 @@ struct PreviousLaunchesView: View {
                             #if os(watchOS)
                                 Button {
                                     launchId = launch.id
-                                    preferredCompactColumn = .detail
+                                    preferredColumn = .detail
                                 } label: {
                                     Image("rocket-template")
                                     Text("Details")
@@ -101,7 +101,7 @@ struct PreviousLaunchesView: View {
     PreviousLaunchesView(
         viewModel: LaunchViewModel(),
         launchId: .constant(nil),
-        preferredCompactColumn: .constant(NavigationSplitViewColumn.sidebar)
+        preferredColumn: .constant(NavigationSplitViewColumn.sidebar)
     )
     .environmentObject(ThemeManager())
 }

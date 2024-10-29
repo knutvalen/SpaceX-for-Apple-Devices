@@ -4,7 +4,7 @@ struct NextLaunchView: View {
     @EnvironmentObject private var themeManager: ThemeManager
     @ObservedObject var viewModel: LaunchViewModel
     @Binding var launchId: String?
-    @Binding var preferredCompactColumn: NavigationSplitViewColumn
+    @Binding var preferredColumn: NavigationSplitViewColumn
 
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -17,7 +17,7 @@ struct NextLaunchView: View {
                     if let launch = viewModel.nextLaunch {
                         Button {
                             launchId = launch.id
-                            preferredCompactColumn = .detail
+                            preferredColumn = .detail
                         } label: {
                             Image("rocket-template")
                             Text("Details")
@@ -55,7 +55,7 @@ struct NextLaunchView: View {
                         if let launch = viewModel.nextLaunch {
                             Button {
                                 launchId = launch.id
-                                preferredCompactColumn = .detail
+                                preferredColumn = .detail
                             } label: {
                                 Image("rocket-template")
                                 Text("Details")
@@ -90,7 +90,7 @@ struct NextLaunchView: View {
     NextLaunchView(
         viewModel: LaunchViewModel(),
         launchId: .constant(nil),
-        preferredCompactColumn: .constant(NavigationSplitViewColumn.sidebar)
+        preferredColumn: .constant(NavigationSplitViewColumn.sidebar)
     )
     .environmentObject(ThemeManager())
 }

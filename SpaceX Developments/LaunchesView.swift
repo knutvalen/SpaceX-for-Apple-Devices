@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct LaunchesView: View {
-    private var themeManager = ThemeManager()
+    @EnvironmentObject private var themeManager: ThemeManager
     @ObservedObject private var viewModel = LaunchViewModel()
-    @State private var launchId: String?
-    @State private var preferredColumn = NavigationSplitViewColumn.sidebar
+    @Binding var launchId: String?
+    @Binding var preferredColumn: NavigationSplitViewColumn
 
     var body: some View {
         NavigationSplitView(preferredCompactColumn: $preferredColumn) {
@@ -20,7 +20,7 @@ struct LaunchesView: View {
                 NextLaunchView(
                     viewModel: viewModel,
                     launchId: $launchId,
-                    preferredCompactColumn: $preferredColumn
+                    preferredColumn: $preferredColumn
                 )
                 .environmentObject(themeManager)
                 #if !os(watchOS)
@@ -32,7 +32,7 @@ struct LaunchesView: View {
                 PreviousLaunchesView(
                     viewModel: viewModel,
                     launchId: $launchId,
-                    preferredCompactColumn: $preferredColumn
+                    preferredColumn: $preferredColumn
                 )
                 .environmentObject(themeManager)
                 #if !os(watchOS)
@@ -49,19 +49,6 @@ struct LaunchesView: View {
                 viewModel.getPreviousLaunches(ignoreCache: true)
             }
             .navigationTitle("Launches")
-            .onOpenURL { url in
-                guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-                    debugPrint("Invalid URL: \(url.absoluteString)")
-                    return
-                }
-
-                if let id = urlComponents.queryItems?.first(where: { $0.name == "id" })?.value {
-                    launchId = id
-                    preferredColumn = .detail
-                } else if urlComponents.path.isEmpty {
-                    preferredColumn = .sidebar
-                }
-            }
         } detail: {
             ZStack {
                 if let id = Binding($launchId) {
@@ -75,6 +62,9 @@ struct LaunchesView: View {
 }
 
 #Preview {
-    LaunchesView()
-        .environmentObject(ThemeManager())
+    LaunchesView(
+        launchId: .constant(nil),
+        preferredColumn: .constant(NavigationSplitViewColumn.sidebar)
+    )
+    .environmentObject(ThemeManager())
 }
