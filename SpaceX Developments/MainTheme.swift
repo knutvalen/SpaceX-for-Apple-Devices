@@ -9,4 +9,6 @@ struct MainTheme: ThemeProtocol {
     var cardColor: Color { return Color("cardColor") }
 
     var listDividerColor: Color { return Color("listDividerColor") }
+    
+    var rocketBackground: Color { return Color("rocketBackground") }
 }
