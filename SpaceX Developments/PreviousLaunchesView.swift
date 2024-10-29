@@ -30,15 +30,16 @@ struct PreviousLaunchesView: View {
                                 }
 
                                 Spacer()
-
-                                Button {
-                                    launchId = launch.id
-                                    preferredCompactColumn = .detail
-                                } label: {
-                                    Image("rocket-template")
-                                    Text("Details")
-                                }
-                                .buttonStyle(.borderedProminent)
+                                #if !os(watchOS)
+                                    Button {
+                                        launchId = launch.id
+                                        preferredCompactColumn = .detail
+                                    } label: {
+                                        Image("rocket-template")
+                                        Text("Details")
+                                    }
+                                    .buttonStyle(.borderedProminent)
+                                #endif
                             }
 
                             if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
@@ -51,12 +52,27 @@ struct PreviousLaunchesView: View {
                                         .fixedSize(horizontal: false, vertical: true)
                                 }
                             }
+
+                            #if os(watchOS)
+                                Button {
+                                    launchId = launch.id
+                                    preferredCompactColumn = .detail
+                                } label: {
+                                    Image("rocket-template")
+                                    Text("Details")
+                                }
+                                .buttonStyle(.borderedProminent)
+                            #endif
                         }
-                        .padding(.bottom, 24)
+                        #if !os(watchOS)
                         .background(themeManager.selectedTheme.cardColor)
+                        #endif
                     }
-                    .padding(.bottom, 1)
+                    #if !os(watchOS)
                     .background(themeManager.selectedTheme.listDividerColor)
+                    #endif
+
+                    Divider()
                 }
             } else {
                 HStack {
@@ -69,11 +85,15 @@ struct PreviousLaunchesView: View {
                 }
             }
         }
+        #if !os(watchOS)
         .padding(16)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
         .frame(maxHeight: .infinity)
+        #else
+        .padding(8)
+        #endif
     }
 }
 

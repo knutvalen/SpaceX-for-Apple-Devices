@@ -13,17 +13,18 @@ struct NextLaunchView: View {
                     .font(.title2)
 
                 Spacer()
-
-                if let launch = viewModel.nextLaunch {
-                    Button {
-                        launchId = launch.id
-                        preferredCompactColumn = .detail
-                    } label: {
-                        Image("rocket-template")
-                        Text("Details")
+                #if !os(watchOS)
+                    if let launch = viewModel.nextLaunch {
+                        Button {
+                            launchId = launch.id
+                            preferredCompactColumn = .detail
+                        } label: {
+                            Image("rocket-template")
+                            Text("Details")
+                        }
+                        .buttonStyle(.borderedProminent)
                     }
-                    .buttonStyle(.borderedProminent)
-                }
+                #endif
             }
 
             if let launch = viewModel.nextLaunch {
@@ -49,6 +50,19 @@ struct NextLaunchView: View {
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                     }
+
+                    #if os(watchOS)
+                        if let launch = viewModel.nextLaunch {
+                            Button {
+                                launchId = launch.id
+                                preferredCompactColumn = .detail
+                            } label: {
+                                Image("rocket-template")
+                                Text("Details")
+                            }
+                            .buttonStyle(.borderedProminent)
+                        }
+                    #endif
                 }
             } else {
                 HStack {
@@ -61,10 +75,14 @@ struct NextLaunchView: View {
                 }
             }
         }
+        #if !os(watchOS)
         .padding(16)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
+        #else
+        .padding(8)
+        #endif
     }
 }
 

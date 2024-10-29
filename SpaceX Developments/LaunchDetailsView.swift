@@ -6,7 +6,11 @@ struct LaunchDetailsView: View {
     @Environment(\.openURL) private var openURL
 
     private func minWidthClamp() -> CGFloat {
-        let calc = UIScreen.main.bounds.width - 80
+        #if !os(watchOS)
+            let calc = UIScreen.main.bounds.width - 80
+        #else
+            let calc: CGFloat = WKInterfaceDevice().screenBounds.width
+        #endif
 
         if calc < 300 {
             return calc
@@ -29,7 +33,9 @@ struct LaunchDetailsView: View {
                             case let .success(image):
                                 image.resizable()
                                     .aspectRatio(contentMode: .fit)
+                                #if !os(watchOS)
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
+                                #endif
 
                             case .failure:
                                 EmptyView()
@@ -37,7 +43,9 @@ struct LaunchDetailsView: View {
                             case .empty:
                                 ProgressView()
                                     .controlSize(.regular)
+                                #if !os(watchOS)
                                     .frame(width: minWidthClamp(), height: minWidthClamp())
+                                #endif
 
                             @unknown default:
                                 EmptyView()
@@ -48,35 +56,43 @@ struct LaunchDetailsView: View {
                     }
                 }
 
-                HStack(alignment: .top) {
+                VStack(alignment: .leading) {
                     Text("Name")
-                    Spacer()
+                        .font(.headline)
+
                     Text(launch.name)
+                        .font(.subheadline)
                 }
 
-                HStack(alignment: .top) {
+                VStack(alignment: .leading) {
                     Text("Status")
-                    Spacer()
+                        .font(.headline)
+
                     Text(launch.status.name)
+                        .font(.subheadline)
                 }
 
                 if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
-                    HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
                         Text("Launch date")
-                        Spacer()
+                            .font(.headline)
+
                         Text(launchDate)
+                            .font(.subheadline)
                     }
 
-                    HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
                         Text("Launch date precision")
-                        Spacer()
+                            .font(.headline)
+
                         Text(launch.netPrecision.rawValue)
+                            .font(.subheadline)
                     }
                 }
 
-                HStack(alignment: .top) {
+                VStack(alignment: .leading) {
                     Text("Webcasts")
-                    Spacer()
+                        .font(.headline)
 
                     if launch.webcasts.isEmpty {
                         Text("No webcasts available")
@@ -103,35 +119,44 @@ struct LaunchDetailsView: View {
                     }
                 }
 
-                HStack(alignment: .top) {
+                VStack(alignment: .leading) {
                     Text("Mission name")
-                    Spacer()
+                        .font(.headline)
+
                     Text(launch.mission.name)
+                        .font(.subheadline)
                 }
 
-                HStack(alignment: .top) {
+                VStack(alignment: .leading) {
                     Text("Mission type")
-                    Spacer()
+                        .font(.headline)
+
                     Text(launch.mission.type)
+                        .font(.subheadline)
                 }
 
                 if let missionDescription = launch.mission.description {
-                    HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
                         Text("Mission description")
-                        Spacer()
+                            .font(.headline)
+
                         Text(missionDescription)
+                            .font(.subheadline)
                     }
                 }
 
-                HStack(alignment: .top) {
+                VStack(alignment: .leading) {
                     Text("Orbit")
-                    Spacer()
+                        .font(.headline)
+
                     Text(launch.mission.orbit)
+                        .font(.subheadline)
                 }
 
-                HStack(alignment: .top) {
+                VStack(alignment: .leading) {
                     Text("Details updated")
-                    Spacer()
+                        .font(.headline)
+
                     Text(
                         Date.RelativeFormatStyle(
                             presentation: .named,
@@ -139,9 +164,12 @@ struct LaunchDetailsView: View {
                         )
                         .format(launch.lastUpdated)
                     )
+                    .font(.subheadline)
                 }
             }
+            #if !os(watchOS)
             .listStyle(.inset)
+            #endif
             .refreshable {
                 viewModel.getLaunchDetails(for: launchId, ignoreCache: true)
             }
@@ -161,5 +189,7 @@ struct LaunchDetailsView: View {
 }
 
 #Preview {
-    LaunchDetailsView(launchId: .constant("9d576892-dcf0-472b-92d1-37053ff549ab"))
+    LaunchDetailsView(
+        launchId: .constant("9d576892-dcf0-472b-92d1-37053ff549ab")
+    )
 }
