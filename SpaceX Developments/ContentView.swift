@@ -13,7 +13,7 @@ struct ContentView: View {
             Tab("Launches", image: "rocket-template", value: Selection.launches) {
                 LaunchesView()
             }
-            Tab("News", systemImage: "newspaper", value: Selection.launches) {
+            Tab("News", systemImage: "newspaper", value: Selection.news) {
                 NewsView()
             }
         }
