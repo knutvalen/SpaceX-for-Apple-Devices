@@ -11,9 +11,11 @@ struct LaunchesView: View {
             List {
                 CountdownView(viewModel: viewModel)
                     .environmentObject(themeManager)
+                #if !os(watchOS)
                     .listRowSeparator(.hidden)
+                #endif
                     .padding(.horizontal, -8)
-                    .buttonStyle(.plain)
+                    .buttonStyle(.plain) // TODO: remove?
 
                 NextLaunchView(
                     viewModel: viewModel,
@@ -21,9 +23,11 @@ struct LaunchesView: View {
                     preferredCompactColumn: $preferredColumn
                 )
                 .environmentObject(themeManager)
-                .listRowSeparator(.hidden)
-                .padding(.horizontal, -8)
-                .buttonStyle(.plain)
+                #if !os(watchOS)
+                    .listRowSeparator(.hidden)
+                #endif
+                    .padding(.horizontal, -8)
+                    .buttonStyle(.plain)
 
                 PreviousLaunchesView(
                     viewModel: viewModel,
@@ -31,11 +35,15 @@ struct LaunchesView: View {
                     preferredCompactColumn: $preferredColumn
                 )
                 .environmentObject(themeManager)
-                .listRowSeparator(.hidden)
-                .padding(.horizontal, -8)
-                .buttonStyle(.plain)
+                #if !os(watchOS)
+                    .listRowSeparator(.hidden)
+                #endif
+                    .padding(.horizontal, -8)
+                    .buttonStyle(.plain)
             }
+            #if !os(watchOS)
             .listStyle(.inset)
+            #endif
             .refreshable {
                 viewModel.getNextLaunch(ignoreCache: true)
                 viewModel.getPreviousLaunches(ignoreCache: true)

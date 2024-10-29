@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,40 @@
 		CCD7DD942C9B0340004BD230 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */; };
 		CCD7DD962C9B040A004BD230 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD952C9B040A004BD230 /* ThemeManager.swift */; };
 		CCD7DD982C9B044F004BD230 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD972C9B044F004BD230 /* MainTheme.swift */; };
+		CCDF320F2CD0ED0B00212F62 /* Watch SpaceX Developments Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CCDF31EC2CD0ED0900212F62 /* Watch SpaceX Developments Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CCDF321D2CD0F0A400212F62 /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42604B2C9C5DA40084BB56 /* WebcastType.swift */; };
+		CCDF321E2CD0F0A400212F62 /* DatePrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4260472C9C5C140084BB56 /* DatePrecision.swift */; };
+		CCDF321F2CD0F0A400212F62 /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4260452C9C5AB90084BB56 /* LaunchOverview.swift */; };
+		CCDF32202CD0F0A400212F62 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42604D2C9C5FA60084BB56 /* ApiService.swift */; };
+		CCDF32212CD0F0A400212F62 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */; };
+		CCDF32222CD0F0A400212F62 /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4260492C9C5D8C0084BB56 /* Webcast.swift */; };
+		CCDF32232CD0F0A400212F62 /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0AFBE2CAC196900118BD0 /* LaunchDetailsViewModel.swift */; };
+		CCDF32262CD0F0A400212F62 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */; };
+		CCDF32272CD0F0A400212F62 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11697A2C9DB9E3003E86B7 /* BuildConfiguration.swift */; };
+		CCDF32282CD0F0A400212F62 /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF30AA62CB805A400DD06A1 /* PreviousLaunchesView.swift */; };
+		CCDF32292CD0F0A400212F62 /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABF5E2CA96D840016F435 /* NextLaunchView.swift */; };
+		CCDF322A2CD0F0A400212F62 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF30AAA2CB8097400DD06A1 /* HttpService.swift */; };
+		CCDF322D2CD0F0A400212F62 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6C1B02CC121320095DB23 /* AppState.swift */; };
+		CCDF322E2CD0F0A400212F62 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE345852CCBD9D80067A880 /* NewsViewModel.swift */; };
+		CCDF322F2CD0F0A400212F62 /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4FC6A12CA18274005EE4C1 /* HttpLogger.swift */; };
+		CCDF32302CD0F0A400212F62 /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */; };
+		CCDF32312CD0F0A400212F62 /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA588CA2CB7EF2900464DF7 /* Date+toLaunch.swift */; };
+		CCDF32322CD0F0A400212F62 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */; };
+		CCDF32332CD0F0A400212F62 /* SpaceX_DevelopmentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F0DDB2C98346B00101B68 /* SpaceX_DevelopmentsApp.swift */; };
+		CCDF32342CD0F0A400212F62 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6C1B22CC140FA0095DB23 /* Endpoint.swift */; };
+		CCDF32352CD0F0A400212F62 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42604F2C9C605F0084BB56 /* AppError.swift */; };
+		CCDF32362CD0F0A400212F62 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD952C9B040A004BD230 /* ThemeManager.swift */; };
+		CCDF32372CD0F0A400212F62 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4FC69B2CA156DB005EE4C1 /* HTTPMethod.swift */; };
+		CCDF32392CD0F0A400212F62 /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6C1BA2CC6D2ED0095DB23 /* DetailMode.swift */; };
+		CCDF323A2CD0F0A400212F62 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE345872CCBDA380067A880 /* NewsArticle.swift */; };
+		CCDF323B2CD0F0A400212F62 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7DD972C9B044F004BD230 /* MainTheme.swift */; };
+		CCDF323C2CD0F0A400212F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4F0DDF2C98346C00101B68 /* Assets.xcassets */; };
+		CCDF323D2CD0F0A400212F62 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD7DD912C9B02B4004BD230 /* Colors.xcassets */; };
+		CCDF32462CD0F72100212F62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F0DDD2C98346B00101B68 /* ContentView.swift */; };
+		CCDF32492CD0FB0A00212F62 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3A72462CA6956F004A3A01 /* LaunchesView.swift */; };
+		CCDF324A2CD0FB1500212F62 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F0E062C995BC900101B68 /* CountdownView.swift */; };
+		CCDF324B2CD0FB2C00212F62 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABF5C2CA96CD10016F435 /* NewsView.swift */; };
+		CCDF324F2CD101C800212F62 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */; };
 		CCDFD0D02CABCAAD009A9978 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */; };
 		CCDFD0D22CAC0FBC009A9978 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */; };
 		CCE345862CCBD9D80067A880 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE345852CCBD9D80067A880 /* NewsViewModel.swift */; };
@@ -61,54 +95,98 @@
 			remoteGlobalIDString = CC4F0DD72C98346B00101B68;
 			remoteInfo = "SpaceX Launches";
 		};
+		CCDF31FC2CD0ED0B00212F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC4F0DD02C98346B00101B68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDF31EB2CD0ED0900212F62;
+			remoteInfo = "Watch SpaceX Developments Watch App";
+		};
+		CCDF32062CD0ED0B00212F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC4F0DD02C98346B00101B68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDF31EB2CD0ED0900212F62;
+			remoteInfo = "Watch SpaceX Developments Watch App";
+		};
+		CCDF320D2CD0ED0B00212F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC4F0DD02C98346B00101B68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDF31EB2CD0ED0900212F62;
+			remoteInfo = "Watch SpaceX Developments Watch App";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CCDF32102CD0ED0B00212F62 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CCDF320F2CD0ED0B00212F62 /* Watch SpaceX Developments Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		CC11697A2C9DB9E3003E86B7 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
-		CC3A72462CA6956F004A3A01 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
-		CC4260452C9C5AB90084BB56 /* LaunchOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOverview.swift; sourceTree = "<group>"; };
-		CC4260472C9C5C140084BB56 /* DatePrecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePrecision.swift; sourceTree = "<group>"; };
-		CC4260492C9C5D8C0084BB56 /* Webcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webcast.swift; sourceTree = "<group>"; };
-		CC42604B2C9C5DA40084BB56 /* WebcastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcastType.swift; sourceTree = "<group>"; };
-		CC42604D2C9C5FA60084BB56 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		CC42604F2C9C605F0084BB56 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		CC11697A2C9DB9E3003E86B7 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BuildConfiguration.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/BuildConfiguration.swift"; sourceTree = "<absolute>"; };
+		CC3A72462CA6956F004A3A01 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchesView.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/LaunchesView.swift"; sourceTree = "<absolute>"; };
+		CC4260452C9C5AB90084BB56 /* LaunchOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchOverview.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/LaunchOverview.swift"; sourceTree = "<absolute>"; };
+		CC4260472C9C5C140084BB56 /* DatePrecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatePrecision.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/DatePrecision.swift"; sourceTree = "<absolute>"; };
+		CC4260492C9C5D8C0084BB56 /* Webcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Webcast.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/Webcast.swift"; sourceTree = "<absolute>"; };
+		CC42604B2C9C5DA40084BB56 /* WebcastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebcastType.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/WebcastType.swift"; sourceTree = "<absolute>"; };
+		CC42604D2C9C5FA60084BB56 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/API/ApiService.swift"; sourceTree = "<absolute>"; };
+		CC42604F2C9C605F0084BB56 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppError.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/AppError.swift"; sourceTree = "<absolute>"; };
 		CC4F0DD82C98346B00101B68 /* SpaceX Developments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Developments.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC4F0DDB2C98346B00101B68 /* SpaceX_DevelopmentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_DevelopmentsApp.swift; sourceTree = "<group>"; };
-		CC4F0DDD2C98346B00101B68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CC4F0DDF2C98346C00101B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC4F0DDB2C98346B00101B68 /* SpaceX_DevelopmentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpaceX_DevelopmentsApp.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/SpaceX_DevelopmentsApp.swift"; sourceTree = "<absolute>"; };
+		CC4F0DDD2C98346B00101B68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/ContentView.swift"; sourceTree = "<absolute>"; };
+		CC4F0DDF2C98346C00101B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/Assets.xcassets"; sourceTree = "<absolute>"; };
 		CC4F0DE22C98346C00101B68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC4F0DE82C98346C00101B68 /* SpaceX DevelopmentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpaceX DevelopmentsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4F0DEC2C98346C00101B68 /* SpaceX_LaunchesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_LaunchesTests.swift; sourceTree = "<group>"; };
 		CC4F0DF22C98346C00101B68 /* SpaceX DevelopmentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpaceX DevelopmentsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4F0DF62C98346C00101B68 /* SpaceX_LaunchesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_LaunchesUITests.swift; sourceTree = "<group>"; };
 		CC4F0DF82C98346C00101B68 /* SpaceX_LaunchesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_LaunchesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CC4F0E062C995BC900101B68 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		CC4F0E062C995BC900101B68 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountdownView.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/CountdownView.swift"; sourceTree = "<absolute>"; };
 		CC4FC69A2CA14E39005EE4C1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		CC4FC69B2CA156DB005EE4C1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		CC4FC6A12CA18274005EE4C1 /* HttpLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpLogger.swift; sourceTree = "<group>"; };
+		CC4FC69B2CA156DB005EE4C1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/HTTPMethod.swift"; sourceTree = "<absolute>"; };
+		CC4FC6A12CA18274005EE4C1 /* HttpLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HttpLogger.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/API/HttpLogger.swift"; sourceTree = "<absolute>"; };
 		CC4FC6A32CA29E2A005EE4C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetails.swift; sourceTree = SOURCE_ROOT; };
-		CCA0AFBE2CAC196900118BD0 /* LaunchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModel.swift; sourceTree = "<group>"; };
-		CCA588CA2CB7EF2900464DF7 /* Date+toLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toLaunch.swift"; sourceTree = "<group>"; };
-		CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SpaceX-Developments-Info.plist"; sourceTree = SOURCE_ROOT; };
-		CCD7DD912C9B02B4004BD230 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
-		CCD7DD952C9B040A004BD230 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		CCD7DD972C9B044F004BD230 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
-		CCDA0C532CCA1F6300B5CA67 /* SpaceX Developments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SpaceX Developments.entitlements"; sourceTree = "<group>"; };
-		CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
-		CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
-		CCE345852CCBD9D80067A880 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
-		CCE345872CCBDA380067A880 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
-		CCF30AA62CB805A400DD06A1 /* PreviousLaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLaunchesView.swift; sourceTree = "<group>"; };
-		CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
-		CCF30AAA2CB8097400DD06A1 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
-		CCF6C1B02CC121320095DB23 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		CCF6C1B22CC140FA0095DB23 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		CCF6C1BA2CC6D2ED0095DB23 /* DetailMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMode.swift; sourceTree = "<group>"; };
-		CCFABF5C2CA96CD10016F435 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		CCFABF5E2CA96D840016F435 /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchView.swift; sourceTree = "<group>"; };
+		CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchDetails.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/LaunchDetails.swift"; sourceTree = "<absolute>"; };
+		CCA0AFBE2CAC196900118BD0 /* LaunchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchDetailsViewModel.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/LaunchDetailsViewModel.swift"; sourceTree = "<absolute>"; };
+		CCA588CA2CB7EF2900464DF7 /* Date+toLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Date+toLaunch.swift"; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/extensions/Date+toLaunch.swift"; sourceTree = "<absolute>"; };
+		CCB4D7C92CA5A9B50017D16F /* SpaceX-Developments-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SpaceX-Developments-Info.plist"; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX-Developments-Info.plist"; sourceTree = "<absolute>"; };
+		CCD7DD912C9B02B4004BD230 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/Colors.xcassets"; sourceTree = "<absolute>"; };
+		CCD7DD932C9B0340004BD230 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThemeProtocol.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/ThemeProtocol.swift"; sourceTree = "<absolute>"; };
+		CCD7DD952C9B040A004BD230 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThemeManager.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/ThemeManager.swift"; sourceTree = "<absolute>"; };
+		CCD7DD972C9B044F004BD230 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTheme.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/MainTheme.swift"; sourceTree = "<absolute>"; };
+		CCDA0C532CCA1F6300B5CA67 /* SpaceX Developments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "SpaceX Developments.entitlements"; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/SpaceX Developments.entitlements"; sourceTree = "<absolute>"; };
+		CCDF31EC2CD0ED0900212F62 /* Watch SpaceX Developments Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch SpaceX Developments Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDF31FB2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Watch SpaceX Developments Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDF32052CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Watch SpaceX Developments Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchViewModel.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/LaunchViewModel.swift"; sourceTree = "<absolute>"; };
+		CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchDetailsView.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/LaunchDetailsView.swift"; sourceTree = "<absolute>"; };
+		CCE345852CCBD9D80067A880 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsViewModel.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/NewsViewModel.swift"; sourceTree = "<absolute>"; };
+		CCE345872CCBDA380067A880 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsArticle.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/NewsArticle.swift"; sourceTree = "<absolute>"; };
+		CCF30AA62CB805A400DD06A1 /* PreviousLaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreviousLaunchesView.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/PreviousLaunchesView.swift"; sourceTree = "<absolute>"; };
+		CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationDestination.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/NavigationDestination.swift"; sourceTree = "<absolute>"; };
+		CCF30AAA2CB8097400DD06A1 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HttpService.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/API/HttpService.swift"; sourceTree = "<absolute>"; };
+		CCF6C1B02CC121320095DB23 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/AppState.swift"; sourceTree = "<absolute>"; };
+		CCF6C1B22CC140FA0095DB23 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/API/Endpoint.swift"; sourceTree = "<absolute>"; };
+		CCF6C1BA2CC6D2ED0095DB23 /* DetailMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailMode.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/models/DetailMode.swift"; sourceTree = "<absolute>"; };
+		CCFABF5C2CA96CD10016F435 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsView.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/NewsView.swift"; sourceTree = "<absolute>"; };
+		CCFABF5E2CA96D840016F435 /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextLaunchView.swift; path = "/Users/knutvalen/Code/SpaceX-for-Apple-Devices/SpaceX Developments/NextLaunchView.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CCDF31ED2CD0ED0A00212F62 /* Watch SpaceX Developments Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Watch SpaceX Developments Watch App"; sourceTree = "<group>"; };
+		CCDF31FE2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Watch SpaceX Developments Watch AppTests"; sourceTree = "<group>"; };
+		CCDF32082CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Watch SpaceX Developments Watch AppUITests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC4F0DD52C98346B00101B68 /* Frameworks */ = {
@@ -132,6 +210,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCDF31E92CD0ED0900212F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDF31F82CD0ED0B00212F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDF32022CD0ED0B00212F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,9 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				CC42604D2C9C5FA60084BB56 /* ApiService.swift */,
+				CCF6C1B22CC140FA0095DB23 /* Endpoint.swift */,
 				CC4FC6A12CA18274005EE4C1 /* HttpLogger.swift */,
 				CCF30AAA2CB8097400DD06A1 /* HttpService.swift */,
-				CCF6C1B22CC140FA0095DB23 /* Endpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -157,9 +256,9 @@
 				CCA0AFBC2CAC10C600118BD0 /* LaunchDetails.swift */,
 				CC4260452C9C5AB90084BB56 /* LaunchOverview.swift */,
 				CCF30AA82CB805E500DD06A1 /* NavigationDestination.swift */,
+				CCE345872CCBDA380067A880 /* NewsArticle.swift */,
 				CC4260492C9C5D8C0084BB56 /* Webcast.swift */,
 				CC42604B2C9C5DA40084BB56 /* WebcastType.swift */,
-				CCE345872CCBDA380067A880 /* NewsArticle.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -173,6 +272,9 @@
 				CC4F0DDA2C98346B00101B68 /* SpaceX Developments */,
 				CC4F0DEB2C98346C00101B68 /* SpaceX DevelopmentsTests */,
 				CC4F0DF52C98346C00101B68 /* SpaceX DevelopmentsUITests */,
+				CCDF31ED2CD0ED0A00212F62 /* Watch SpaceX Developments Watch App */,
+				CCDF31FE2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests */,
+				CCDF32082CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +284,9 @@
 				CC4F0DD82C98346B00101B68 /* SpaceX Developments.app */,
 				CC4F0DE82C98346C00101B68 /* SpaceX DevelopmentsTests.xctest */,
 				CC4F0DF22C98346C00101B68 /* SpaceX DevelopmentsUITests.xctest */,
+				CCDF31EC2CD0ED0900212F62 /* Watch SpaceX Developments Watch App.app */,
+				CCDF31FB2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests.xctest */,
+				CCDF32052CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,10 +364,12 @@
 				CC4F0DD42C98346B00101B68 /* Sources */,
 				CC4F0DD52C98346B00101B68 /* Frameworks */,
 				CC4F0DD62C98346B00101B68 /* Resources */,
+				CCDF32102CD0ED0B00212F62 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CCDF320E2CD0ED0B00212F62 /* PBXTargetDependency */,
 			);
 			name = "SpaceX Developments";
 			productName = "SpaceX Launches";
@@ -305,6 +412,74 @@
 			productReference = CC4F0DF22C98346C00101B68 /* SpaceX DevelopmentsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CCDF31EB2CD0ED0900212F62 /* Watch SpaceX Developments Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCDF321A2CD0ED0B00212F62 /* Build configuration list for PBXNativeTarget "Watch SpaceX Developments Watch App" */;
+			buildPhases = (
+				CCDF31E82CD0ED0900212F62 /* Sources */,
+				CCDF31E92CD0ED0900212F62 /* Frameworks */,
+				CCDF31EA2CD0ED0900212F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CCDF31ED2CD0ED0A00212F62 /* Watch SpaceX Developments Watch App */,
+			);
+			name = "Watch SpaceX Developments Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Watch SpaceX Developments Watch App";
+			productReference = CCDF31EC2CD0ED0900212F62 /* Watch SpaceX Developments Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCDF31FA2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCDF321B2CD0ED0B00212F62 /* Build configuration list for PBXNativeTarget "Watch SpaceX Developments Watch AppTests" */;
+			buildPhases = (
+				CCDF31F72CD0ED0B00212F62 /* Sources */,
+				CCDF31F82CD0ED0B00212F62 /* Frameworks */,
+				CCDF31F92CD0ED0B00212F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCDF31FD2CD0ED0B00212F62 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CCDF31FE2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests */,
+			);
+			name = "Watch SpaceX Developments Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Watch SpaceX Developments Watch AppTests";
+			productReference = CCDF31FB2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCDF32042CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCDF321C2CD0ED0B00212F62 /* Build configuration list for PBXNativeTarget "Watch SpaceX Developments Watch AppUITests" */;
+			buildPhases = (
+				CCDF32012CD0ED0B00212F62 /* Sources */,
+				CCDF32022CD0ED0B00212F62 /* Frameworks */,
+				CCDF32032CD0ED0B00212F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCDF32072CD0ED0B00212F62 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CCDF32082CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests */,
+			);
+			name = "Watch SpaceX Developments Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Watch SpaceX Developments Watch AppUITests";
+			productReference = CCDF32052CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,7 +487,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					CC4F0DD72C98346B00101B68 = {
@@ -325,6 +500,17 @@
 					CC4F0DF12C98346C00101B68 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = CC4F0DD72C98346B00101B68;
+					};
+					CCDF31EB2CD0ED0900212F62 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					CCDF31FA2CD0ED0B00212F62 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CCDF31EB2CD0ED0900212F62;
+					};
+					CCDF32042CD0ED0B00212F62 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CCDF31EB2CD0ED0900212F62;
 					};
 				};
 			};
@@ -344,6 +530,9 @@
 				CC4F0DD72C98346B00101B68 /* SpaceX Developments */,
 				CC4F0DE72C98346C00101B68 /* SpaceX DevelopmentsTests */,
 				CC4F0DF12C98346C00101B68 /* SpaceX DevelopmentsUITests */,
+				CCDF31EB2CD0ED0900212F62 /* Watch SpaceX Developments Watch App */,
+				CCDF31FA2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests */,
+				CCDF32042CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,6 +556,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CC4F0DF02C98346C00101B68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDF31EA2CD0ED0900212F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDF323C2CD0F0A400212F62 /* Assets.xcassets in Resources */,
+				CCDF323D2CD0F0A400212F62 /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDF31F92CD0ED0B00212F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDF32032CD0ED0B00212F62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,6 +643,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCDF31E82CD0ED0900212F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDF324F2CD101C800212F62 /* LaunchDetailsView.swift in Sources */,
+				CCDF321D2CD0F0A400212F62 /* WebcastType.swift in Sources */,
+				CCDF321E2CD0F0A400212F62 /* DatePrecision.swift in Sources */,
+				CCDF32462CD0F72100212F62 /* ContentView.swift in Sources */,
+				CCDF324B2CD0FB2C00212F62 /* NewsView.swift in Sources */,
+				CCDF32492CD0FB0A00212F62 /* LaunchesView.swift in Sources */,
+				CCDF321F2CD0F0A400212F62 /* LaunchOverview.swift in Sources */,
+				CCDF32202CD0F0A400212F62 /* ApiService.swift in Sources */,
+				CCDF32212CD0F0A400212F62 /* ThemeProtocol.swift in Sources */,
+				CCDF32222CD0F0A400212F62 /* Webcast.swift in Sources */,
+				CCDF32232CD0F0A400212F62 /* LaunchDetailsViewModel.swift in Sources */,
+				CCDF32262CD0F0A400212F62 /* LaunchViewModel.swift in Sources */,
+				CCDF32272CD0F0A400212F62 /* BuildConfiguration.swift in Sources */,
+				CCDF32282CD0F0A400212F62 /* PreviousLaunchesView.swift in Sources */,
+				CCDF32292CD0F0A400212F62 /* NextLaunchView.swift in Sources */,
+				CCDF322A2CD0F0A400212F62 /* HttpService.swift in Sources */,
+				CCDF324A2CD0FB1500212F62 /* CountdownView.swift in Sources */,
+				CCDF322D2CD0F0A400212F62 /* AppState.swift in Sources */,
+				CCDF322E2CD0F0A400212F62 /* NewsViewModel.swift in Sources */,
+				CCDF322F2CD0F0A400212F62 /* HttpLogger.swift in Sources */,
+				CCDF32302CD0F0A400212F62 /* LaunchDetails.swift in Sources */,
+				CCDF32312CD0F0A400212F62 /* Date+toLaunch.swift in Sources */,
+				CCDF32322CD0F0A400212F62 /* NavigationDestination.swift in Sources */,
+				CCDF32332CD0F0A400212F62 /* SpaceX_DevelopmentsApp.swift in Sources */,
+				CCDF32342CD0F0A400212F62 /* Endpoint.swift in Sources */,
+				CCDF32352CD0F0A400212F62 /* AppError.swift in Sources */,
+				CCDF32362CD0F0A400212F62 /* ThemeManager.swift in Sources */,
+				CCDF32372CD0F0A400212F62 /* HTTPMethod.swift in Sources */,
+				CCDF32392CD0F0A400212F62 /* DetailMode.swift in Sources */,
+				CCDF323A2CD0F0A400212F62 /* NewsArticle.swift in Sources */,
+				CCDF323B2CD0F0A400212F62 /* MainTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDF31F72CD0ED0B00212F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDF32012CD0ED0B00212F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -443,6 +707,21 @@
 			isa = PBXTargetDependency;
 			target = CC4F0DD72C98346B00101B68 /* SpaceX Developments */;
 			targetProxy = CC4F0DF32C98346C00101B68 /* PBXContainerItemProxy */;
+		};
+		CCDF31FD2CD0ED0B00212F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCDF31EB2CD0ED0900212F62 /* Watch SpaceX Developments Watch App */;
+			targetProxy = CCDF31FC2CD0ED0B00212F62 /* PBXContainerItemProxy */;
+		};
+		CCDF32072CD0ED0B00212F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCDF31EB2CD0ED0900212F62 /* Watch SpaceX Developments Watch App */;
+			targetProxy = CCDF32062CD0ED0B00212F62 /* PBXContainerItemProxy */;
+		};
+		CCDF320E2CD0ED0B00212F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCDF31EB2CD0ED0900212F62 /* Watch SpaceX Developments Watch App */;
+			targetProxy = CCDF320D2CD0ED0B00212F62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -837,6 +1116,216 @@
 			};
 			name = Release;
 		};
+		CCDF32112CD0ED0B00212F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch SpaceX Developments Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Watch SpaceX Developments";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "dev.knutvalen.SpaceX-Developments";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.SpaceX-Developments.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		CCDF32122CD0ED0B00212F62 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch SpaceX Developments Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Watch SpaceX Developments";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "dev.knutvalen.SpaceX-Developments";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.SpaceX-Developments.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Development;
+		};
+		CCDF32132CD0ED0B00212F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch SpaceX Developments Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Watch SpaceX Developments";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "dev.knutvalen.SpaceX-Developments";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.SpaceX-Developments.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		CCDF32142CD0ED0B00212F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.Watch-SpaceX-Developments-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Watch SpaceX Developments Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Watch SpaceX Developments Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		CCDF32152CD0ED0B00212F62 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.Watch-SpaceX-Developments-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Watch SpaceX Developments Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Watch SpaceX Developments Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Development;
+		};
+		CCDF32162CD0ED0B00212F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.Watch-SpaceX-Developments-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Watch SpaceX Developments Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Watch SpaceX Developments Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		CCDF32172CD0ED0B00212F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.Watch-SpaceX-Developments-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Watch SpaceX Developments Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		CCDF32182CD0ED0B00212F62 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.Watch-SpaceX-Developments-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Watch SpaceX Developments Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Development;
+		};
+		CCDF32192CD0ED0B00212F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.knutvalen.Watch-SpaceX-Developments-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Watch SpaceX Developments Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -876,6 +1365,36 @@
 				CC4F0E032C98346C00101B68 /* Debug */,
 				CC11697F2C9DBC7C003E86B7 /* Development */,
 				CC4F0E042C98346C00101B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCDF321A2CD0ED0B00212F62 /* Build configuration list for PBXNativeTarget "Watch SpaceX Developments Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCDF32112CD0ED0B00212F62 /* Debug */,
+				CCDF32122CD0ED0B00212F62 /* Development */,
+				CCDF32132CD0ED0B00212F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCDF321B2CD0ED0B00212F62 /* Build configuration list for PBXNativeTarget "Watch SpaceX Developments Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCDF32142CD0ED0B00212F62 /* Debug */,
+				CCDF32152CD0ED0B00212F62 /* Development */,
+				CCDF32162CD0ED0B00212F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCDF321C2CD0ED0B00212F62 /* Build configuration list for PBXNativeTarget "Watch SpaceX Developments Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCDF32172CD0ED0B00212F62 /* Debug */,
+				CCDF32182CD0ED0B00212F62 /* Development */,
+				CCDF32192CD0ED0B00212F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

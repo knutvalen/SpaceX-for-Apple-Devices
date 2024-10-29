@@ -122,8 +122,11 @@ struct NewsView: View {
                             .buttonStyle(.borderedProminent)
                         }
                     }
+                    .padding(.vertical)
                 }
+                #if !os(watchOS)
                 .listStyle(.inset)
+                #endif
                 .navigationTitle("News")
                 .refreshable {
                     viewModel.getNews(ignoreCache: true)

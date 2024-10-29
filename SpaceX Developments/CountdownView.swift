@@ -12,11 +12,18 @@ struct CountdownView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 16) {
                         Text(launch.name)
+                        #if !os(watchOS)
                             .font(.title2)
-
+                        #else
+                            .font(.subheadline)
+                        #endif
                         if let timeInSeconds = viewModel.timeLeft {
                             Text(formatCountdown(timeInSeconds: timeInSeconds))
+                            #if !os(watchOS)
                                 .font(.title)
+                            #else
+                                .font(.headline)
+                            #endif
                                 .bold()
                         } else {
                             ProgressView()
@@ -37,10 +44,15 @@ struct CountdownView: View {
                 }
             }
         }
+        #if !os(watchOS)
         .padding(16)
         .background(themeManager.selectedTheme.cardColor)
         .cornerRadius(12)
         .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
+        #else
+        .padding(8)
+        #endif
+
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active && viewModel.timeLeft != nil {
                 viewModel.getNextLaunch(ignoreCache: false)
