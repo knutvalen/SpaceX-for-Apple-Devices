@@ -1,3 +1,4 @@
+import CachedAsyncImage
 import SwiftUI
 
 struct LaunchDetailsView: View {
@@ -28,7 +29,7 @@ struct LaunchDetailsView: View {
                     HStack {
                         Spacer()
 
-                        AsyncImage(url: URL(string: patch)) { phase in
+                        CachedAsyncImage(url: URL(string: patch)) { phase in
                             switch phase {
                             case let .success(image):
                                 image.resizable()

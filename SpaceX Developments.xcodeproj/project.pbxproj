@@ -66,6 +66,8 @@
 		CCDF324A2CD0FB1500212F62 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F0E062C995BC900101B68 /* CountdownView.swift */; };
 		CCDF324B2CD0FB2C00212F62 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABF5C2CA96CD10016F435 /* NewsView.swift */; };
 		CCDF324F2CD101C800212F62 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */; };
+		CCDF32692CD17BCB00212F62 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CCDF32682CD17BCB00212F62 /* CachedAsyncImage */; };
+		CCDF326B2CD17C6B00212F62 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CCDF326A2CD17C6B00212F62 /* CachedAsyncImage */; };
 		CCDFD0D02CABCAAD009A9978 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0CF2CABCAAD009A9978 /* LaunchViewModel.swift */; };
 		CCDFD0D22CAC0FBC009A9978 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD0D12CAC0FBC009A9978 /* LaunchDetailsView.swift */; };
 		CCE345862CCBD9D80067A880 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE345852CCBD9D80067A880 /* NewsViewModel.swift */; };
@@ -193,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDF32692CD17BCB00212F62 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDF326B2CD17C6B00212F62 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +279,7 @@
 				CCDF31ED2CD0ED0A00212F62 /* Watch SpaceX Developments Watch App */,
 				CCDF31FE2CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppTests */,
 				CCDF32082CD0ED0B00212F62 /* Watch SpaceX Developments Watch AppUITests */,
+				CCDF32672CD17BCB00212F62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,6 +359,13 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		CCDF32672CD17BCB00212F62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +441,7 @@
 			);
 			name = "Watch SpaceX Developments Watch App";
 			packageProductDependencies = (
+				CCDF326A2CD17C6B00212F62 /* CachedAsyncImage */,
 			);
 			productName = "Watch SpaceX Developments Watch App";
 			productReference = CCDF31EC2CD0ED0900212F62 /* Watch SpaceX Developments Watch App.app */;
@@ -523,6 +536,9 @@
 				Base,
 			);
 			mainGroup = CC4F0DCF2C98346B00101B68;
+			packageReferences = (
+				CCDF32662CD17B4C00212F62 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = CC4F0DD92C98346B00101B68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1400,6 +1416,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCDF32662CD17B4C00212F62 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCDF32682CD17BCB00212F62 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCDF32662CD17B4C00212F62 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		CCDF326A2CD17C6B00212F62 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCDF32662CD17B4C00212F62 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC4F0DD02C98346B00101B68 /* Project object */;
 }

@@ -1,3 +1,4 @@
+import CachedAsyncImage
 import Foundation
 import SwiftUI
 
@@ -24,7 +25,7 @@ struct NewsView: View {
             NavigationStack {
                 List(news) { newsArticle in
                     VStack {
-                        AsyncImage(url: newsArticle.imageUrl) { phase in
+                        CachedAsyncImage(url: newsArticle.imageUrl) { phase in
                             switch phase {
                             case let .success(image):
                                 image.resizable()
