@@ -43,6 +43,7 @@ struct LaunchesView: View {
             }
             #if !os(watchOS)
             .listStyle(.inset)
+            .listRowSpacing(32)
             #endif
             .refreshable {
                 viewModel.getNextLaunch(ignoreCache: true)
