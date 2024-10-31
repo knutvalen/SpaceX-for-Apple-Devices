@@ -10,6 +10,75 @@
 		CC2689E82CD279F2000004ED /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC2689E72CD279F2000004ED /* CachedAsyncImage */; };
 		CC271D0C2CD24CB50011F12A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC271D0B2CD24CB50011F12A /* CachedAsyncImage */; };
 		CC60947B2CD2C73B00356157 /* SpaceX Developments.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CC2689962CD27944000004ED /* SpaceX Developments.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC6095162CD3781400356157 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094EE2CD3781400356157 /* ApiService.swift */; };
+		CC6095172CD3781400356157 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094EF2CD3781400356157 /* Endpoint.swift */; };
+		CC6095182CD3781400356157 /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F02CD3781400356157 /* HttpLogger.swift */; };
+		CC6095192CD3781400356157 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F12CD3781400356157 /* HttpService.swift */; };
+		CC60951A2CD3781400356157 /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F32CD3781400356157 /* Date+toLaunch.swift */; };
+		CC60951B2CD3781400356157 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F52CD3781400356157 /* AppError.swift */; };
+		CC60951C2CD3781400356157 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F62CD3781400356157 /* BuildConfiguration.swift */; };
+		CC60951D2CD3781400356157 /* DatePrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F72CD3781400356157 /* DatePrecision.swift */; };
+		CC60951E2CD3781400356157 /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F82CD3781400356157 /* DetailMode.swift */; };
+		CC60951F2CD3781400356157 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F92CD3781400356157 /* HTTPMethod.swift */; };
+		CC6095202CD3781400356157 /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FA2CD3781400356157 /* LaunchDetails.swift */; };
+		CC6095212CD3781400356157 /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FB2CD3781400356157 /* LaunchOverview.swift */; };
+		CC6095222CD3781400356157 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FC2CD3781400356157 /* NavigationDestination.swift */; };
+		CC6095232CD3781400356157 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FD2CD3781400356157 /* NewsArticle.swift */; };
+		CC6095242CD3781400356157 /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FE2CD3781400356157 /* Webcast.swift */; };
+		CC6095252CD3781400356157 /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FF2CD3781400356157 /* WebcastType.swift */; };
+		CC6095262CD3781400356157 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095032CD3781400356157 /* AppState.swift */; };
+		CC6095272CD3781400356157 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095062CD3781400356157 /* ContentView.swift */; };
+		CC6095282CD3781400356157 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095072CD3781400356157 /* CountdownView.swift */; };
+		CC6095292CD3781400356157 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095082CD3781400356157 /* LaunchDetailsView.swift */; };
+		CC60952A2CD3781400356157 /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095092CD3781400356157 /* LaunchDetailsViewModel.swift */; };
+		CC60952B2CD3781400356157 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950A2CD3781400356157 /* LaunchesView.swift */; };
+		CC60952C2CD3781400356157 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950B2CD3781400356157 /* LaunchViewModel.swift */; };
+		CC60952D2CD3781400356157 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950C2CD3781400356157 /* MainTheme.swift */; };
+		CC60952E2CD3781400356157 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950D2CD3781400356157 /* NewsView.swift */; };
+		CC60952F2CD3781400356157 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950E2CD3781400356157 /* NewsViewModel.swift */; };
+		CC6095302CD3781400356157 /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950F2CD3781400356157 /* NextLaunchView.swift */; };
+		CC6095312CD3781400356157 /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095102CD3781400356157 /* PreviousLaunchesView.swift */; };
+		CC6095322CD3781400356157 /* SpaceX_DevelopmentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095122CD3781400356157 /* SpaceX_DevelopmentsApp.swift */; };
+		CC6095332CD3781400356157 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095132CD3781400356157 /* ThemeManager.swift */; };
+		CC6095342CD3781400356157 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095142CD3781400356157 /* ThemeProtocol.swift */; };
+		CC6095352CD3781400356157 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095012CD3781400356157 /* Preview Assets.xcassets */; };
+		CC6095362CD3781400356157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095042CD3781400356157 /* Assets.xcassets */; };
+		CC6095372CD3781400356157 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095052CD3781400356157 /* Colors.xcassets */; };
+		CC6095382CD3781400356157 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095052CD3781400356157 /* Colors.xcassets */; };
+		CC6095392CD3781400356157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095042CD3781400356157 /* Assets.xcassets */; };
+		CC60953A2CD3781400356157 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094EE2CD3781400356157 /* ApiService.swift */; };
+		CC60953B2CD3781400356157 /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950F2CD3781400356157 /* NextLaunchView.swift */; };
+		CC60953C2CD3781400356157 /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FE2CD3781400356157 /* Webcast.swift */; };
+		CC60953D2CD3781400356157 /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095092CD3781400356157 /* LaunchDetailsViewModel.swift */; };
+		CC60953E2CD3781400356157 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095062CD3781400356157 /* ContentView.swift */; };
+		CC60953F2CD3781400356157 /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FA2CD3781400356157 /* LaunchDetails.swift */; };
+		CC6095402CD3781400356157 /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F82CD3781400356157 /* DetailMode.swift */; };
+		CC6095412CD3781400356157 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FD2CD3781400356157 /* NewsArticle.swift */; };
+		CC6095422CD3781400356157 /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FF2CD3781400356157 /* WebcastType.swift */; };
+		CC6095432CD3781400356157 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095072CD3781400356157 /* CountdownView.swift */; };
+		CC6095442CD3781400356157 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950B2CD3781400356157 /* LaunchViewModel.swift */; };
+		CC6095452CD3781400356157 /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FB2CD3781400356157 /* LaunchOverview.swift */; };
+		CC6095462CD3781400356157 /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F02CD3781400356157 /* HttpLogger.swift */; };
+		CC6095472CD3781400356157 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F12CD3781400356157 /* HttpService.swift */; };
+		CC6095482CD3781400356157 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095032CD3781400356157 /* AppState.swift */; };
+		CC6095492CD3781400356157 /* SpaceX_DevelopmentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095122CD3781400356157 /* SpaceX_DevelopmentsApp.swift */; };
+		CC60954A2CD3781400356157 /* DatePrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F72CD3781400356157 /* DatePrecision.swift */; };
+		CC60954B2CD3781400356157 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095132CD3781400356157 /* ThemeManager.swift */; };
+		CC60954C2CD3781400356157 /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F32CD3781400356157 /* Date+toLaunch.swift */; };
+		CC60954D2CD3781400356157 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094FC2CD3781400356157 /* NavigationDestination.swift */; };
+		CC60954E2CD3781400356157 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095082CD3781400356157 /* LaunchDetailsView.swift */; };
+		CC60954F2CD3781400356157 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950A2CD3781400356157 /* LaunchesView.swift */; };
+		CC6095502CD3781400356157 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950C2CD3781400356157 /* MainTheme.swift */; };
+		CC6095512CD3781400356157 /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095102CD3781400356157 /* PreviousLaunchesView.swift */; };
+		CC6095522CD3781400356157 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094EF2CD3781400356157 /* Endpoint.swift */; };
+		CC6095532CD3781400356157 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F92CD3781400356157 /* HTTPMethod.swift */; };
+		CC6095542CD3781400356157 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F52CD3781400356157 /* AppError.swift */; };
+		CC6095552CD3781400356157 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095142CD3781400356157 /* ThemeProtocol.swift */; };
+		CC6095562CD3781400356157 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950D2CD3781400356157 /* NewsView.swift */; };
+		CC6095572CD3781400356157 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950E2CD3781400356157 /* NewsViewModel.swift */; };
+		CC6095582CD3781400356157 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094F62CD3781400356157 /* BuildConfiguration.swift */; };
+		CC60955D2CD3781D00356157 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095592CD3781D00356157 /* Preview Assets.xcassets */; };
+		CC60955E2CD3781D00356157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC60955B2CD3781D00356157 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,65 +108,44 @@
 /* Begin PBXFileReference section */
 		CC2689962CD27944000004ED /* SpaceX Developments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Developments.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC271CC12CD240AC0011F12A /* SpaceX Developments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Developments.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC6094EE2CD3781400356157 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		CC6094EF2CD3781400356157 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CC6094F02CD3781400356157 /* HttpLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpLogger.swift; sourceTree = "<group>"; };
+		CC6094F12CD3781400356157 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		CC6094F32CD3781400356157 /* Date+toLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toLaunch.swift"; sourceTree = "<group>"; };
+		CC6094F52CD3781400356157 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		CC6094F62CD3781400356157 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
+		CC6094F72CD3781400356157 /* DatePrecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePrecision.swift; sourceTree = "<group>"; };
+		CC6094F82CD3781400356157 /* DetailMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMode.swift; sourceTree = "<group>"; };
+		CC6094F92CD3781400356157 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CC6094FA2CD3781400356157 /* LaunchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetails.swift; sourceTree = "<group>"; };
+		CC6094FB2CD3781400356157 /* LaunchOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOverview.swift; sourceTree = "<group>"; };
+		CC6094FC2CD3781400356157 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		CC6094FD2CD3781400356157 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
+		CC6094FE2CD3781400356157 /* Webcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webcast.swift; sourceTree = "<group>"; };
+		CC6094FF2CD3781400356157 /* WebcastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcastType.swift; sourceTree = "<group>"; };
+		CC6095012CD3781400356157 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC6095032CD3781400356157 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CC6095042CD3781400356157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC6095052CD3781400356157 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CC6095062CD3781400356157 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC6095072CD3781400356157 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		CC6095082CD3781400356157 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
+		CC6095092CD3781400356157 /* LaunchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModel.swift; sourceTree = "<group>"; };
+		CC60950A2CD3781400356157 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
+		CC60950B2CD3781400356157 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		CC60950C2CD3781400356157 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		CC60950D2CD3781400356157 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CC60950E2CD3781400356157 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		CC60950F2CD3781400356157 /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchView.swift; sourceTree = "<group>"; };
+		CC6095102CD3781400356157 /* PreviousLaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLaunchesView.swift; sourceTree = "<group>"; };
+		CC6095112CD3781400356157 /* SpaceX Developments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SpaceX Developments.entitlements"; sourceTree = "<group>"; };
+		CC6095122CD3781400356157 /* SpaceX_DevelopmentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_DevelopmentsApp.swift; sourceTree = "<group>"; };
+		CC6095132CD3781400356157 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CC6095142CD3781400356157 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		CC6095592CD3781D00356157 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC60955B2CD3781D00356157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CC2689E52CD2798E000004ED /* Exceptions for "SpaceX Developments" folder in "watchOS SpaceX Developments Watch App" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				API/ApiService.swift,
-				API/Endpoint.swift,
-				API/HttpLogger.swift,
-				API/HttpService.swift,
-				AppState.swift,
-				Assets.xcassets,
-				Colors.xcassets,
-				ContentView.swift,
-				CountdownView.swift,
-				"extensions/Date+toLaunch.swift",
-				LaunchDetailsView.swift,
-				LaunchDetailsViewModel.swift,
-				LaunchesView.swift,
-				LaunchViewModel.swift,
-				MainTheme.swift,
-				models/AppError.swift,
-				models/BuildConfiguration.swift,
-				models/DatePrecision.swift,
-				models/DetailMode.swift,
-				models/HTTPMethod.swift,
-				models/LaunchDetails.swift,
-				models/LaunchOverview.swift,
-				models/NavigationDestination.swift,
-				models/NewsArticle.swift,
-				models/Webcast.swift,
-				models/WebcastType.swift,
-				NewsView.swift,
-				NewsViewModel.swift,
-				NextLaunchView.swift,
-				PreviousLaunchesView.swift,
-				SpaceX_DevelopmentsApp.swift,
-				ThemeManager.swift,
-				ThemeProtocol.swift,
-			);
-			target = CC2689952CD27944000004ED /* watchOS SpaceX Developments Watch App */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CC2689972CD27944000004ED /* watchOS SpaceX Developments Watch App */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "watchOS SpaceX Developments Watch App";
-			sourceTree = "<group>";
-		};
-		CC271CC32CD240AC0011F12A /* SpaceX Developments */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				CC2689E52CD2798E000004ED /* Exceptions for "SpaceX Developments" folder in "watchOS SpaceX Developments Watch App" target */,
-			);
-			path = "SpaceX Developments";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC2689932CD27944000004ED /* Frameworks */ = {
@@ -129,8 +177,8 @@
 		CC271CB82CD240AC0011F12A = {
 			isa = PBXGroup;
 			children = (
-				CC271CC32CD240AC0011F12A /* SpaceX Developments */,
-				CC2689972CD27944000004ED /* watchOS SpaceX Developments Watch App */,
+				CC6095152CD3781400356157 /* SpaceX Developments */,
+				CC60955C2CD3781D00356157 /* watchOS SpaceX Developments Watch App */,
 				CC2689E62CD279F2000004ED /* Frameworks */,
 				CC271CC22CD240AC0011F12A /* Products */,
 			);
@@ -143,6 +191,97 @@
 				CC2689962CD27944000004ED /* SpaceX Developments.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CC6094F22CD3781400356157 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CC6094EE2CD3781400356157 /* ApiService.swift */,
+				CC6094EF2CD3781400356157 /* Endpoint.swift */,
+				CC6094F02CD3781400356157 /* HttpLogger.swift */,
+				CC6094F12CD3781400356157 /* HttpService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CC6094F42CD3781400356157 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC6094F32CD3781400356157 /* Date+toLaunch.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CC6095002CD3781400356157 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CC6094F52CD3781400356157 /* AppError.swift */,
+				CC6094F62CD3781400356157 /* BuildConfiguration.swift */,
+				CC6094F72CD3781400356157 /* DatePrecision.swift */,
+				CC6094F82CD3781400356157 /* DetailMode.swift */,
+				CC6094F92CD3781400356157 /* HTTPMethod.swift */,
+				CC6094FA2CD3781400356157 /* LaunchDetails.swift */,
+				CC6094FB2CD3781400356157 /* LaunchOverview.swift */,
+				CC6094FC2CD3781400356157 /* NavigationDestination.swift */,
+				CC6094FD2CD3781400356157 /* NewsArticle.swift */,
+				CC6094FE2CD3781400356157 /* Webcast.swift */,
+				CC6094FF2CD3781400356157 /* WebcastType.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		CC6095022CD3781400356157 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC6095012CD3781400356157 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC6095152CD3781400356157 /* SpaceX Developments */ = {
+			isa = PBXGroup;
+			children = (
+				CC6095112CD3781400356157 /* SpaceX Developments.entitlements */,
+				CC6095032CD3781400356157 /* AppState.swift */,
+				CC6095062CD3781400356157 /* ContentView.swift */,
+				CC6095072CD3781400356157 /* CountdownView.swift */,
+				CC6095082CD3781400356157 /* LaunchDetailsView.swift */,
+				CC6095092CD3781400356157 /* LaunchDetailsViewModel.swift */,
+				CC60950A2CD3781400356157 /* LaunchesView.swift */,
+				CC60950B2CD3781400356157 /* LaunchViewModel.swift */,
+				CC60950C2CD3781400356157 /* MainTheme.swift */,
+				CC60950D2CD3781400356157 /* NewsView.swift */,
+				CC60950E2CD3781400356157 /* NewsViewModel.swift */,
+				CC60950F2CD3781400356157 /* NextLaunchView.swift */,
+				CC6095102CD3781400356157 /* PreviousLaunchesView.swift */,
+				CC6095122CD3781400356157 /* SpaceX_DevelopmentsApp.swift */,
+				CC6095132CD3781400356157 /* ThemeManager.swift */,
+				CC6095142CD3781400356157 /* ThemeProtocol.swift */,
+				CC6095042CD3781400356157 /* Assets.xcassets */,
+				CC6095052CD3781400356157 /* Colors.xcassets */,
+				CC6094F22CD3781400356157 /* API */,
+				CC6094F42CD3781400356157 /* extensions */,
+				CC6095002CD3781400356157 /* models */,
+				CC6095022CD3781400356157 /* Preview Content */,
+			);
+			path = "SpaceX Developments";
+			sourceTree = "<group>";
+		};
+		CC60955A2CD3781D00356157 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC6095592CD3781D00356157 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC60955C2CD3781D00356157 /* watchOS SpaceX Developments Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				CC60955B2CD3781D00356157 /* Assets.xcassets */,
+				CC60955A2CD3781D00356157 /* Preview Content */,
+			);
+			path = "watchOS SpaceX Developments Watch App";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +298,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CC2689972CD27944000004ED /* watchOS SpaceX Developments Watch App */,
 			);
 			name = "watchOS SpaceX Developments Watch App";
 			packageProductDependencies = (
@@ -184,9 +320,6 @@
 			);
 			dependencies = (
 				CC60947D2CD2C73B00356157 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CC271CC32CD240AC0011F12A /* SpaceX Developments */,
 			);
 			name = "SpaceX Developments";
 			packageProductDependencies = (
@@ -242,6 +375,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6095382CD3781400356157 /* Colors.xcassets in Resources */,
+				CC6095392CD3781400356157 /* Assets.xcassets in Resources */,
+				CC60955D2CD3781D00356157 /* Preview Assets.xcassets in Resources */,
+				CC60955E2CD3781D00356157 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +386,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6095352CD3781400356157 /* Preview Assets.xcassets in Resources */,
+				CC6095362CD3781400356157 /* Assets.xcassets in Resources */,
+				CC6095372CD3781400356157 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +399,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC60953A2CD3781400356157 /* ApiService.swift in Sources */,
+				CC60953B2CD3781400356157 /* NextLaunchView.swift in Sources */,
+				CC60953C2CD3781400356157 /* Webcast.swift in Sources */,
+				CC60953D2CD3781400356157 /* LaunchDetailsViewModel.swift in Sources */,
+				CC60953E2CD3781400356157 /* ContentView.swift in Sources */,
+				CC60953F2CD3781400356157 /* LaunchDetails.swift in Sources */,
+				CC6095402CD3781400356157 /* DetailMode.swift in Sources */,
+				CC6095412CD3781400356157 /* NewsArticle.swift in Sources */,
+				CC6095422CD3781400356157 /* WebcastType.swift in Sources */,
+				CC6095432CD3781400356157 /* CountdownView.swift in Sources */,
+				CC6095442CD3781400356157 /* LaunchViewModel.swift in Sources */,
+				CC6095452CD3781400356157 /* LaunchOverview.swift in Sources */,
+				CC6095462CD3781400356157 /* HttpLogger.swift in Sources */,
+				CC6095472CD3781400356157 /* HttpService.swift in Sources */,
+				CC6095482CD3781400356157 /* AppState.swift in Sources */,
+				CC6095492CD3781400356157 /* SpaceX_DevelopmentsApp.swift in Sources */,
+				CC60954A2CD3781400356157 /* DatePrecision.swift in Sources */,
+				CC60954B2CD3781400356157 /* ThemeManager.swift in Sources */,
+				CC60954C2CD3781400356157 /* Date+toLaunch.swift in Sources */,
+				CC60954D2CD3781400356157 /* NavigationDestination.swift in Sources */,
+				CC60954E2CD3781400356157 /* LaunchDetailsView.swift in Sources */,
+				CC60954F2CD3781400356157 /* LaunchesView.swift in Sources */,
+				CC6095502CD3781400356157 /* MainTheme.swift in Sources */,
+				CC6095512CD3781400356157 /* PreviousLaunchesView.swift in Sources */,
+				CC6095522CD3781400356157 /* Endpoint.swift in Sources */,
+				CC6095532CD3781400356157 /* HTTPMethod.swift in Sources */,
+				CC6095542CD3781400356157 /* AppError.swift in Sources */,
+				CC6095552CD3781400356157 /* ThemeProtocol.swift in Sources */,
+				CC6095562CD3781400356157 /* NewsView.swift in Sources */,
+				CC6095572CD3781400356157 /* NewsViewModel.swift in Sources */,
+				CC6095582CD3781400356157 /* BuildConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +437,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6095162CD3781400356157 /* ApiService.swift in Sources */,
+				CC6095172CD3781400356157 /* Endpoint.swift in Sources */,
+				CC6095182CD3781400356157 /* HttpLogger.swift in Sources */,
+				CC6095192CD3781400356157 /* HttpService.swift in Sources */,
+				CC60951A2CD3781400356157 /* Date+toLaunch.swift in Sources */,
+				CC60951B2CD3781400356157 /* AppError.swift in Sources */,
+				CC60951C2CD3781400356157 /* BuildConfiguration.swift in Sources */,
+				CC60951D2CD3781400356157 /* DatePrecision.swift in Sources */,
+				CC60951E2CD3781400356157 /* DetailMode.swift in Sources */,
+				CC60951F2CD3781400356157 /* HTTPMethod.swift in Sources */,
+				CC6095202CD3781400356157 /* LaunchDetails.swift in Sources */,
+				CC6095212CD3781400356157 /* LaunchOverview.swift in Sources */,
+				CC6095222CD3781400356157 /* NavigationDestination.swift in Sources */,
+				CC6095232CD3781400356157 /* NewsArticle.swift in Sources */,
+				CC6095242CD3781400356157 /* Webcast.swift in Sources */,
+				CC6095252CD3781400356157 /* WebcastType.swift in Sources */,
+				CC6095262CD3781400356157 /* AppState.swift in Sources */,
+				CC6095272CD3781400356157 /* ContentView.swift in Sources */,
+				CC6095282CD3781400356157 /* CountdownView.swift in Sources */,
+				CC6095292CD3781400356157 /* LaunchDetailsView.swift in Sources */,
+				CC60952A2CD3781400356157 /* LaunchDetailsViewModel.swift in Sources */,
+				CC60952B2CD3781400356157 /* LaunchesView.swift in Sources */,
+				CC60952C2CD3781400356157 /* LaunchViewModel.swift in Sources */,
+				CC60952D2CD3781400356157 /* MainTheme.swift in Sources */,
+				CC60952E2CD3781400356157 /* NewsView.swift in Sources */,
+				CC60952F2CD3781400356157 /* NewsViewModel.swift in Sources */,
+				CC6095302CD3781400356157 /* NextLaunchView.swift in Sources */,
+				CC6095312CD3781400356157 /* PreviousLaunchesView.swift in Sources */,
+				CC6095322CD3781400356157 /* SpaceX_DevelopmentsApp.swift in Sources */,
+				CC6095332CD3781400356157 /* ThemeManager.swift in Sources */,
+				CC6095342CD3781400356157 /* ThemeProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
