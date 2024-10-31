@@ -12,27 +12,30 @@ class LaunchViewModel: ObservableObject {
 
     init() {
         limit = initialLimit
-        getNextLaunch(ignoreCache: false)
-        getPreviousLaunches(ignoreCache: false)
+
+        Task {
+            await getNextLaunch(ignoreCache: false)
+            await getPreviousLaunches(ignoreCache: false)
+        }
     }
 
-    func getNextLaunch(ignoreCache: Bool) {
+    func getNextLaunch(ignoreCache: Bool) async {
         countdown?.invalidate()
-        timeLeft = nil
 
-        appState.api.getNextLaunch(ignoreCache: ignoreCache) { (result: Result<LaunchOverview, AppError>) in
-            switch result {
-            case let .success(nextLaunch):
+        let result = await appState.api.getNextLaunch(ignoreCache: ignoreCache)
 
-                let nowTime = Date().timeIntervalSince1970
-                let nextLaunchTime = nextLaunch.net.timeIntervalSince1970
-                let timeLeft = Int(floor(nextLaunchTime - nowTime))
+        switch result {
+        case let .success(nextLaunch):
+            let nowTime = Date().timeIntervalSince1970
+            let nextLaunchTime = nextLaunch.net.timeIntervalSince1970
+            let timeLeft = Int(floor(nextLaunchTime - nowTime))
 
-                DispatchQueue.main.async {
-                    self.nextLaunch = nextLaunch
-                    self.timeLeft = timeLeft
+            DispatchQueue.main.async {
+                self.nextLaunch = nextLaunch
+                self.timeLeft = timeLeft
 
-                    self.countdown = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                self.countdown = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                    DispatchQueue.main.async {
                         if self.timeLeft != nil {
                             if self.timeLeft! > 0 {
                                 self.timeLeft! -= 1
@@ -42,29 +45,29 @@ class LaunchViewModel: ObservableObject {
                         }
                     }
                 }
-
-            case let .failure(error):
-                debugPrint(error)
             }
+
+        case let .failure(error):
+            debugPrint(error)
         }
     }
 
-    func loadMore() {
+    func loadMore() async {
         limit += initialLimit
-        getPreviousLaunches(ignoreCache: false)
+        await getPreviousLaunches(ignoreCache: false)
     }
 
-    func getPreviousLaunches(ignoreCache: Bool) {
-        appState.api.getPreviousLaunches(limit: limit, ignoreCache: ignoreCache) { (result: Result<[LaunchOverview], AppError>) in
-            switch result {
-            case let .success(launches):
-                DispatchQueue.main.async {
-                    self.previousLaunches = launches
-                }
+    func getPreviousLaunches(ignoreCache: Bool) async {
+        let result = await appState.api.getPreviousLaunches(limit: limit, ignoreCache: ignoreCache)
 
-            case let .failure(error):
-                debugPrint(error)
+        switch result {
+        case let .success(launches):
+            DispatchQueue.main.async {
+                self.previousLaunches = launches
             }
+
+        case let .failure(error):
+            debugPrint(error)
         }
     }
 }

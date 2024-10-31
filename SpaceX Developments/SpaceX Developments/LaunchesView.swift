@@ -43,10 +43,11 @@ struct LaunchesView: View {
             }
             #if !os(watchOS)
             .listStyle(.inset)
+            .listRowSpacing(32)
             #endif
             .refreshable {
-                viewModel.getNextLaunch(ignoreCache: true)
-                viewModel.getPreviousLaunches(ignoreCache: true)
+                await viewModel.getNextLaunch(ignoreCache: true)
+                await viewModel.getPreviousLaunches(ignoreCache: true)
             }
             .navigationTitle("Launches")
         } detail: {

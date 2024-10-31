@@ -16,20 +16,23 @@ class NewsViewModel: ObservableObject {
 
     init() {
         limit = initialLimit
-        getNews(ignoreCache: false)
+
+        Task {
+            await getNews(ignoreCache: false)
+        }
     }
 
-    func getNews(ignoreCache: Bool) {
-        appState.api.getNewsArticles(limit: limit, ignoreCache: ignoreCache) { result in
-            switch result {
-            case let .success(articles):
-                DispatchQueue.main.async {
-                    self.news = articles
-                }
+    func getNews(ignoreCache: Bool) async {
+        let result = await appState.api.getNewsArticles(limit: limit, ignoreCache: ignoreCache)
 
-            case let .failure(error):
-                debugPrint(error)
+        switch result {
+        case let .success(articles):
+            DispatchQueue.main.async {
+                self.news = articles
             }
+
+        case let .failure(error):
+            debugPrint(error)
         }
     }
 }

@@ -130,7 +130,7 @@ struct NewsView: View {
                 #endif
                 .navigationTitle("News")
                 .refreshable {
-                    viewModel.getNews(ignoreCache: true)
+                    await viewModel.getNews(ignoreCache: true)
                 }
             }
         } else {
@@ -142,7 +142,9 @@ struct NewsView: View {
 
                 Spacer()
             }.onAppear {
-                viewModel.getNews(ignoreCache: false)
+                Task {
+                    await viewModel.getNews(ignoreCache: false)
+                }
             }
         }
     }

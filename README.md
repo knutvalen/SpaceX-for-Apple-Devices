@@ -17,3 +17,7 @@ Xcode Cloud will build and deploy to Apple TestFlight and Apple App Store.
 ## To-Do's
 
 [To-Do](https://github.com/users/knutvalen/projects/2) board at GitHub. 
+
+## User Experience Specifications
+
+[UX spec](https://www.figma.com/design/lV4dXYQJgVTGPYVp74bbuj/SpaceX-Developments) at Figma. 

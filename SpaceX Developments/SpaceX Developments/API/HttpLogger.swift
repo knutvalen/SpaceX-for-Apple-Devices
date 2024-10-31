@@ -46,7 +46,7 @@ class HttpLogger {
         printLog(logMessage)
     }
 
-    func intercept(data: Data?, response: HTTPURLResponse, error: Error?) {
+    func intercept(response: HTTPURLResponse, data: Data? = nil, error: Error? = nil) {
         let now = Date()
         let statusCode = response.statusCode
         let statusString = HTTPURLResponse.localizedString(forStatusCode: statusCode).capitalized
