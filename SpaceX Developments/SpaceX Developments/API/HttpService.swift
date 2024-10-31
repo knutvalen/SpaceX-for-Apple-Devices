@@ -11,11 +11,10 @@ class HttpService: ObservableObject {
     func request(
         endpoint: Endpoint,
         method: HTTPMethod,
-        ignoreCache: Bool,
-        completion: @escaping (Result<Data, AppError>) -> Void
-    ) {
+        ignoreCache: Bool
+    ) async -> Result<Data, AppError> {
         guard let url = endpoint.url else {
-            return completion(.failure(AppError.invalidURL))
+            return .failure(AppError.invalidURL)
         }
 
         var request = URLRequest(url: url)
@@ -24,22 +23,19 @@ class HttpService: ObservableObject {
 
         httpLogger.intercept(request: request)
 
-        urlSession.dataTask(with: request) { data, response, error in
+        do {
+            let (data, response) = try await urlSession.data(for: request)
+
             guard let response = response as? HTTPURLResponse else {
-                return completion(.failure(AppError.response(error)))
+                let error = AppError.response()
+                return .failure(error)
             }
 
-            self.httpLogger.intercept(data: data, response: response, error: error)
+            httpLogger.intercept(response: response, data: data)
 
-            if let error {
-                return completion(.failure(AppError.response(error)))
-            }
-
-            guard let data else {
-                return completion(.failure(AppError.noData))
-            }
-
-            return completion(.success(data))
-        }.resume()
+            return .success(data)
+        } catch {
+            return .failure(AppError.response(error))
+        }
     }
 }

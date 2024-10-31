@@ -5,7 +5,6 @@ struct Endpoint {
     let version: String
     let path: String
     let queryItems: [URLQueryItem]
-    static let launchServiceProvider = "SpaceX"
 
     var url: URL? {
         var urlComponents = URLComponents()
@@ -15,10 +14,22 @@ struct Endpoint {
         urlComponents.queryItems = queryItems
         return urlComponents.url
     }
+}
+
+extension Endpoint {
+    static let host: String = {
+        #if DEBUG
+            return "lldev.thespacedevs.com"
+        #else
+            return "ll.thespacedevs.com"
+        #endif
+    }()
+
+    static let launchServiceProvider = "SpaceX"
 
     static func launchDetails(for launchId: String) -> Endpoint {
         return Endpoint(
-            host: buildConfiguration == .development ? "lldev.thespacedevs.com" : "ll.thespacedevs.com",
+            host: host,
             version: "2.3.0",
             path: "launches/\(launchId)",
             queryItems: [URLQueryItem(name: "mode", value: DetailMode.normal.rawValue)]
@@ -27,7 +38,7 @@ struct Endpoint {
 
     static func nextLaunch() -> Endpoint {
         return Endpoint(
-            host: buildConfiguration == .development ? "lldev.thespacedevs.com" : "ll.thespacedevs.com",
+            host: host,
             version: "2.3.0",
             path: "launches/upcoming",
             queryItems: [
@@ -41,7 +52,7 @@ struct Endpoint {
 
     static func previousLaunches(limit: Int) -> Endpoint {
         return Endpoint(
-            host: buildConfiguration == .development ? "lldev.thespacedevs.com" : "ll.thespacedevs.com",
+            host: host,
             version: "2.3.0",
             path: "launches/previous",
             queryItems: [

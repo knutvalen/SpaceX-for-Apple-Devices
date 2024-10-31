@@ -8,7 +8,9 @@ struct CountdownView: View {
 
     var body: some View {
         VStack {
-            if let launch = viewModel.nextLaunch {
+            if let launch = viewModel.nextLaunch,
+               let timeInSeconds = viewModel.timeLeft
+            {
                 HStack {
                     VStack(alignment: .leading, spacing: 16) {
                         Text(launch.name)
@@ -17,18 +19,14 @@ struct CountdownView: View {
                         #else
                             .font(.subheadline)
                         #endif
-                        if let timeInSeconds = viewModel.timeLeft {
-                            Text(formatCountdown(timeInSeconds: timeInSeconds))
-                            #if !os(watchOS)
-                                .font(.title)
-                            #else
-                                .font(.headline)
-                            #endif
-                                .bold()
-                        } else {
-                            ProgressView()
-                                .controlSize(.large)
-                        }
+
+                        Text(formatCountdown(timeInSeconds: timeInSeconds))
+                        #if !os(watchOS)
+                            .font(.title)
+                        #else
+                            .font(.headline)
+                        #endif
+                            .bold()
                     }
 
                     Spacer()
@@ -38,7 +36,7 @@ struct CountdownView: View {
                     Spacer()
 
                     ProgressView()
-                        .controlSize(.large)
+                        .controlSize(.regular)
 
                     Spacer()
                 }
@@ -55,7 +53,9 @@ struct CountdownView: View {
 
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active && viewModel.timeLeft != nil {
-                viewModel.getNextLaunch(ignoreCache: false)
+                Task {
+                    await viewModel.getNextLaunch(ignoreCache: false)
+                }
             }
         }
     }

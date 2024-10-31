@@ -172,7 +172,7 @@ struct LaunchDetailsView: View {
             .listStyle(.inset)
             #endif
             .refreshable {
-                viewModel.getLaunchDetails(for: launchId, ignoreCache: true)
+                await viewModel.getLaunchDetails(for: launchId, ignoreCache: true)
             }
         } else {
             VStack {
@@ -183,7 +183,9 @@ struct LaunchDetailsView: View {
 
                 Spacer()
             }.onChange(of: launchId, initial: true) {
-                viewModel.getLaunchDetails(for: launchId, ignoreCache: false)
+                Task {
+                    await viewModel.getLaunchDetails(for: launchId, ignoreCache: false)
+                }
             }
         }
     }

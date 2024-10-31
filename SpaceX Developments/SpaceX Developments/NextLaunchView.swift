@@ -69,7 +69,7 @@ struct NextLaunchView: View {
                     Spacer()
 
                     ProgressView()
-                        .controlSize(.large)
+                        .controlSize(.regular)
 
                     Spacer()
                 }

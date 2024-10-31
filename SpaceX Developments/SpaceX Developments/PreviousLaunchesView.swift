@@ -79,7 +79,7 @@ struct PreviousLaunchesView: View {
                     Spacer()
 
                     ProgressView()
-                        .controlSize(.large)
+                        .controlSize(.regular)
 
                     Spacer()
                 }
