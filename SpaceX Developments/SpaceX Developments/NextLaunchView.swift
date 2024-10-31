@@ -14,7 +14,9 @@ struct NextLaunchView: View {
 
                 Spacer()
                 #if !os(watchOS)
-                    if let launch = viewModel.nextLaunch {
+                    if let launch = viewModel.nextLaunch,
+                       viewModel.timeLeft ?? 0 > 0
+                    {
                         Button {
                             launchId = launch.id
                             preferredColumn = .detail
@@ -28,41 +30,51 @@ struct NextLaunchView: View {
             }
 
             if let launch = viewModel.nextLaunch {
-                VStack(alignment: .leading, spacing: 16) {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Name")
-                                .font(.headline)
+                if let timeLeft = viewModel.timeLeft, timeLeft > 0 {
+                    VStack(alignment: .leading, spacing: 16) {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("Name")
+                                    .font(.headline)
 
-                            Text(launch.name)
-                                .font(.subheadline)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-                    }
-
-                    if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
-                        VStack(alignment: .leading) {
-                            Text("Launch date")
-                                .font(.headline)
-
-                            Text(launchDate)
-                                .font(.subheadline)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-                    }
-
-                    #if os(watchOS)
-                        if let launch = viewModel.nextLaunch {
-                            Button {
-                                launchId = launch.id
-                                preferredColumn = .detail
-                            } label: {
-                                Image("rocket-tiny-template")
-                                Text("Details")
+                                Text(launch.name)
+                                    .font(.subheadline)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
-                            .buttonStyle(.borderedProminent)
                         }
+
+                        if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
+                            VStack(alignment: .leading) {
+                                Text("Launch date")
+                                    .font(.headline)
+
+                                Text(launchDate)
+                                    .font(.subheadline)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                        }
+
+                        #if os(watchOS)
+                            if let launch = viewModel.nextLaunch {
+                                Button {
+                                    launchId = launch.id
+                                    preferredColumn = .detail
+                                } label: {
+                                    Image("rocket-tiny-template")
+                                    Text("Details")
+                                }
+                                .buttonStyle(.borderedProminent)
+                            }
+                        #endif
+                    }
+                } else {
+                    Text("Unscheduled")
+                    #if !os(watchOS)
+                        .font(.title)
+                    #else
+                        .font(.headline)
                     #endif
+                        .bold()
                 }
             } else {
                 HStack {
