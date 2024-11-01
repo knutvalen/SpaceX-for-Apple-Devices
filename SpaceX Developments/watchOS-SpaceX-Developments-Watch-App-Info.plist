@@ -4,5 +4,12 @@
 <dict>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>rocketBackground</string>
+		<key>UIImageName</key>
+		<string>rocket-launch-image</string>
+	</dict>
 </dict>
 </plist>
