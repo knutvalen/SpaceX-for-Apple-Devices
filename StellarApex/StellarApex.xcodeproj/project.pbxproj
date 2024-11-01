@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC29F3932CD4DB6500E67D7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F38D2CD4DB6500E67D7B /* Preview Assets.xcassets */; };
+		CC29F3962CD4DB6500E67D7B /* StellarApexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */; };
+		CC29F3992CD4DB8200E67D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F3982CD4DB8200E67D7B /* Assets.xcassets */; };
+		CC8878E42CD4DE7A005A22DA /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC8878E32CD4DE7A005A22DA /* CachedAsyncImage */; };
+		CC8878F72CD4E055005A22DA /* watchOS StellarApex Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CC8878EA2CD4E054005A22DA /* watchOS StellarApex Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC8879022CD4E05F005A22DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8878FC2CD4E05F005A22DA /* Preview Assets.xcassets */; };
+		CC8879072CD4E085005A22DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8879062CD4E085005A22DA /* Assets.xcassets */; };
+		CC88790B2CD4E136005A22DA /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC88790A2CD4E136005A22DA /* CachedAsyncImage */; };
+		CC88792F2CD4E830005A22DA /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879152CD4E830005A22DA /* NewsViewModel.swift */; };
+		CC8879302CD4E830005A22DA /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879232CD4E830005A22DA /* AppError.swift */; };
+		CC8879312CD4E830005A22DA /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879102CD4E830005A22DA /* LaunchDetailsViewModel.swift */; };
+		CC8879322CD4E830005A22DA /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879122CD4E830005A22DA /* LaunchViewModel.swift */; };
+		CC8879332CD4E830005A22DA /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */; };
+		CC8879342CD4E830005A22DA /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879132CD4E830005A22DA /* MainTheme.swift */; };
+		CC8879352CD4E830005A22DA /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791E2CD4E830005A22DA /* HttpLogger.swift */; };
+		CC8879362CD4E830005A22DA /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Webcast.swift */; };
+		CC8879372CD4E830005A22DA /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* WebcastType.swift */; };
+		CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toLaunch.swift */; };
+		CC8879392CD4E830005A22DA /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879242CD4E830005A22DA /* BuildConfiguration.swift */; };
+		CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791F2CD4E830005A22DA /* HttpService.swift */; };
+		CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791D2CD4E830005A22DA /* Endpoint.swift */; };
+		CC88793D2CD4E830005A22DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790D2CD4E830005A22DA /* ContentView.swift */; };
+		CC88793E2CD4E830005A22DA /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792B2CD4E830005A22DA /* NewsArticle.swift */; };
+		CC88793F2CD4E830005A22DA /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879162CD4E830005A22DA /* NextLaunchView.swift */; };
+		CC8879402CD4E830005A22DA /* DatePrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879252CD4E830005A22DA /* DatePrecision.swift */; };
+		CC8879412CD4E830005A22DA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879272CD4E830005A22DA /* HTTPMethod.swift */; };
+		CC8879422CD4E830005A22DA /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879282CD4E830005A22DA /* LaunchDetails.swift */; };
+		CC8879432CD4E830005A22DA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790C2CD4E830005A22DA /* AppState.swift */; };
+		CC8879442CD4E830005A22DA /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */; };
+		CC8879452CD4E830005A22DA /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879262CD4E830005A22DA /* DetailMode.swift */; };
+		CC8879462CD4E830005A22DA /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879292CD4E830005A22DA /* LaunchOverview.swift */; };
+		CC8879472CD4E830005A22DA /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879192CD4E830005A22DA /* ThemeManager.swift */; };
+		CC8879482CD4E830005A22DA /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792A2CD4E830005A22DA /* NavigationDestination.swift */; };
+		CC8879492CD4E830005A22DA /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790F2CD4E830005A22DA /* LaunchDetailsView.swift */; };
+		CC88794A2CD4E830005A22DA /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879112CD4E830005A22DA /* LaunchesView.swift */; };
+		CC88794B2CD4E830005A22DA /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879142CD4E830005A22DA /* NewsView.swift */; };
+		CC88794C2CD4E830005A22DA /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790E2CD4E830005A22DA /* CountdownView.swift */; };
+		CC88794D2CD4E830005A22DA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791C2CD4E830005A22DA /* ApiService.swift */; };
+		CC88794F2CD4E88B005A22DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F3982CD4DB8200E67D7B /* Assets.xcassets */; };
+		CC8879512CD4E88B005A22DA /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Webcast.swift */; };
+		CC8879522CD4E88B005A22DA /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792A2CD4E830005A22DA /* NavigationDestination.swift */; };
+		CC8879532CD4E88B005A22DA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791D2CD4E830005A22DA /* Endpoint.swift */; };
+		CC8879542CD4E88B005A22DA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790C2CD4E830005A22DA /* AppState.swift */; };
+		CC8879552CD4E88B005A22DA /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879162CD4E830005A22DA /* NextLaunchView.swift */; };
+		CC8879562CD4E88B005A22DA /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* WebcastType.swift */; };
+		CC8879572CD4E88B005A22DA /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879282CD4E830005A22DA /* LaunchDetails.swift */; };
+		CC8879582CD4E88B005A22DA /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879292CD4E830005A22DA /* LaunchOverview.swift */; };
+		CC8879592CD4E88B005A22DA /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toLaunch.swift */; };
+		CC88795A2CD4E88B005A22DA /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790E2CD4E830005A22DA /* CountdownView.swift */; };
+		CC88795B2CD4E88B005A22DA /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792B2CD4E830005A22DA /* NewsArticle.swift */; };
+		CC88795C2CD4E88B005A22DA /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879132CD4E830005A22DA /* MainTheme.swift */; };
+		CC88795D2CD4E88B005A22DA /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */; };
+		CC88795E2CD4E88B005A22DA /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879232CD4E830005A22DA /* AppError.swift */; };
+		CC88795F2CD4E88B005A22DA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879272CD4E830005A22DA /* HTTPMethod.swift */; };
+		CC8879602CD4E88B005A22DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790D2CD4E830005A22DA /* ContentView.swift */; };
+		CC8879612CD4E88B005A22DA /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879112CD4E830005A22DA /* LaunchesView.swift */; };
+		CC8879622CD4E88B005A22DA /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791E2CD4E830005A22DA /* HttpLogger.swift */; };
+		CC8879632CD4E88B005A22DA /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879152CD4E830005A22DA /* NewsViewModel.swift */; };
+		CC8879642CD4E88B005A22DA /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */; };
+		CC8879652CD4E88B005A22DA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791C2CD4E830005A22DA /* ApiService.swift */; };
+		CC8879662CD4E88B005A22DA /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879102CD4E830005A22DA /* LaunchDetailsViewModel.swift */; };
+		CC8879672CD4E88B005A22DA /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879142CD4E830005A22DA /* NewsView.swift */; };
+		CC8879682CD4E88B005A22DA /* StellarApexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */; };
+		CC8879692CD4E88B005A22DA /* DatePrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879252CD4E830005A22DA /* DatePrecision.swift */; };
+		CC88796A2CD4E88B005A22DA /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879192CD4E830005A22DA /* ThemeManager.swift */; };
+		CC88796B2CD4E88B005A22DA /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791F2CD4E830005A22DA /* HttpService.swift */; };
+		CC88796C2CD4E88B005A22DA /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790F2CD4E830005A22DA /* LaunchDetailsView.swift */; };
+		CC88796D2CD4E88B005A22DA /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879122CD4E830005A22DA /* LaunchViewModel.swift */; };
+		CC88796E2CD4E88B005A22DA /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879262CD4E830005A22DA /* DetailMode.swift */; };
+		CC88796F2CD4E88B005A22DA /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879242CD4E830005A22DA /* BuildConfiguration.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC8878F52CD4E055005A22DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC29F3742CD4DB4C00E67D7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC8878E92CD4E054005A22DA;
+			remoteInfo = "watchOS StellarApex Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC8878FB2CD4E055005A22DA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CC8878F72CD4E055005A22DA /* watchOS StellarApex Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CC29F37C2CD4DB4C00E67D7B /* StellarApex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StellarApex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC29F38D2CD4DB6500E67D7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarApexApp.swift; sourceTree = "<group>"; };
+		CC29F3972CD4DB7100E67D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC29F3982CD4DB8200E67D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC8878E52CD4DEE5005A22DA /* StellarApex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StellarApex.entitlements; sourceTree = "<group>"; };
+		CC8878EA2CD4E054005A22DA /* watchOS StellarApex Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchOS StellarApex Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8878FC2CD4E05F005A22DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC8879062CD4E085005A22DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC8879082CD4E0A0005A22DA /* watchOS-StellarApex-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "watchOS-StellarApex-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CC88790C2CD4E830005A22DA /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CC88790D2CD4E830005A22DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC88790E2CD4E830005A22DA /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		CC88790F2CD4E830005A22DA /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
+		CC8879102CD4E830005A22DA /* LaunchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModel.swift; sourceTree = "<group>"; };
+		CC8879112CD4E830005A22DA /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
+		CC8879122CD4E830005A22DA /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		CC8879132CD4E830005A22DA /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		CC8879142CD4E830005A22DA /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CC8879152CD4E830005A22DA /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		CC8879162CD4E830005A22DA /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchView.swift; sourceTree = "<group>"; };
+		CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLaunchesView.swift; sourceTree = "<group>"; };
+		CC8879192CD4E830005A22DA /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		CC88791C2CD4E830005A22DA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		CC88791D2CD4E830005A22DA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CC88791E2CD4E830005A22DA /* HttpLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpLogger.swift; sourceTree = "<group>"; };
+		CC88791F2CD4E830005A22DA /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		CC8879212CD4E830005A22DA /* Date+toLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toLaunch.swift"; sourceTree = "<group>"; };
+		CC8879232CD4E830005A22DA /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		CC8879242CD4E830005A22DA /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
+		CC8879252CD4E830005A22DA /* DatePrecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePrecision.swift; sourceTree = "<group>"; };
+		CC8879262CD4E830005A22DA /* DetailMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMode.swift; sourceTree = "<group>"; };
+		CC8879272CD4E830005A22DA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CC8879282CD4E830005A22DA /* LaunchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetails.swift; sourceTree = "<group>"; };
+		CC8879292CD4E830005A22DA /* LaunchOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOverview.swift; sourceTree = "<group>"; };
+		CC88792A2CD4E830005A22DA /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		CC88792B2CD4E830005A22DA /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
+		CC88792C2CD4E830005A22DA /* Webcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webcast.swift; sourceTree = "<group>"; };
+		CC88792D2CD4E830005A22DA /* WebcastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcastType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC29F3792CD4DB4C00E67D7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8878E42CD4DE7A005A22DA /* CachedAsyncImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8878E72CD4E054005A22DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC88790B2CD4E136005A22DA /* CachedAsyncImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC29F3732CD4DB4C00E67D7B = {
+			isa = PBXGroup;
+			children = (
+				CC29F3922CD4DB6500E67D7B /* StellarApex */,
+				CC8879012CD4E05F005A22DA /* watchOS StellarApex Watch App */,
+				CC8879092CD4E136005A22DA /* Frameworks */,
+				CC29F37D2CD4DB4C00E67D7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC29F37D2CD4DB4C00E67D7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC29F37C2CD4DB4C00E67D7B /* StellarApex.app */,
+				CC8878EA2CD4E054005A22DA /* watchOS StellarApex Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC29F38E2CD4DB6500E67D7B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC29F38D2CD4DB6500E67D7B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC29F3922CD4DB6500E67D7B /* StellarApex */ = {
+			isa = PBXGroup;
+			children = (
+				CC8878E52CD4DEE5005A22DA /* StellarApex.entitlements */,
+				CC29F3972CD4DB7100E67D7B /* Info.plist */,
+				CC88790C2CD4E830005A22DA /* AppState.swift */,
+				CC88790D2CD4E830005A22DA /* ContentView.swift */,
+				CC88790E2CD4E830005A22DA /* CountdownView.swift */,
+				CC88790F2CD4E830005A22DA /* LaunchDetailsView.swift */,
+				CC8879102CD4E830005A22DA /* LaunchDetailsViewModel.swift */,
+				CC8879112CD4E830005A22DA /* LaunchesView.swift */,
+				CC8879122CD4E830005A22DA /* LaunchViewModel.swift */,
+				CC8879132CD4E830005A22DA /* MainTheme.swift */,
+				CC8879142CD4E830005A22DA /* NewsView.swift */,
+				CC8879152CD4E830005A22DA /* NewsViewModel.swift */,
+				CC8879162CD4E830005A22DA /* NextLaunchView.swift */,
+				CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */,
+				CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */,
+				CC8879192CD4E830005A22DA /* ThemeManager.swift */,
+				CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */,
+				CC29F3982CD4DB8200E67D7B /* Assets.xcassets */,
+				CC8879202CD4E830005A22DA /* API */,
+				CC8879222CD4E830005A22DA /* extensions */,
+				CC88792E2CD4E830005A22DA /* models */,
+				CC29F38E2CD4DB6500E67D7B /* Preview Content */,
+			);
+			path = StellarApex;
+			sourceTree = "<group>";
+		};
+		CC8878FD2CD4E05F005A22DA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC8878FC2CD4E05F005A22DA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC8879012CD4E05F005A22DA /* watchOS StellarApex Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				CC8879082CD4E0A0005A22DA /* watchOS-StellarApex-Watch-App-Info.plist */,
+				CC8879062CD4E085005A22DA /* Assets.xcassets */,
+				CC8878FD2CD4E05F005A22DA /* Preview Content */,
+			);
+			path = "watchOS StellarApex Watch App";
+			sourceTree = "<group>";
+		};
+		CC8879092CD4E136005A22DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC8879202CD4E830005A22DA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CC88791C2CD4E830005A22DA /* ApiService.swift */,
+				CC88791D2CD4E830005A22DA /* Endpoint.swift */,
+				CC88791E2CD4E830005A22DA /* HttpLogger.swift */,
+				CC88791F2CD4E830005A22DA /* HttpService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CC8879222CD4E830005A22DA /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC8879212CD4E830005A22DA /* Date+toLaunch.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CC88792E2CD4E830005A22DA /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CC8879232CD4E830005A22DA /* AppError.swift */,
+				CC8879242CD4E830005A22DA /* BuildConfiguration.swift */,
+				CC8879252CD4E830005A22DA /* DatePrecision.swift */,
+				CC8879262CD4E830005A22DA /* DetailMode.swift */,
+				CC8879272CD4E830005A22DA /* HTTPMethod.swift */,
+				CC8879282CD4E830005A22DA /* LaunchDetails.swift */,
+				CC8879292CD4E830005A22DA /* LaunchOverview.swift */,
+				CC88792A2CD4E830005A22DA /* NavigationDestination.swift */,
+				CC88792B2CD4E830005A22DA /* NewsArticle.swift */,
+				CC88792C2CD4E830005A22DA /* Webcast.swift */,
+				CC88792D2CD4E830005A22DA /* WebcastType.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC29F37B2CD4DB4C00E67D7B /* StellarApex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC29F38A2CD4DB4D00E67D7B /* Build configuration list for PBXNativeTarget "StellarApex" */;
+			buildPhases = (
+				CC29F3782CD4DB4C00E67D7B /* Sources */,
+				CC29F3792CD4DB4C00E67D7B /* Frameworks */,
+				CC29F37A2CD4DB4C00E67D7B /* Resources */,
+				CC8878FB2CD4E055005A22DA /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC8878F62CD4E055005A22DA /* PBXTargetDependency */,
+			);
+			name = StellarApex;
+			packageProductDependencies = (
+				CC8878E32CD4DE7A005A22DA /* CachedAsyncImage */,
+			);
+			productName = StellarApex;
+			productReference = CC29F37C2CD4DB4C00E67D7B /* StellarApex.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC8878E92CD4E054005A22DA /* watchOS StellarApex Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8878F82CD4E055005A22DA /* Build configuration list for PBXNativeTarget "watchOS StellarApex Watch App" */;
+			buildPhases = (
+				CC8878E62CD4E054005A22DA /* Sources */,
+				CC8878E72CD4E054005A22DA /* Frameworks */,
+				CC8878E82CD4E054005A22DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchOS StellarApex Watch App";
+			packageProductDependencies = (
+				CC88790A2CD4E136005A22DA /* CachedAsyncImage */,
+			);
+			productName = "watchOS StellarApex Watch App";
+			productReference = CC8878EA2CD4E054005A22DA /* watchOS StellarApex Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC29F3742CD4DB4C00E67D7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					CC29F37B2CD4DB4C00E67D7B = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					CC8878E92CD4E054005A22DA = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = CC29F3772CD4DB4C00E67D7B /* Build configuration list for PBXProject "StellarApex" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC29F3732CD4DB4C00E67D7B;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CC8878E22CD4DE7A005A22DA /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CC29F37D2CD4DB4C00E67D7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC29F37B2CD4DB4C00E67D7B /* StellarApex */,
+				CC8878E92CD4E054005A22DA /* watchOS StellarApex Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC29F37A2CD4DB4C00E67D7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC29F3992CD4DB8200E67D7B /* Assets.xcassets in Resources */,
+				CC29F3932CD4DB6500E67D7B /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8878E82CD4E054005A22DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8879072CD4E085005A22DA /* Assets.xcassets in Resources */,
+				CC8879022CD4E05F005A22DA /* Preview Assets.xcassets in Resources */,
+				CC88794F2CD4E88B005A22DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC29F3782CD4DB4C00E67D7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC88792F2CD4E830005A22DA /* NewsViewModel.swift in Sources */,
+				CC8879302CD4E830005A22DA /* AppError.swift in Sources */,
+				CC8879312CD4E830005A22DA /* LaunchDetailsViewModel.swift in Sources */,
+				CC8879322CD4E830005A22DA /* LaunchViewModel.swift in Sources */,
+				CC8879332CD4E830005A22DA /* ThemeProtocol.swift in Sources */,
+				CC8879342CD4E830005A22DA /* MainTheme.swift in Sources */,
+				CC8879352CD4E830005A22DA /* HttpLogger.swift in Sources */,
+				CC8879362CD4E830005A22DA /* Webcast.swift in Sources */,
+				CC8879372CD4E830005A22DA /* WebcastType.swift in Sources */,
+				CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */,
+				CC8879392CD4E830005A22DA /* BuildConfiguration.swift in Sources */,
+				CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */,
+				CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */,
+				CC88793D2CD4E830005A22DA /* ContentView.swift in Sources */,
+				CC88793E2CD4E830005A22DA /* NewsArticle.swift in Sources */,
+				CC88793F2CD4E830005A22DA /* NextLaunchView.swift in Sources */,
+				CC8879402CD4E830005A22DA /* DatePrecision.swift in Sources */,
+				CC8879412CD4E830005A22DA /* HTTPMethod.swift in Sources */,
+				CC8879422CD4E830005A22DA /* LaunchDetails.swift in Sources */,
+				CC8879432CD4E830005A22DA /* AppState.swift in Sources */,
+				CC8879442CD4E830005A22DA /* PreviousLaunchesView.swift in Sources */,
+				CC8879452CD4E830005A22DA /* DetailMode.swift in Sources */,
+				CC8879462CD4E830005A22DA /* LaunchOverview.swift in Sources */,
+				CC8879472CD4E830005A22DA /* ThemeManager.swift in Sources */,
+				CC8879482CD4E830005A22DA /* NavigationDestination.swift in Sources */,
+				CC8879492CD4E830005A22DA /* LaunchDetailsView.swift in Sources */,
+				CC88794A2CD4E830005A22DA /* LaunchesView.swift in Sources */,
+				CC88794B2CD4E830005A22DA /* NewsView.swift in Sources */,
+				CC88794C2CD4E830005A22DA /* CountdownView.swift in Sources */,
+				CC88794D2CD4E830005A22DA /* ApiService.swift in Sources */,
+				CC29F3962CD4DB6500E67D7B /* StellarApexApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8878E62CD4E054005A22DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8879512CD4E88B005A22DA /* Webcast.swift in Sources */,
+				CC8879522CD4E88B005A22DA /* NavigationDestination.swift in Sources */,
+				CC8879532CD4E88B005A22DA /* Endpoint.swift in Sources */,
+				CC8879542CD4E88B005A22DA /* AppState.swift in Sources */,
+				CC8879552CD4E88B005A22DA /* NextLaunchView.swift in Sources */,
+				CC8879562CD4E88B005A22DA /* WebcastType.swift in Sources */,
+				CC8879572CD4E88B005A22DA /* LaunchDetails.swift in Sources */,
+				CC8879582CD4E88B005A22DA /* LaunchOverview.swift in Sources */,
+				CC8879592CD4E88B005A22DA /* Date+toLaunch.swift in Sources */,
+				CC88795A2CD4E88B005A22DA /* CountdownView.swift in Sources */,
+				CC88795B2CD4E88B005A22DA /* NewsArticle.swift in Sources */,
+				CC88795C2CD4E88B005A22DA /* MainTheme.swift in Sources */,
+				CC88795D2CD4E88B005A22DA /* ThemeProtocol.swift in Sources */,
+				CC88795E2CD4E88B005A22DA /* AppError.swift in Sources */,
+				CC88795F2CD4E88B005A22DA /* HTTPMethod.swift in Sources */,
+				CC8879602CD4E88B005A22DA /* ContentView.swift in Sources */,
+				CC8879612CD4E88B005A22DA /* LaunchesView.swift in Sources */,
+				CC8879622CD4E88B005A22DA /* HttpLogger.swift in Sources */,
+				CC8879632CD4E88B005A22DA /* NewsViewModel.swift in Sources */,
+				CC8879642CD4E88B005A22DA /* PreviousLaunchesView.swift in Sources */,
+				CC8879652CD4E88B005A22DA /* ApiService.swift in Sources */,
+				CC8879662CD4E88B005A22DA /* LaunchDetailsViewModel.swift in Sources */,
+				CC8879672CD4E88B005A22DA /* NewsView.swift in Sources */,
+				CC8879682CD4E88B005A22DA /* StellarApexApp.swift in Sources */,
+				CC8879692CD4E88B005A22DA /* DatePrecision.swift in Sources */,
+				CC88796A2CD4E88B005A22DA /* ThemeManager.swift in Sources */,
+				CC88796B2CD4E88B005A22DA /* HttpService.swift in Sources */,
+				CC88796C2CD4E88B005A22DA /* LaunchDetailsView.swift in Sources */,
+				CC88796D2CD4E88B005A22DA /* LaunchViewModel.swift in Sources */,
+				CC88796E2CD4E88B005A22DA /* DetailMode.swift in Sources */,
+				CC88796F2CD4E88B005A22DA /* BuildConfiguration.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC8878F62CD4E055005A22DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC8878E92CD4E054005A22DA /* watchOS StellarApex Watch App */;
+			targetProxy = CC8878F52CD4E055005A22DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC29F3882CD4DB4D00E67D7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC29F3892CD4DB4D00E67D7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC29F38B2CD4DB4D00E67D7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon DEV";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StellarApex/StellarApex.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StellarApex/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarApex/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.knutvalen.StellarApex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC29F38C2CD4DB4D00E67D7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StellarApex/StellarApex.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StellarApex/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarApex/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.knutvalen.StellarApex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC8878F92CD4E055005A22DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS StellarApex Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "watchOS-StellarApex-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "watchOS StellarApex";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.knutvalen.StellarApex;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.knutvalen.StellarApex.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		CC8878FA2CD4E055005A22DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS StellarApex Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "watchOS-StellarApex-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "watchOS StellarApex";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.knutvalen.StellarApex;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.knutvalen.StellarApex.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC29F3772CD4DB4C00E67D7B /* Build configuration list for PBXProject "StellarApex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC29F3882CD4DB4D00E67D7B /* Debug */,
+				CC29F3892CD4DB4D00E67D7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC29F38A2CD4DB4D00E67D7B /* Build configuration list for PBXNativeTarget "StellarApex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC29F38B2CD4DB4D00E67D7B /* Debug */,
+				CC29F38C2CD4DB4D00E67D7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC8878F82CD4E055005A22DA /* Build configuration list for PBXNativeTarget "watchOS StellarApex Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8878F92CD4E055005A22DA /* Debug */,
+				CC8878FA2CD4E055005A22DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC8878E22CD4DE7A005A22DA /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC8878E32CD4DE7A005A22DA /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC8878E22CD4DE7A005A22DA /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		CC88790A2CD4E136005A22DA /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC8878E22CD4DE7A005A22DA /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CC29F3742CD4DB4C00E67D7B /* Project object */;
+}
