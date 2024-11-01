@@ -43,8 +43,6 @@
 		CC6095342CD3781400356157 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6095142CD3781400356157 /* ThemeProtocol.swift */; };
 		CC6095352CD3781400356157 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095012CD3781400356157 /* Preview Assets.xcassets */; };
 		CC6095362CD3781400356157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095042CD3781400356157 /* Assets.xcassets */; };
-		CC6095372CD3781400356157 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095052CD3781400356157 /* Colors.xcassets */; };
-		CC6095382CD3781400356157 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095052CD3781400356157 /* Colors.xcassets */; };
 		CC6095392CD3781400356157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6095042CD3781400356157 /* Assets.xcassets */; };
 		CC60953A2CD3781400356157 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6094EE2CD3781400356157 /* ApiService.swift */; };
 		CC60953B2CD3781400356157 /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60950F2CD3781400356157 /* NextLaunchView.swift */; };
@@ -127,7 +125,6 @@
 		CC6095012CD3781400356157 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC6095032CD3781400356157 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CC6095042CD3781400356157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC6095052CD3781400356157 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CC6095062CD3781400356157 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC6095072CD3781400356157 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		CC6095082CD3781400356157 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
@@ -258,7 +255,6 @@
 				CC6095132CD3781400356157 /* ThemeManager.swift */,
 				CC6095142CD3781400356157 /* ThemeProtocol.swift */,
 				CC6095042CD3781400356157 /* Assets.xcassets */,
-				CC6095052CD3781400356157 /* Colors.xcassets */,
 				CC6094F22CD3781400356157 /* API */,
 				CC6094F42CD3781400356157 /* extensions */,
 				CC6095002CD3781400356157 /* models */,
@@ -375,7 +371,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6095382CD3781400356157 /* Colors.xcassets in Resources */,
 				CC6095392CD3781400356157 /* Assets.xcassets in Resources */,
 				CC60955D2CD3781D00356157 /* Preview Assets.xcassets in Resources */,
 				CC60955E2CD3781D00356157 /* Assets.xcassets in Resources */,
@@ -388,7 +383,6 @@
 			files = (
 				CC6095352CD3781400356157 /* Preview Assets.xcassets in Resources */,
 				CC6095362CD3781400356157 /* Assets.xcassets in Resources */,
-				CC6095372CD3781400356157 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
