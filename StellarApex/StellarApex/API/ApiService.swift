@@ -36,12 +36,6 @@ final class ApiService: ObservableObject {
                     var launchDetailsJson = [
                         "id": dataAsJson.value(forKey: "id"),
                         "lastUpdated": dataAsJson.value(forKey: "last_updated"),
-                        "launchServiceProvider": [
-                            "name": dataAsJson.value(forKeyPath: "launch_service_provider.name"),
-                            "description": dataAsJson.value(forKeyPath: "launch_service_provider.description"),
-                            "url": dataAsJson.value(forKeyPath: "launch_service_provider.info_url"),
-                            "logo": dataAsJson.value(forKeyPath: "launch_service_provider.logo.image_url"),
-                        ],
                         "name": dataAsJson.value(forKey: "name"),
                         "net": dataAsJson.value(forKey: "net"),
                         "netPrecision": dataAsJson.value(forKeyPath: "net_precision.name"),
@@ -101,6 +95,13 @@ final class ApiService: ObservableObject {
                         "webcast": firstResult.value(forKey: "vid_urls.0"),
                         "netPrecision": firstResult.value(forKeyPath: "net_precision.name"),
                         "net": firstResult.value(forKey: "net"),
+                        "launchServiceProvider": [
+                            "id": firstResult.value(forKeyPath: "launch_service_provider.id"),
+                            "name": firstResult.value(forKeyPath: "launch_service_provider.name"),
+                            "description": firstResult.value(forKeyPath: "launch_service_provider.description"),
+                            "url": firstResult.value(forKeyPath: "launch_service_provider.info_url"),
+                            "logo": firstResult.value(forKeyPath: "launch_service_provider.logo.image_url"),
+                        ],
                     ]
 
                     let nextLaunchJsonData = try JSONSerialization.data(withJSONObject: nextLaunchJson)
@@ -122,9 +123,9 @@ final class ApiService: ObservableObject {
         return .failure(AppError.unknown)
     }
 
-    func getPreviousLaunches(limit: Int, ignoreCache: Bool) async -> Result<[LaunchOverview], AppError> {
+    func getPreviousLaunches(ignoreCache: Bool) async -> Result<[LaunchOverview], AppError> {
         let result = await httpService.request(
-            endpoint: .previousLaunches(limit: limit),
+            endpoint: .previousLaunches(),
             method: .get,
             ignoreCache: ignoreCache
         )
@@ -141,6 +142,13 @@ final class ApiService: ObservableObject {
                             "name": result.value(forKey: "name"),
                             "netPrecision": result.value(forKeyPath: "net_precision.name"),
                             "net": result.value(forKey: "net"),
+                            "launchServiceProvider": [
+                                "id": result.value(forKeyPath: "launch_service_provider.id"),
+                                "name": result.value(forKeyPath: "launch_service_provider.name"),
+                                "description": result.value(forKeyPath: "launch_service_provider.description"),
+                                "url": result.value(forKeyPath: "launch_service_provider.info_url"),
+                                "logo": result.value(forKeyPath: "launch_service_provider.logo.image_url"),
+                            ],
                         ]
 
                         let launchJsonData = try JSONSerialization.data(withJSONObject: launchJson)
@@ -165,9 +173,9 @@ final class ApiService: ObservableObject {
         return .failure(AppError.unknown)
     }
 
-    func getNewsArticles(limit: Int, ignoreCache: Bool) async -> Result<[NewsArticle], AppError> {
+    func getNewsArticles(launchServiceProviders: [LaunchServiceProvider], ignoreCache: Bool) async -> Result<[NewsArticle], AppError> {
         let result = await httpService.request(
-            endpoint: .newsArticles(limit: limit),
+            endpoint: .newsArticles(launchServiceProviders: launchServiceProviders),
             method: .get,
             ignoreCache: ignoreCache
         )
@@ -199,7 +207,7 @@ final class ApiService: ObservableObject {
                             newsArticleJson.merge(["launches": ids]) { _, new in new }
                         }
 
-                        let newsArticleJsonData = try JSONSerialization.data(withJSONObject: newsArticleJson, options: [])
+                        let newsArticleJsonData = try JSONSerialization.data(withJSONObject: newsArticleJson)
 
                         let decoder = JSONDecoder()
                         decoder.dateDecodingStrategy = self.dateDecodingStrategy

@@ -50,14 +50,6 @@ struct CountdownView: View {
         #else
         .padding(8)
         #endif
-
-        .onChange(of: scenePhase) { _, newPhase in
-            if newPhase == .active && viewModel.timeLeft != nil {
-                Task {
-                    await viewModel.getNextLaunch(ignoreCache: false)
-                }
-            }
-        }
     }
 }
 

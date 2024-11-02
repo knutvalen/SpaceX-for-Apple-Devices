@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC17D38F2CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */; };
+		CC17D3902CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */; };
+		CC17D3932CDA661E00547433 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17D3912CDA661E00547433 /* WebView.swift */; };
 		CC29F3932CD4DB6500E67D7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F38D2CD4DB6500E67D7B /* Preview Assets.xcassets */; };
 		CC29F3962CD4DB6500E67D7B /* StellarApexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */; };
 		CC29F3992CD4DB8200E67D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F3982CD4DB8200E67D7B /* Assets.xcassets */; };
@@ -104,6 +107,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchServiceProvider.swift; sourceTree = "<group>"; };
+		CC17D3912CDA661E00547433 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		CC29F37C2CD4DB4C00E67D7B /* StellarApex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StellarApex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC29F38D2CD4DB6500E67D7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarApexApp.swift; sourceTree = "<group>"; };
@@ -213,6 +218,7 @@
 				CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */,
 				CC8879192CD4E830005A22DA /* ThemeManager.swift */,
 				CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */,
+				CC17D3912CDA661E00547433 /* WebView.swift */,
 				CC29F3982CD4DB8200E67D7B /* Assets.xcassets */,
 				CC8879202CD4E830005A22DA /* API */,
 				CC8879222CD4E830005A22DA /* extensions */,
@@ -280,6 +286,7 @@
 				CC88792B2CD4E830005A22DA /* NewsArticle.swift */,
 				CC88792C2CD4E830005A22DA /* Webcast.swift */,
 				CC88792D2CD4E830005A22DA /* WebcastType.swift */,
+				CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -402,6 +409,7 @@
 				CC8879312CD4E830005A22DA /* LaunchDetailsViewModel.swift in Sources */,
 				CC8879322CD4E830005A22DA /* LaunchViewModel.swift in Sources */,
 				CC8879332CD4E830005A22DA /* ThemeProtocol.swift in Sources */,
+				CC17D38F2CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */,
 				CC8879342CD4E830005A22DA /* MainTheme.swift in Sources */,
 				CC8879352CD4E830005A22DA /* HttpLogger.swift in Sources */,
 				CC8879362CD4E830005A22DA /* Webcast.swift in Sources */,
@@ -426,6 +434,7 @@
 				CC88794A2CD4E830005A22DA /* LaunchesView.swift in Sources */,
 				CC88794B2CD4E830005A22DA /* NewsView.swift in Sources */,
 				CC88794C2CD4E830005A22DA /* CountdownView.swift in Sources */,
+				CC17D3932CDA661E00547433 /* WebView.swift in Sources */,
 				CC88794D2CD4E830005A22DA /* ApiService.swift in Sources */,
 				CC29F3962CD4DB6500E67D7B /* StellarApexApp.swift in Sources */,
 			);
@@ -440,6 +449,7 @@
 				CC8879532CD4E88B005A22DA /* Endpoint.swift in Sources */,
 				CC8879542CD4E88B005A22DA /* AppState.swift in Sources */,
 				CC8879552CD4E88B005A22DA /* NextLaunchView.swift in Sources */,
+				CC17D3902CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */,
 				CC8879562CD4E88B005A22DA /* WebcastType.swift in Sources */,
 				CC8879572CD4E88B005A22DA /* LaunchDetails.swift in Sources */,
 				CC8879582CD4E88B005A22DA /* LaunchOverview.swift in Sources */,

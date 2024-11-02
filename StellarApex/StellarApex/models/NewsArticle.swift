@@ -1,10 +1,3 @@
-//
-//  NewsArticle.swift
-//  SpaceX Developments
-//
-//  Created by Knut Valen on 25/10/2024.
-//
-
 import Foundation
 
 struct NewsArticle: Decodable, Identifiable {
