@@ -4,6 +4,7 @@ struct ContentView: View {
     @State private var selection: Selection = .launches
     @State private var launchId: String?
     @State private var preferredColumn = NavigationSplitViewColumn.sidebar
+    private var theme = ThemeManager()
 
     enum Selection {
         case launches
@@ -17,10 +18,11 @@ struct ContentView: View {
                     launchId: $launchId,
                     preferredColumn: $preferredColumn
                 )
-                .environmentObject(ThemeManager())
+                .environmentObject(theme)
             }
             Tab("News", systemImage: "newspaper", value: Selection.news) {
                 NewsView()
+                    .environmentObject(theme)
             }
         }
         .tabViewStyle(.automatic)

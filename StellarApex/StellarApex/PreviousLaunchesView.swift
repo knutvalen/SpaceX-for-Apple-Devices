@@ -19,7 +19,7 @@ struct PreviousLaunchesView: View {
                 ForEach(launches) { launch in
                     VStack {
                         VStack(alignment: .leading, spacing: 16) {
-                            HStack {
+                            HStack(alignment: .top) {
                                 VStack(alignment: .leading) {
                                     Text("Name")
                                         .font(.headline)
@@ -30,6 +30,7 @@ struct PreviousLaunchesView: View {
                                 }
 
                                 Spacer()
+
                                 #if !os(watchOS)
                                     Button {
                                         launchId = launch.id

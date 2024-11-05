@@ -4,8 +4,12 @@ import SwiftUI
 
 struct NewsView: View {
     @StateObject private var viewModel = NewsViewModel()
+    @EnvironmentObject private var themeManager: ThemeManager
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.openURL) private var openURL
+    @State private var displayingSheet = false
+    @State private var newsUrl: URL?
+    @State var preferredColumn = NavigationSplitViewColumn.sidebar
 
     private func relativeTime(from date: Date) -> String? {
         let now = Date()
@@ -22,7 +26,7 @@ struct NewsView: View {
 
     var body: some View {
         if let news = viewModel.news {
-            NavigationStack {
+            NavigationSplitView(preferredCompactColumn: $preferredColumn) {
                 List(news) { newsArticle in
                     VStack {
                         CachedAsyncImage(url: newsArticle.imageUrl) { phase in
@@ -113,24 +117,45 @@ struct NewsView: View {
                             Spacer()
 
                             Button {
-                                openURL(newsArticle.newsUrl)
+                                newsUrl = newsArticle.newsUrl
+                                preferredColumn = .detail
                             } label: {
                                 HStack {
-                                    Image(systemName: "arrow.up.forward.app")
+                                    Image(systemName: "newspaper")
                                     Text("Details")
                                 }
                             }
                             .buttonStyle(.borderedProminent)
                         }
                     }
-                    .padding(.vertical)
+                    #if !os(watchOS)
+                    .listRowSeparator(.hidden)
+                    .padding(16)
+                    .background(themeManager.selectedTheme.cardColor)
+                    .cornerRadius(12)
+                    .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
+                    #else
+                    .padding(8)
+                    #endif
                 }
                 #if !os(watchOS)
                 .listStyle(.inset)
+                .listRowSpacing(32)
                 #endif
                 .navigationTitle("News")
+                .padding(.horizontal, -8)
                 .refreshable {
                     await viewModel.getNews(ignoreCache: true)
+                }
+            } detail: {
+                ZStack {
+                    if let url = newsUrl {
+                        #if !os(watchOS)
+                            WebView(url: url)
+                        #endif
+                    } else {
+                        ContentUnavailableView("Select a news article", systemImage: "newspaper")
+                    }
                 }
             }
         } else {
@@ -141,10 +166,6 @@ struct NewsView: View {
                     .controlSize(.large)
 
                 Spacer()
-            }.onAppear {
-                Task {
-                    await viewModel.getNews(ignoreCache: false)
-                }
             }
         }
     }
@@ -152,4 +173,5 @@ struct NewsView: View {
 
 #Preview {
     NewsView()
+        .environmentObject(ThemeManager())
 }

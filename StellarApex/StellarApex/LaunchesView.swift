@@ -5,6 +5,8 @@ struct LaunchesView: View {
     @ObservedObject private var viewModel = LaunchViewModel()
     @Binding var launchId: String?
     @Binding var preferredColumn: NavigationSplitViewColumn
+    @State private var displayingSettings: Bool = false
+    @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
         NavigationSplitView(preferredCompactColumn: $preferredColumn) {
@@ -14,8 +16,6 @@ struct LaunchesView: View {
                 #if !os(watchOS)
                     .listRowSeparator(.hidden)
                 #endif
-                    .padding(.horizontal, -8)
-                    .buttonStyle(.plain) // TODO: remove?
 
                 NextLaunchView(
                     viewModel: viewModel,
@@ -26,8 +26,6 @@ struct LaunchesView: View {
                 #if !os(watchOS)
                     .listRowSeparator(.hidden)
                 #endif
-                    .padding(.horizontal, -8)
-                    .buttonStyle(.plain)
 
                 PreviousLaunchesView(
                     viewModel: viewModel,
@@ -38,18 +36,25 @@ struct LaunchesView: View {
                 #if !os(watchOS)
                     .listRowSeparator(.hidden)
                 #endif
-                    .padding(.horizontal, -8)
-                    .buttonStyle(.plain)
             }
             #if !os(watchOS)
             .listStyle(.inset)
             .listRowSpacing(32)
             #endif
+            .padding(.horizontal, -8)
             .refreshable {
                 await viewModel.getNextLaunch(ignoreCache: true)
                 await viewModel.getPreviousLaunches(ignoreCache: true)
             }
             .navigationTitle("Launches")
+            .onChange(of: scenePhase) { _, newPhase in
+                if newPhase == .active && viewModel.timeLeft != nil {
+                    Task {
+                        await viewModel.getNextLaunch(ignoreCache: true)
+                        await viewModel.getPreviousLaunches(ignoreCache: true)
+                    }
+                }
+            }
         } detail: {
             ZStack {
                 if let id = Binding($launchId) {

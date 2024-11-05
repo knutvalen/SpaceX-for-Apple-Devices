@@ -3,7 +3,6 @@ import Foundation
 struct LaunchDetails: Decodable {
     var id: String
     var lastUpdated: Date
-    var launchServiceProvider: LaunchServiceProvider
     var mission: Mission
     var name: String
     var net: Date
@@ -15,7 +14,6 @@ struct LaunchDetails: Decodable {
     enum CodingKeys: CodingKey {
         case id
         case lastUpdated
-        case launchServiceProvider
         case mission
         case name
         case net
@@ -29,7 +27,6 @@ struct LaunchDetails: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
         lastUpdated = try container.decode(Date.self, forKey: .lastUpdated)
-        launchServiceProvider = try container.decode(LaunchServiceProvider.self, forKey: .launchServiceProvider)
         mission = try container.decode(Mission.self, forKey: .mission)
         name = try container.decode(String.self, forKey: .name)
         net = try container.decode(Date.self, forKey: .net)
@@ -76,11 +73,4 @@ struct Mission: Decodable {
         orbit = try container.decode(String.self, forKey: .orbit)
         type = try container.decode(String.self, forKey: .type)
     }
-}
-
-struct LaunchServiceProvider: Decodable {
-    var description: String?
-    var logo: String
-    var name: String
-    var url: String?
 }
