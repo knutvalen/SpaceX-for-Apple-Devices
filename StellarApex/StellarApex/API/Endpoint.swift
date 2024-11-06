@@ -40,8 +40,7 @@ extension Endpoint {
             version: "2.3.0",
             path: "launches/upcoming",
             queryItems: [
-                URLQueryItem(name: "related", value: true.description),
-                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue),
+                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue), // TODO: consider list mode
                 URLQueryItem(name: "limit", value: 1.description),
             ]
         )
@@ -53,8 +52,8 @@ extension Endpoint {
             version: "2.3.0",
             path: "launches/previous",
             queryItems: [
-                URLQueryItem(name: "mode", value: DetailMode.detailed.rawValue),
-                URLQueryItem(name: "limit", value: 30.description),
+                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue), // TODO: consider list mode
+                URLQueryItem(name: "limit", value: 50.description),
             ]
         )
     }
@@ -65,22 +64,9 @@ extension Endpoint {
             version: "v4",
             path: "articles",
             queryItems: [
-                URLQueryItem(name: "limit", value: 30.description),
+                URLQueryItem(name: "limit", value: 50.description),
                 URLQueryItem(name: "title_contains_one", value: launchServiceProviders.map(\.name).joined(separator: ",")),
                 URLQueryItem(name: "summary_contains_one", value: launchServiceProviders.map(\.name).joined(separator: ",")),
-            ]
-        )
-    }
-
-    static func agencies(limit: Int, offset: Int) -> Endpoint {
-        return Endpoint(
-            host: host,
-            version: "2.3.0",
-            path: "agencies",
-            queryItems: [
-                URLQueryItem(name: "limit", value: limit.description),
-                URLQueryItem(name: "offset", value: offset.description),
-                URLQueryItem(name: "mode", value: DetailMode.list.rawValue),
             ]
         )
     }

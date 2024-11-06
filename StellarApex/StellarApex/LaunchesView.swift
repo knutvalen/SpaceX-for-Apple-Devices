@@ -31,7 +31,6 @@ struct LaunchesView: View {
             }
             #if !os(watchOS)
             .listStyle(.inset)
-            .listRowSpacing(32)
             #endif
             .padding(.horizontal, -8)
             .refreshable {
