@@ -31,8 +31,8 @@ struct LaunchesView: View {
             }
             #if !os(watchOS)
             .listStyle(.inset)
-            #endif
             .padding(.horizontal, -8)
+            #endif
             .refreshable {
                 await viewModel.getNextLaunch(ignoreCache: true)
                 await viewModel.getPreviousLaunches(ignoreCache: true)

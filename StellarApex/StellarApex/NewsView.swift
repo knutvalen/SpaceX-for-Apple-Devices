@@ -113,20 +113,22 @@ struct NewsView: View {
                          }
                          */
 
-                        HStack {
-                            Spacer()
+                        #if !os(watchOS)
+                            HStack {
+                                Spacer()
 
-                            Button {
-                                newsUrl = newsArticle.newsUrl
-                                preferredColumn = .detail
-                            } label: {
-                                HStack {
-                                    Image(systemName: "newspaper")
-                                    Text("Details")
+                                Button {
+                                    newsUrl = newsArticle.newsUrl
+                                    preferredColumn = .detail
+                                } label: {
+                                    HStack {
+                                        Image(systemName: "newspaper")
+                                        Text("Details")
+                                    }
                                 }
+                                .buttonStyle(.borderedProminent)
                             }
-                            .buttonStyle(.borderedProminent)
-                        }
+                        #endif
                     }
                     #if !os(watchOS)
                     .listRowSeparator(.hidden)
@@ -140,9 +142,9 @@ struct NewsView: View {
                 }
                 #if !os(watchOS)
                 .listStyle(.inset)
+                .padding(.horizontal, -8)
                 #endif
                 .navigationTitle("News")
-                .padding(.horizontal, -8)
                 .refreshable {
                     await viewModel.getNews(ignoreCache: true)
                 }
