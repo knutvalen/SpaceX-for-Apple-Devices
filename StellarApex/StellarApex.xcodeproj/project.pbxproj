@@ -28,7 +28,6 @@
 		CC8879362CD4E830005A22DA /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Webcast.swift */; };
 		CC8879372CD4E830005A22DA /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* WebcastType.swift */; };
 		CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toLaunch.swift */; };
-		CC8879392CD4E830005A22DA /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879242CD4E830005A22DA /* BuildConfiguration.swift */; };
 		CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791F2CD4E830005A22DA /* HttpService.swift */; };
 		CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791D2CD4E830005A22DA /* Endpoint.swift */; };
 		CC88793D2CD4E830005A22DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790D2CD4E830005A22DA /* ContentView.swift */; };
@@ -79,7 +78,6 @@
 		CC88796C2CD4E88B005A22DA /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790F2CD4E830005A22DA /* LaunchDetailsView.swift */; };
 		CC88796D2CD4E88B005A22DA /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879122CD4E830005A22DA /* LaunchViewModel.swift */; };
 		CC88796E2CD4E88B005A22DA /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879262CD4E830005A22DA /* DetailMode.swift */; };
-		CC88796F2CD4E88B005A22DA /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879242CD4E830005A22DA /* BuildConfiguration.swift */; };
 		CCFBAC212CDB739E0048FEFD /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = CCFBAC202CDB739E0048FEFD /* YouTubePlayerKit */; };
 /* End PBXBuildFile section */
 
@@ -140,7 +138,6 @@
 		CC88791F2CD4E830005A22DA /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		CC8879212CD4E830005A22DA /* Date+toLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toLaunch.swift"; sourceTree = "<group>"; };
 		CC8879232CD4E830005A22DA /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		CC8879242CD4E830005A22DA /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 		CC8879252CD4E830005A22DA /* DatePrecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePrecision.swift; sourceTree = "<group>"; };
 		CC8879262CD4E830005A22DA /* DetailMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMode.swift; sourceTree = "<group>"; };
 		CC8879272CD4E830005A22DA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -278,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				CC8879232CD4E830005A22DA /* AppError.swift */,
-				CC8879242CD4E830005A22DA /* BuildConfiguration.swift */,
 				CC8879252CD4E830005A22DA /* DatePrecision.swift */,
 				CC8879262CD4E830005A22DA /* DetailMode.swift */,
 				CC8879272CD4E830005A22DA /* HTTPMethod.swift */,
@@ -419,7 +415,6 @@
 				CC8879362CD4E830005A22DA /* Webcast.swift in Sources */,
 				CC8879372CD4E830005A22DA /* WebcastType.swift in Sources */,
 				CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */,
-				CC8879392CD4E830005A22DA /* BuildConfiguration.swift in Sources */,
 				CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */,
 				CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */,
 				CC88793D2CD4E830005A22DA /* ContentView.swift in Sources */,
@@ -479,7 +474,6 @@
 				CC88796C2CD4E88B005A22DA /* LaunchDetailsView.swift in Sources */,
 				CC88796D2CD4E88B005A22DA /* LaunchViewModel.swift in Sources */,
 				CC88796E2CD4E88B005A22DA /* DetailMode.swift in Sources */,
-				CC88796F2CD4E88B005A22DA /* BuildConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
