@@ -36,7 +36,7 @@ struct PreviousLaunchesView: View {
                                         launchId = launch.id
                                         preferredColumn = .detail
                                     } label: {
-                                        Image("rocket-tiny-template")
+                                        Image("rocket-template-tiny")
                                         Text("Details")
                                     }
                                     .buttonStyle(.borderedProminent)
@@ -59,7 +59,7 @@ struct PreviousLaunchesView: View {
                                     launchId = launch.id
                                     preferredColumn = .detail
                                 } label: {
-                                    Image("rocket-tiny-template")
+                                    Image("rocket-template-tiny")
                                     Text("Details")
                                 }
                                 .buttonStyle(.borderedProminent)

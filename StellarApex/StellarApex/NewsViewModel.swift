@@ -20,7 +20,6 @@ class NewsViewModel: ObservableObject {
             }
 
             await getNews(ignoreCache: false)
-            await getNews(ignoreCache: true)
         }
     }
 

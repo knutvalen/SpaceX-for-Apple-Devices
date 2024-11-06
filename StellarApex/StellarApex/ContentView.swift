@@ -13,7 +13,7 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $selection) {
-            Tab("Launches", image: "rocket-tiny-template", value: Selection.launches) {
+            Tab("Launches", image: "rocket-template-tiny", value: Selection.launches) {
                 LaunchesView(
                     launchId: $launchId,
                     preferredColumn: $preferredColumn

@@ -1,9 +1,9 @@
 import Foundation
 
 final class ApiService: ObservableObject {
-    let httpService: HttpService
+    private let httpService: HttpService
 
-    let dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .custom { decoder in
+    private let dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .custom { decoder in
         let container = try decoder.singleValueContainer()
         let dateString = try container.decode(String.self)
         let formatter = ISO8601DateFormatter()

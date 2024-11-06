@@ -17,22 +17,14 @@ struct LaunchesView: View {
                     .listRowSeparator(.hidden)
                 #endif
 
-                NextLaunchView(
-                    viewModel: viewModel,
-                    launchId: $launchId,
-                    preferredColumn: $preferredColumn
-                )
-                .environmentObject(themeManager)
+                NextLaunchView(viewModel: viewModel, launchId: $launchId, preferredColumn: $preferredColumn)
+                    .environmentObject(themeManager)
                 #if !os(watchOS)
                     .listRowSeparator(.hidden)
                 #endif
 
-                PreviousLaunchesView(
-                    viewModel: viewModel,
-                    launchId: $launchId,
-                    preferredColumn: $preferredColumn
-                )
-                .environmentObject(themeManager)
+                PreviousLaunchesView(viewModel: viewModel, launchId: $launchId, preferredColumn: $preferredColumn)
+                    .environmentObject(themeManager)
                 #if !os(watchOS)
                     .listRowSeparator(.hidden)
                 #endif
@@ -50,8 +42,8 @@ struct LaunchesView: View {
             .onChange(of: scenePhase) { _, newPhase in
                 if newPhase == .active && viewModel.timeLeft != nil {
                     Task {
-                        await viewModel.getNextLaunch(ignoreCache: true)
-                        await viewModel.getPreviousLaunches(ignoreCache: true)
+                        await viewModel.getNextLaunch(ignoreCache: false)
+                        await viewModel.getPreviousLaunches(ignoreCache: false)
                     }
                 }
             }
@@ -60,7 +52,7 @@ struct LaunchesView: View {
                 if let id = Binding($launchId) {
                     LaunchDetailsView(launchId: id)
                 } else {
-                    ContentUnavailableView("Select a launch", image: "rocket-tiny-template")
+                    ContentUnavailableView("Select a launch", image: "rocket-template-1x")
                 }
             }
         }

@@ -99,7 +99,7 @@ struct NewsView: View {
                                              //TODO: navigate to launch details from here
                                          } label: {
                                              HStack {
-                                                 Image("rocket-tiny-template")
+                                                 Image("rocket-template-tiny")
                                                  Text("Details")
                                              }
                                          }

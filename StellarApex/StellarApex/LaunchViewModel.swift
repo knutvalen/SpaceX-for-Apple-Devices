@@ -32,8 +32,6 @@ class LaunchViewModel: ObservableObject {
         Task {
             await getNextLaunch(ignoreCache: false)
             await getPreviousLaunches(ignoreCache: false)
-            await getNextLaunch(ignoreCache: true)
-            await getPreviousLaunches(ignoreCache: true)
         }
     }
 
@@ -46,7 +44,6 @@ class LaunchViewModel: ObservableObject {
             let nextLaunchTime = nextLaunch.net.timeIntervalSince1970
             let timeLeft = Int(floor(nextLaunchTime - nowTime))
 
-//            DispatchQueue.main.async {
             self.nextLaunch = nextLaunch
             self.timeLeft = timeLeft
             countdown?.invalidate()
@@ -61,7 +58,6 @@ class LaunchViewModel: ObservableObject {
                         }
                     }
                 }
-//                }
             }
 
         case let .failure(error):
@@ -82,9 +78,7 @@ class LaunchViewModel: ObservableObject {
                 fatalError(error.localizedDescription)
             }
 
-//            DispatchQueue.main.async {
             previousLaunches = launches
-//            }
 
         case let .failure(error):
             debugPrint(error)
