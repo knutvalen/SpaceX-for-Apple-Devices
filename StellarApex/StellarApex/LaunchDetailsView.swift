@@ -147,9 +147,7 @@ struct LaunchDetailsView: View {
                         Text("Stream")
                             .font(.headline)
 
-                        if let webcast = launch.webcasts.first(where: { webcast in
-                            webcast.source?.contains("youtube") ?? false // TODO: rewrite using $0
-                        }) {
+                        if let webcast = launch.webcasts.first(where: { $0.source?.contains("youtube") ?? false }) {
                             let player = YouTubePlayer(stringLiteral: webcast.url)
                             YouTubePlayerView(player) { state in
                                 switch state {

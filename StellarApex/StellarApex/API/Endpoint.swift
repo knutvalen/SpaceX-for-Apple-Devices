@@ -40,7 +40,7 @@ extension Endpoint {
             version: "2.3.0",
             path: "launches/upcoming",
             queryItems: [
-                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue), // TODO: consider list mode
+                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue),
                 URLQueryItem(name: "limit", value: 1.description),
             ]
         )
@@ -52,7 +52,7 @@ extension Endpoint {
             version: "2.3.0",
             path: "launches/previous",
             queryItems: [
-                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue), // TODO: consider list mode
+                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue),
                 URLQueryItem(name: "limit", value: 50.description),
             ]
         )

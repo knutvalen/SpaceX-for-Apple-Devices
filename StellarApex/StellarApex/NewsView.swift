@@ -96,7 +96,7 @@ struct NewsView: View {
 
                                      ForEach(newsArticle.launches, id: \.self) { launchId in
                                          Button {
-                                             //TODO: navigate to launch details from here
+
                                          } label: {
                                              HStack {
                                                  Image("rocket-template-tiny")
