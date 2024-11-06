@@ -679,7 +679,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "watchOS-StellarApex-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "watchOS StellarApex";
+				INFOPLIST_KEY_CFBundleDisplayName = StellarApex;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.knutvalen.StellarApex;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
@@ -711,7 +711,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "watchOS-StellarApex-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "watchOS StellarApex";
+				INFOPLIST_KEY_CFBundleDisplayName = StellarApex;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.knutvalen.StellarApex;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
