@@ -140,7 +140,6 @@ struct NewsView: View {
                 }
                 #if !os(watchOS)
                 .listStyle(.inset)
-                .listRowSpacing(32)
                 #endif
                 .navigationTitle("News")
                 .padding(.horizontal, -8)

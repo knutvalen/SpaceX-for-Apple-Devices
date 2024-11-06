@@ -43,7 +43,7 @@ final class ApiService: ObservableObject {
                             "name": dataAsJson.value(forKeyPath: "status.name"),
                             "description": dataAsJson.value(forKeyPath: "status.description"),
                         ],
-                        "webcasts": dataAsJson.value(forKey: "vid_urls"),
+                        "webcasts": dataAsJson.value(forKey: "vid_urls") as? [NSDictionary],
                         "mission": [
                             "description": dataAsJson.value(forKeyPath: "mission.description"),
                             "name": dataAsJson.value(forKeyPath: "mission.name"),
@@ -92,15 +92,12 @@ final class ApiService: ObservableObject {
                     let nextLaunchJson = [
                         "id": firstResult.value(forKey: "id"),
                         "name": firstResult.value(forKey: "name"),
-                        "webcast": firstResult.value(forKey: "vid_urls.0"),
                         "netPrecision": firstResult.value(forKeyPath: "net_precision.name"),
                         "net": firstResult.value(forKey: "net"),
                         "launchServiceProvider": [
                             "id": firstResult.value(forKeyPath: "launch_service_provider.id"),
                             "name": firstResult.value(forKeyPath: "launch_service_provider.name"),
-                            "description": firstResult.value(forKeyPath: "launch_service_provider.description"),
                             "url": firstResult.value(forKeyPath: "launch_service_provider.info_url"),
-                            "logo": firstResult.value(forKeyPath: "launch_service_provider.logo.image_url"),
                         ],
                     ]
 
@@ -145,9 +142,7 @@ final class ApiService: ObservableObject {
                             "launchServiceProvider": [
                                 "id": result.value(forKeyPath: "launch_service_provider.id"),
                                 "name": result.value(forKeyPath: "launch_service_provider.name"),
-                                "description": result.value(forKeyPath: "launch_service_provider.description"),
                                 "url": result.value(forKeyPath: "launch_service_provider.info_url"),
-                                "logo": result.value(forKeyPath: "launch_service_provider.logo.image_url"),
                             ],
                         ]
 

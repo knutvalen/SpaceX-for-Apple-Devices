@@ -80,6 +80,7 @@
 		CC88796D2CD4E88B005A22DA /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879122CD4E830005A22DA /* LaunchViewModel.swift */; };
 		CC88796E2CD4E88B005A22DA /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879262CD4E830005A22DA /* DetailMode.swift */; };
 		CC88796F2CD4E88B005A22DA /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879242CD4E830005A22DA /* BuildConfiguration.swift */; };
+		CCFBAC212CDB739E0048FEFD /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = CCFBAC202CDB739E0048FEFD /* YouTubePlayerKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCFBAC212CDB739E0048FEFD /* YouTubePlayerKit in Frameworks */,
 				CC8878E42CD4DE7A005A22DA /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +313,7 @@
 			name = StellarApex;
 			packageProductDependencies = (
 				CC8878E32CD4DE7A005A22DA /* CachedAsyncImage */,
+				CCFBAC202CDB739E0048FEFD /* YouTubePlayerKit */,
 			);
 			productName = StellarApex;
 			productReference = CC29F37C2CD4DB4C00E67D7B /* StellarApex.app */;
@@ -365,6 +368,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				CC8878E22CD4DE7A005A22DA /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				CCFBAC1F2CDB739E0048FEFD /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CC29F37D2CD4DB4C00E67D7B /* Products */;
@@ -774,6 +778,14 @@
 				minimumVersion = 2.1.1;
 			};
 		};
+		CCFBAC1F2CDB739E0048FEFD /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -786,6 +798,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CC8878E22CD4DE7A005A22DA /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		CCFBAC202CDB739E0048FEFD /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCFBAC1F2CDB739E0048FEFD /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

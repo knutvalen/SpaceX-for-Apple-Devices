@@ -1,5 +1,5 @@
 {
-  "originHash" : "c49517a3a917ff0505be51a11c3b9b6d5ff293b67ec086349c3d52a78b1fbd7a",
+  "originHash" : "954cc762a48dda2b037a9b2b410b7f7a2e7cb9911f51680708ff61b4259a402b",
   "pins" : [
     {
       "identity" : "swiftui-cached-async-image",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "467a3d17479887943ab917a379e62bbaff60ac8a",
         "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "youtubeplayerkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SvenTiigi/YouTubePlayerKit.git",
+      "state" : {
+        "revision" : "fe1c1ec340f6d79866131432ecaa190fd6bbc4cb",
+        "version" : "1.9.0"
       }
     }
   ],

@@ -1,5 +1,8 @@
 import CachedAsyncImage
 import SwiftUI
+#if !os(watchOS)
+    import YouTubePlayerKit
+#endif
 
 struct LaunchDetailsView: View {
     @StateObject private var viewModel = LaunchDetailsViewModel()
@@ -92,35 +95,6 @@ struct LaunchDetailsView: View {
                 }
 
                 VStack(alignment: .leading) {
-                    Text("Webcasts")
-                        .font(.headline)
-
-                    if launch.webcasts.isEmpty {
-                        Text("No webcasts available")
-                    } else {
-                        VStack(spacing: 16) {
-                            ForEach(launch.webcasts) { webcast in
-                                if let url = URL(string: webcast.url) {
-                                    HStack(alignment: .top) {
-                                        Spacer()
-
-                                        Button {
-                                            openURL(url)
-                                        } label: {
-                                            HStack {
-                                                Image(systemName: "arrow.up.forward.app")
-                                                Text(webcast.type.name)
-                                            }
-                                        }
-                                        .buttonStyle(.borderless)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                VStack(alignment: .leading) {
                     Text("Mission name")
                         .font(.headline)
 
@@ -167,6 +141,34 @@ struct LaunchDetailsView: View {
                     )
                     .font(.subheadline)
                 }
+
+                #if !os(watchOS)
+                    VStack(alignment: .leading) {
+                        Text("Stream")
+                            .font(.headline)
+
+                        if let webcast = launch.webcasts.first(where: { webcast in
+                            webcast.source?.contains("youtube") ?? false // TODO: rewrite using $0
+                        }) {
+                            let player = YouTubePlayer(stringLiteral: webcast.url)
+                            YouTubePlayerView(player) { state in
+                                switch state {
+                                case .idle:
+                                    ProgressView()
+
+                                case .ready:
+                                    EmptyView()
+
+                                case .error:
+                                    Text("YouTube player could not be loaded.")
+                                }
+                            }
+                            .aspectRatio(contentMode: .fit)
+                        } else {
+                            Text("No stream available")
+                        }
+                    }
+                #endif
             }
             #if !os(watchOS)
             .listStyle(.inset)
