@@ -1,8 +1,8 @@
 import Foundation
 
-struct Webcast: Codable, Identifiable {
+struct Videos: Codable, Identifiable {
     var publisher: String?
-    var type: WebcastType
+    var type: VideoType
     var url: String
     var source: String?
     var id: String { url }

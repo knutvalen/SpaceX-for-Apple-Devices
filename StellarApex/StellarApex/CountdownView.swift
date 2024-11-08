@@ -1,79 +1,79 @@
-import Foundation
+import CachedAsyncImage
 import SwiftUI
 
 struct CountdownView: View {
-    @EnvironmentObject private var themeManager: ThemeManager
     @ObservedObject var viewModel: LaunchViewModel
-    @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
-        VStack {
-            if let launch = viewModel.nextLaunch,
-               let timeInSeconds = viewModel.timeLeft
-            {
-                HStack {
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text(launch.name)
-                        #if !os(watchOS)
-                            .font(.title2)
-                        #else
-                            .font(.subheadline)
-                        #endif
+        if let launch = viewModel.nextLaunch,
+           let timeLeft = viewModel.timeLeft
+        {
+            HStack {
+                if let imageURL = launch.patches?.first?.imageURL {
+                    CachedAsyncImage(url: URL(string: imageURL)) { phase in
+                        switch phase {
+                        case let .success(image):
+                            image.resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 64, height: 64)
 
-                        Text(formatCountdown(timeInSeconds: timeInSeconds))
-                        #if !os(watchOS)
-                            .font(.title)
-                        #else
-                            .font(.headline)
-                        #endif
-                            .bold()
+                        case .failure:
+                            EmptyView()
+
+                        case .empty:
+                            ProgressView()
+                                .controlSize(.small)
+                                .frame(width: 64, height: 64)
+
+                        @unknown default:
+                            EmptyView()
+                        }
                     }
-
-                    Spacer()
                 }
-            } else {
-                HStack {
-                    Spacer()
 
-                    ProgressView()
-                        .controlSize(.regular)
+                VStack(alignment: .leading) {
+                    Text(formatCountdown(secondsLeft: timeLeft))
 
-                    Spacer()
+                        .font(.largeTitle)
+
+                    if let launchDate = launch.net?.toStellarApexDateString() {
+                        Text(launchDate)
+                            .font(.caption)
+                    }
+                }
+            }
+        } else {
+            ProgressView().onAppear {
+                Task {
+                    await viewModel.getNextLaunch(ignoreCache: false)
                 }
             }
         }
-        #if !os(watchOS)
-        .padding(16)
-        .background(themeManager.selectedTheme.cardColor)
-        .cornerRadius(12)
-        .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
-        #else
-        .padding(8)
-        #endif
     }
 }
 
-private func formatCountdown(timeInSeconds: Int) -> String {
-    if timeInSeconds <= 0 {
-        if let past = Calendar.current.date(
-            byAdding: .second,
-            value: timeInSeconds,
-            to: Date()
-        ) {
-            return "Launched \(past.formatted(.relative(presentation: .named)))"
-        }
+private func formatCountdown(secondsLeft: Int) -> String {
+    var hours = secondsLeft / (60 * 60)
+    var minutes = (secondsLeft % (60 * 60)) / 60
+    var seconds = secondsLeft % 60
+    let prefix: String
 
-        return "Launched"
+    if secondsLeft > 0 {
+        prefix = "T-"
+    } else {
+        prefix = "T+"
+        hours.negate()
+        minutes.negate()
+        seconds.negate()
     }
 
-    let days = timeInSeconds / (60 * 60 * 24)
-    let hours = (timeInSeconds % (60 * 60 * 24)) / (60 * 60)
-    let minutes = (timeInSeconds % (60 * 60)) / 60
-    let seconds = timeInSeconds % 60
-    return "\(days)d \(hours)h \(minutes)m \(seconds)s"
+    let hPrefix = hours < 10 ? "0" : ""
+    let mPrefix = minutes < 10 ? "0" : ""
+    let sPrefix = seconds < 10 ? "0" : ""
+
+    return "\(prefix)\(hPrefix)\(hours):\(mPrefix)\(minutes):\(sPrefix)\(seconds)"
 }
 
 #Preview {
     CountdownView(viewModel: LaunchViewModel())
-        .environmentObject(ThemeManager())
 }

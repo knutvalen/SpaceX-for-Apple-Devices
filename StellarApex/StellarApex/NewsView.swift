@@ -46,6 +46,7 @@ struct NewsView: View {
                                 EmptyView()
                             }
                         }
+                        .cornerRadius(4)
 
                         HStack {
                             Text(newsArticle.title)
@@ -112,38 +113,8 @@ struct NewsView: View {
                              .padding(.top, 4)
                          }
                          */
-
-                        #if !os(watchOS)
-                            HStack {
-                                Spacer()
-
-                                Button {
-                                    newsUrl = newsArticle.newsUrl
-                                    preferredColumn = .detail
-                                } label: {
-                                    HStack {
-                                        Image(systemName: "newspaper")
-                                        Text("Details")
-                                    }
-                                }
-                                .buttonStyle(.borderedProminent)
-                            }
-                        #endif
                     }
-                    #if !os(watchOS)
-                    .listRowSeparator(.hidden)
-                    .padding(16)
-                    .background(themeManager.selectedTheme.cardColor)
-                    .cornerRadius(12)
-                    .shadow(color: themeManager.selectedTheme.shadowColor, radius: 2, x: 1, y: 2)
-                    #else
-                    .padding(8)
-                    #endif
                 }
-                #if !os(watchOS)
-                .listStyle(.inset)
-                .padding(.horizontal, -8)
-                #endif
                 .navigationTitle("News")
                 .refreshable {
                     await viewModel.getNews(ignoreCache: true)

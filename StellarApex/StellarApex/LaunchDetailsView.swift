@@ -28,11 +28,11 @@ struct LaunchDetailsView: View {
            launch.id == launchId
         {
             List {
-                if let patch = launch.patch {
+                if let patch = launch.patches?.first {
                     HStack {
                         Spacer()
 
-                        CachedAsyncImage(url: URL(string: patch)) { phase in
+                        CachedAsyncImage(url: URL(string: patch.imageURL)) { phase in
                             switch phase {
                             case let .success(image):
                                 image.resizable()
@@ -60,23 +60,27 @@ struct LaunchDetailsView: View {
                     }
                 }
 
-                VStack(alignment: .leading) {
-                    Text("Name")
-                        .font(.headline)
+                if let name = launch.name {
+                    VStack(alignment: .leading) {
+                        Text("Name")
+                            .font(.headline)
 
-                    Text(launch.name)
-                        .font(.subheadline)
+                        Text(name)
+                            .font(.subheadline)
+                    }
                 }
 
-                VStack(alignment: .leading) {
-                    Text("Status")
-                        .font(.headline)
+                if let status = launch.status?.name {
+                    VStack(alignment: .leading) {
+                        Text("Status")
+                            .font(.headline)
 
-                    Text(launch.status.name)
-                        .font(.subheadline)
+                        Text(status)
+                            .font(.subheadline)
+                    }
                 }
 
-                if let launchDate = launch.net.toLaunch(precision: launch.netPrecision) {
+                if let launchDate = launch.net?.toStellarApexDateString() {
                     VStack(alignment: .leading) {
                         Text("Launch date")
                             .font(.headline)
@@ -85,32 +89,36 @@ struct LaunchDetailsView: View {
                             .font(.subheadline)
                     }
 
+//                    VStack(alignment: .leading) {
+//                        Text("Launch date precision")
+//                            .font(.headline)
+//
+//                        Text(launch.netPrecision?.name.rawValue)
+//                            .font(.subheadline)
+//                    }
+                }
+
+                if let missionName = launch.mission?.name {
                     VStack(alignment: .leading) {
-                        Text("Launch date precision")
+                        Text("Mission name")
                             .font(.headline)
 
-                        Text(launch.netPrecision.rawValue)
+                        Text(missionName)
                             .font(.subheadline)
                     }
                 }
 
-                VStack(alignment: .leading) {
-                    Text("Mission name")
-                        .font(.headline)
+                if let missionType = launch.mission?.type {
+                    VStack(alignment: .leading) {
+                        Text("Mission type")
+                            .font(.headline)
 
-                    Text(launch.mission.name)
-                        .font(.subheadline)
+                        Text(missionType)
+                            .font(.subheadline)
+                    }
                 }
 
-                VStack(alignment: .leading) {
-                    Text("Mission type")
-                        .font(.headline)
-
-                    Text(launch.mission.type)
-                        .font(.subheadline)
-                }
-
-                if let missionDescription = launch.mission.description {
+                if let missionDescription = launch.mission?.description {
                     VStack(alignment: .leading) {
                         Text("Mission description")
                             .font(.headline)
@@ -120,26 +128,30 @@ struct LaunchDetailsView: View {
                     }
                 }
 
-                VStack(alignment: .leading) {
-                    Text("Orbit")
-                        .font(.headline)
+                if let orbit = launch.mission?.orbit.name {
+                    VStack(alignment: .leading) {
+                        Text("Orbit")
+                            .font(.headline)
 
-                    Text(launch.mission.orbit)
-                        .font(.subheadline)
+                        Text(orbit)
+                            .font(.subheadline)
+                    }
                 }
 
-                VStack(alignment: .leading) {
-                    Text("Details updated")
-                        .font(.headline)
+                if let lastUpdated = launch.lastUpdated {
+                    VStack(alignment: .leading) {
+                        Text("Details updated")
+                            .font(.headline)
 
-                    Text(
-                        Date.RelativeFormatStyle(
-                            presentation: .named,
-                            capitalizationContext: .beginningOfSentence
+                        Text(
+                            Date.RelativeFormatStyle(
+                                presentation: .named,
+                                capitalizationContext: .beginningOfSentence
+                            )
+                            .format(lastUpdated)
                         )
-                        .format(launch.lastUpdated)
-                    )
-                    .font(.subheadline)
+                        .font(.subheadline)
+                    }
                 }
 
                 #if !os(watchOS)
@@ -147,7 +159,7 @@ struct LaunchDetailsView: View {
                         Text("Stream")
                             .font(.headline)
 
-                        if let webcast = launch.webcasts.first(where: { $0.source?.contains("youtube") ?? false }) {
+                        if let webcast = launch.videos?.first(where: { $0.source?.contains("youtube") ?? false }) {
                             let player = YouTubePlayer(stringLiteral: webcast.url)
                             YouTubePlayerView(player) { state in
                                 switch state {

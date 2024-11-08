@@ -12,7 +12,7 @@ class HttpLogger {
         simpleLog: Bool,
         redactableHeaders: [String],
         redactHeaders: Bool,
-        hideBody: Bool,
+        redactBody: Bool,
         prettyPrintBody: Bool
     ) {
         dateFormatter = DateFormatter()
@@ -21,7 +21,7 @@ class HttpLogger {
         self.simpleLog = simpleLog
         self.redactableHeaders = redactableHeaders
         self.redactHeaders = redactHeaders
-        redactBody = hideBody
+        self.redactBody = redactBody
         self.prettyPrintBody = prettyPrintBody
     }
 

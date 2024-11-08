@@ -40,7 +40,7 @@ extension Endpoint {
             version: "2.3.0",
             path: "launches/upcoming",
             queryItems: [
-                URLQueryItem(name: "mode", value: DetailMode.normal.rawValue),
+                URLQueryItem(name: "mode", value: DetailMode.detailed.rawValue),
                 URLQueryItem(name: "limit", value: 1.description),
             ]
         )

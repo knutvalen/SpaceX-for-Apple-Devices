@@ -1,5 +1,5 @@
 import Foundation
 
-struct WebcastType: Codable {
+struct VideoType: Codable {
     var name: String
 }
