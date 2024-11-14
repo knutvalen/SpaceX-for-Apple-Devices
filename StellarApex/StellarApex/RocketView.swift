@@ -79,14 +79,17 @@ struct RocketView: View {
                         Text("Launch Cost")
                             .font(.headline)
 
-                        Text("\(launchCost.formatted(.number.grouping(.automatic))) $")
+                        Text("$\(launchCost.formatted(.number.grouping(.automatic)))")
                             .font(.none)
                             .fixedSize(horizontal: false, vertical: true)
 
                         Divider()
                     }
 
-                    if let launcher = launch.rocket?.launcherStage.first?.launcher {
+                    if let launcher = launch.rocket?.launcherStage.first?.launcher,
+                       let name = launcher.serialNumber
+                    
+                    {
                         Text("Launcher")
                             .font(.title2)
 
@@ -94,18 +97,21 @@ struct RocketView: View {
                             Text("Name")
                                 .font(.headline)
 
-                            Text(launcher.serialNumber)
+                            Text(name)
                                 .font(.none)
                                 .fixedSize(horizontal: false, vertical: true)
 
                             Divider()
 
-                            Text("Description")
-                                .font(.headline)
+                            if let details = launcher.details {
+                                Text("Description")
+                                    .font(.headline)
 
-                            Text(launcher.details)
-                                .font(.none)
-                                .fixedSize(horizontal: false, vertical: true)
+                                Text(details)
+                                    .font(.none)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            
                         }
                         .padding(.horizontal)
 
