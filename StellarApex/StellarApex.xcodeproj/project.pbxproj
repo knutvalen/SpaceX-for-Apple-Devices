@@ -7,12 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC01BA9B2CE48A8500F7A027 /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01BA9A2CE48A8500F7A027 /* NextLaunchView.swift */; };
+		CC01BA9D2CE491D900F7A027 /* LaunchScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01BA9C2CE491D900F7A027 /* LaunchScrollView.swift */; };
+		CC01BA9E2CE491D900F7A027 /* LaunchScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01BA9C2CE491D900F7A027 /* LaunchScrollView.swift */; };
+		CC01BAA92CE60FB800F7A027 /* SpacecraftConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01BAA82CE60FB800F7A027 /* SpacecraftConfiguration.swift */; };
+		CC01BAAA2CE60FB800F7A027 /* SpacecraftConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01BAA82CE60FB800F7A027 /* SpacecraftConfiguration.swift */; };
+		CC01BAAC2CE6235100F7A027 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01BAAB2CE6235100F7A027 /* RocketView.swift */; };
+		CC01BAAD2CE6235100F7A027 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01BAAB2CE6235100F7A027 /* RocketView.swift */; };
 		CC17D38F2CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */; };
 		CC17D3902CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */; };
 		CC17D3932CDA661E00547433 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17D3912CDA661E00547433 /* WebView.swift */; };
 		CC29F3932CD4DB6500E67D7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F38D2CD4DB6500E67D7B /* Preview Assets.xcassets */; };
 		CC29F3962CD4DB6500E67D7B /* StellarApexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */; };
 		CC29F3992CD4DB8200E67D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F3982CD4DB8200E67D7B /* Assets.xcassets */; };
+		CC3EF0EF2CE0959800633F6C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0EE2CE0959800633F6C /* Status.swift */; };
+		CC3EF0F02CE0959800633F6C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0EE2CE0959800633F6C /* Status.swift */; };
+		CC3EF0F22CE095B300633F6C /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F12CE095B300633F6C /* Mission.swift */; };
+		CC3EF0F32CE095B300633F6C /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F12CE095B300633F6C /* Mission.swift */; };
+		CC3EF0F52CE0A6B400633F6C /* Orbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F42CE0A6B400633F6C /* Orbit.swift */; };
+		CC3EF0F62CE0A6B400633F6C /* Orbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F42CE0A6B400633F6C /* Orbit.swift */; };
+		CC3EF0F82CE0A7D400633F6C /* MissionPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */; };
+		CC3EF0F92CE0A7D400633F6C /* MissionPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */; };
+		CC7FBBE22CE1FB0A0030A4A9 /* nextLaunch.json in Resources */ = {isa = PBXBuildFile; fileRef = CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */; };
+		CC7FBBE32CE1FB0A0030A4A9 /* nextLaunch.json in Resources */ = {isa = PBXBuildFile; fileRef = CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */; };
+		CC7FBBE52CE200400030A4A9 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBE42CE200400030A4A9 /* Rocket.swift */; };
+		CC7FBBE62CE200400030A4A9 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBE42CE200400030A4A9 /* Rocket.swift */; };
+		CC7FBBE82CE200FB0030A4A9 /* RocketConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBE72CE200FB0030A4A9 /* RocketConfiguration.swift */; };
+		CC7FBBE92CE200FB0030A4A9 /* RocketConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBE72CE200FB0030A4A9 /* RocketConfiguration.swift */; };
+		CC7FBBEB2CE3318C0030A4A9 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBEA2CE3318C0030A4A9 /* FirstStage.swift */; };
+		CC7FBBEC2CE3318C0030A4A9 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBEA2CE3318C0030A4A9 /* FirstStage.swift */; };
+		CC7FBBEE2CE333CE0030A4A9 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBED2CE333CE0030A4A9 /* Launcher.swift */; };
+		CC7FBBEF2CE333CE0030A4A9 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBED2CE333CE0030A4A9 /* Launcher.swift */; };
+		CC7FBBF12CE3389E0030A4A9 /* Manufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBF02CE3389E0030A4A9 /* Manufacturer.swift */; };
+		CC7FBBF22CE3389E0030A4A9 /* Manufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBF02CE3389E0030A4A9 /* Manufacturer.swift */; };
+		CC7FBBF42CE345680030A4A9 /* ApiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBF32CE345680030A4A9 /* ApiImage.swift */; };
+		CC7FBBF52CE345680030A4A9 /* ApiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBF32CE345680030A4A9 /* ApiImage.swift */; };
 		CC8878E42CD4DE7A005A22DA /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC8878E32CD4DE7A005A22DA /* CachedAsyncImage */; };
 		CC8878F72CD4E055005A22DA /* watchOS StellarApex Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CC8878EA2CD4E054005A22DA /* watchOS StellarApex Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC8879022CD4E05F005A22DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8878FC2CD4E05F005A22DA /* Preview Assets.xcassets */; };
@@ -25,8 +54,8 @@
 		CC8879332CD4E830005A22DA /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */; };
 		CC8879342CD4E830005A22DA /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879132CD4E830005A22DA /* MainTheme.swift */; };
 		CC8879352CD4E830005A22DA /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791E2CD4E830005A22DA /* HttpLogger.swift */; };
-		CC8879362CD4E830005A22DA /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Webcast.swift */; };
-		CC8879372CD4E830005A22DA /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* WebcastType.swift */; };
+		CC8879362CD4E830005A22DA /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Videos.swift */; };
+		CC8879372CD4E830005A22DA /* VideoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* VideoType.swift */; };
 		CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toLaunch.swift */; };
 		CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791F2CD4E830005A22DA /* HttpService.swift */; };
 		CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791D2CD4E830005A22DA /* Endpoint.swift */; };
@@ -37,7 +66,6 @@
 		CC8879412CD4E830005A22DA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879272CD4E830005A22DA /* HTTPMethod.swift */; };
 		CC8879422CD4E830005A22DA /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879282CD4E830005A22DA /* LaunchDetails.swift */; };
 		CC8879432CD4E830005A22DA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790C2CD4E830005A22DA /* AppState.swift */; };
-		CC8879442CD4E830005A22DA /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */; };
 		CC8879452CD4E830005A22DA /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879262CD4E830005A22DA /* DetailMode.swift */; };
 		CC8879462CD4E830005A22DA /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879292CD4E830005A22DA /* LaunchOverview.swift */; };
 		CC8879472CD4E830005A22DA /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879192CD4E830005A22DA /* ThemeManager.swift */; };
@@ -48,12 +76,11 @@
 		CC88794C2CD4E830005A22DA /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790E2CD4E830005A22DA /* CountdownView.swift */; };
 		CC88794D2CD4E830005A22DA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791C2CD4E830005A22DA /* ApiService.swift */; };
 		CC88794F2CD4E88B005A22DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F3982CD4DB8200E67D7B /* Assets.xcassets */; };
-		CC8879512CD4E88B005A22DA /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Webcast.swift */; };
+		CC8879512CD4E88B005A22DA /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Videos.swift */; };
 		CC8879522CD4E88B005A22DA /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792A2CD4E830005A22DA /* NavigationDestination.swift */; };
 		CC8879532CD4E88B005A22DA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791D2CD4E830005A22DA /* Endpoint.swift */; };
 		CC8879542CD4E88B005A22DA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790C2CD4E830005A22DA /* AppState.swift */; };
-		CC8879552CD4E88B005A22DA /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879162CD4E830005A22DA /* NextLaunchView.swift */; };
-		CC8879562CD4E88B005A22DA /* WebcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* WebcastType.swift */; };
+		CC8879562CD4E88B005A22DA /* VideoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* VideoType.swift */; };
 		CC8879572CD4E88B005A22DA /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879282CD4E830005A22DA /* LaunchDetails.swift */; };
 		CC8879582CD4E88B005A22DA /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879292CD4E830005A22DA /* LaunchOverview.swift */; };
 		CC8879592CD4E88B005A22DA /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toLaunch.swift */; };
@@ -67,7 +94,6 @@
 		CC8879612CD4E88B005A22DA /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879112CD4E830005A22DA /* LaunchesView.swift */; };
 		CC8879622CD4E88B005A22DA /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791E2CD4E830005A22DA /* HttpLogger.swift */; };
 		CC8879632CD4E88B005A22DA /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879152CD4E830005A22DA /* NewsViewModel.swift */; };
-		CC8879642CD4E88B005A22DA /* PreviousLaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */; };
 		CC8879652CD4E88B005A22DA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791C2CD4E830005A22DA /* ApiService.swift */; };
 		CC8879662CD4E88B005A22DA /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879102CD4E830005A22DA /* LaunchDetailsViewModel.swift */; };
 		CC8879672CD4E88B005A22DA /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879142CD4E830005A22DA /* NewsView.swift */; };
@@ -78,7 +104,23 @@
 		CC88796C2CD4E88B005A22DA /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790F2CD4E830005A22DA /* LaunchDetailsView.swift */; };
 		CC88796D2CD4E88B005A22DA /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879122CD4E830005A22DA /* LaunchViewModel.swift */; };
 		CC88796E2CD4E88B005A22DA /* DetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879262CD4E830005A22DA /* DetailMode.swift */; };
+		CCA9DFDC2CE3A38D00272F69 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFDB2CE3A38D00272F69 /* SecondStage.swift */; };
+		CCA9DFDD2CE3A38D00272F69 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFDB2CE3A38D00272F69 /* SecondStage.swift */; };
+		CCA9DFDF2CE3A3B600272F69 /* Spacecraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFDE2CE3A3B600272F69 /* Spacecraft.swift */; };
+		CCA9DFE02CE3A3B600272F69 /* Spacecraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFDE2CE3A3B600272F69 /* Spacecraft.swift */; };
+		CCA9DFE22CE3F1D300272F69 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFE12CE3F1D300272F69 /* Program.swift */; };
+		CCA9DFE32CE3F1D300272F69 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFE12CE3F1D300272F69 /* Program.swift */; };
 		CCFBAC212CDB739E0048FEFD /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = CCFBAC202CDB739E0048FEFD /* YouTubePlayerKit */; };
+		CCFBAC262CDE38A00048FEFD /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC252CDE38A00048FEFD /* Selection.swift */; };
+		CCFBAC272CDE38A00048FEFD /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC252CDE38A00048FEFD /* Selection.swift */; };
+		CCFBAC292CDE550E0048FEFD /* IApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC282CDE550E0048FEFD /* IApiService.swift */; };
+		CCFBAC2A2CDE550E0048FEFD /* IApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC282CDE550E0048FEFD /* IApiService.swift */; };
+		CCFBAC2C2CDE57910048FEFD /* FakeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC2B2CDE57910048FEFD /* FakeApiService.swift */; };
+		CCFBAC2D2CDE57910048FEFD /* FakeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC2B2CDE57910048FEFD /* FakeApiService.swift */; };
+		CCFBAC362CDE62530048FEFD /* FakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */; };
+		CCFBAC372CDE62530048FEFD /* FakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */; };
+		CCFBAC3C2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */; };
+		CCFBAC3D2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +148,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC01BA9A2CE48A8500F7A027 /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchView.swift; sourceTree = "<group>"; };
+		CC01BA9C2CE491D900F7A027 /* LaunchScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScrollView.swift; sourceTree = "<group>"; };
+		CC01BAA82CE60FB800F7A027 /* SpacecraftConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacecraftConfiguration.swift; sourceTree = "<group>"; };
+		CC01BAAB2CE6235100F7A027 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchServiceProvider.swift; sourceTree = "<group>"; };
 		CC17D3912CDA661E00547433 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		CC29F37C2CD4DB4C00E67D7B /* StellarApex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StellarApex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +159,17 @@
 		CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarApexApp.swift; sourceTree = "<group>"; };
 		CC29F3972CD4DB7100E67D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CC29F3982CD4DB8200E67D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC3EF0EE2CE0959800633F6C /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		CC3EF0F12CE095B300633F6C /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		CC3EF0F42CE0A6B400633F6C /* Orbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orbit.swift; sourceTree = "<group>"; };
+		CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionPatch.swift; sourceTree = "<group>"; };
+		CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nextLaunch.json; sourceTree = "<group>"; };
+		CC7FBBE42CE200400030A4A9 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		CC7FBBE72CE200FB0030A4A9 /* RocketConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketConfiguration.swift; sourceTree = "<group>"; };
+		CC7FBBEA2CE3318C0030A4A9 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
+		CC7FBBED2CE333CE0030A4A9 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
+		CC7FBBF02CE3389E0030A4A9 /* Manufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manufacturer.swift; sourceTree = "<group>"; };
+		CC7FBBF32CE345680030A4A9 /* ApiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImage.swift; sourceTree = "<group>"; };
 		CC8878E52CD4DEE5005A22DA /* StellarApex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StellarApex.entitlements; sourceTree = "<group>"; };
 		CC8878EA2CD4E054005A22DA /* watchOS StellarApex Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchOS StellarApex Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8878FC2CD4E05F005A22DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -129,7 +186,6 @@
 		CC8879142CD4E830005A22DA /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CC8879152CD4E830005A22DA /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		CC8879162CD4E830005A22DA /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchView.swift; sourceTree = "<group>"; };
-		CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLaunchesView.swift; sourceTree = "<group>"; };
 		CC8879192CD4E830005A22DA /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		CC88791C2CD4E830005A22DA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -145,8 +201,16 @@
 		CC8879292CD4E830005A22DA /* LaunchOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOverview.swift; sourceTree = "<group>"; };
 		CC88792A2CD4E830005A22DA /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
 		CC88792B2CD4E830005A22DA /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
-		CC88792C2CD4E830005A22DA /* Webcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webcast.swift; sourceTree = "<group>"; };
-		CC88792D2CD4E830005A22DA /* WebcastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcastType.swift; sourceTree = "<group>"; };
+		CC88792C2CD4E830005A22DA /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
+		CC88792D2CD4E830005A22DA /* VideoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoType.swift; sourceTree = "<group>"; };
+		CCA9DFDB2CE3A38D00272F69 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
+		CCA9DFDE2CE3A3B600272F69 /* Spacecraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacecraft.swift; sourceTree = "<group>"; };
+		CCA9DFE12CE3F1D300272F69 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		CCFBAC252CDE38A00048FEFD /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		CCFBAC282CDE550E0048FEFD /* IApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IApiService.swift; sourceTree = "<group>"; };
+		CCFBAC2B2CDE57910048FEFD /* FakeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiService.swift; sourceTree = "<group>"; };
+		CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataSource.swift; sourceTree = "<group>"; };
+		CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,12 +272,13 @@
 				CC88790F2CD4E830005A22DA /* LaunchDetailsView.swift */,
 				CC8879102CD4E830005A22DA /* LaunchDetailsViewModel.swift */,
 				CC8879112CD4E830005A22DA /* LaunchesView.swift */,
+				CC01BA9C2CE491D900F7A027 /* LaunchScrollView.swift */,
 				CC8879122CD4E830005A22DA /* LaunchViewModel.swift */,
 				CC8879132CD4E830005A22DA /* MainTheme.swift */,
 				CC8879142CD4E830005A22DA /* NewsView.swift */,
 				CC8879152CD4E830005A22DA /* NewsViewModel.swift */,
 				CC8879162CD4E830005A22DA /* NextLaunchView.swift */,
-				CC8879172CD4E830005A22DA /* PreviousLaunchesView.swift */,
+				CC01BAAB2CE6235100F7A027 /* RocketView.swift */,
 				CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */,
 				CC8879192CD4E830005A22DA /* ThemeManager.swift */,
 				CC88791A2CD4E830005A22DA /* ThemeProtocol.swift */,
@@ -239,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				CC8879082CD4E0A0005A22DA /* watchOS-StellarApex-Watch-App-Info.plist */,
+				CC01BA9A2CE48A8500F7A027 /* NextLaunchView.swift */,
 				CC8879062CD4E085005A22DA /* Assets.xcassets */,
 				CC8878FD2CD4E05F005A22DA /* Preview Content */,
 			);
@@ -257,8 +323,11 @@
 			children = (
 				CC88791C2CD4E830005A22DA /* ApiService.swift */,
 				CC88791D2CD4E830005A22DA /* Endpoint.swift */,
+				CCFBAC2B2CDE57910048FEFD /* FakeApiService.swift */,
 				CC88791E2CD4E830005A22DA /* HttpLogger.swift */,
 				CC88791F2CD4E830005A22DA /* HttpService.swift */,
+				CCFBAC282CDE550E0048FEFD /* IApiService.swift */,
+				CCFBAC342CDE5B4A0048FEFD /* FakeData */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -267,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				CC8879212CD4E830005A22DA /* Date+toLaunch.swift */,
+				CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -274,19 +344,43 @@
 		CC88792E2CD4E830005A22DA /* models */ = {
 			isa = PBXGroup;
 			children = (
+				CC7FBBF32CE345680030A4A9 /* ApiImage.swift */,
 				CC8879232CD4E830005A22DA /* AppError.swift */,
 				CC8879252CD4E830005A22DA /* DatePrecision.swift */,
 				CC8879262CD4E830005A22DA /* DetailMode.swift */,
+				CC7FBBEA2CE3318C0030A4A9 /* FirstStage.swift */,
 				CC8879272CD4E830005A22DA /* HTTPMethod.swift */,
 				CC8879282CD4E830005A22DA /* LaunchDetails.swift */,
+				CC7FBBED2CE333CE0030A4A9 /* Launcher.swift */,
 				CC8879292CD4E830005A22DA /* LaunchOverview.swift */,
+				CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */,
+				CC7FBBF02CE3389E0030A4A9 /* Manufacturer.swift */,
+				CC3EF0F12CE095B300633F6C /* Mission.swift */,
+				CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */,
 				CC88792A2CD4E830005A22DA /* NavigationDestination.swift */,
 				CC88792B2CD4E830005A22DA /* NewsArticle.swift */,
-				CC88792C2CD4E830005A22DA /* Webcast.swift */,
-				CC88792D2CD4E830005A22DA /* WebcastType.swift */,
-				CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */,
+				CC3EF0F42CE0A6B400633F6C /* Orbit.swift */,
+				CCA9DFE12CE3F1D300272F69 /* Program.swift */,
+				CC7FBBE42CE200400030A4A9 /* Rocket.swift */,
+				CC7FBBE72CE200FB0030A4A9 /* RocketConfiguration.swift */,
+				CCA9DFDB2CE3A38D00272F69 /* SecondStage.swift */,
+				CCFBAC252CDE38A00048FEFD /* Selection.swift */,
+				CCA9DFDE2CE3A3B600272F69 /* Spacecraft.swift */,
+				CC01BAA82CE60FB800F7A027 /* SpacecraftConfiguration.swift */,
+				CC3EF0EE2CE0959800633F6C /* Status.swift */,
+				CC88792C2CD4E830005A22DA /* Videos.swift */,
+				CC88792D2CD4E830005A22DA /* VideoType.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		CCFBAC342CDE5B4A0048FEFD /* FakeData */ = {
+			isa = PBXGroup;
+			children = (
+				CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */,
+				CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */,
+			);
+			path = FakeData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +478,7 @@
 			files = (
 				CC29F3992CD4DB8200E67D7B /* Assets.xcassets in Resources */,
 				CC29F3932CD4DB6500E67D7B /* Preview Assets.xcassets in Resources */,
+				CC7FBBE32CE1FB0A0030A4A9 /* nextLaunch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +489,7 @@
 				CC8879072CD4E085005A22DA /* Assets.xcassets in Resources */,
 				CC8879022CD4E05F005A22DA /* Preview Assets.xcassets in Resources */,
 				CC88794F2CD4E88B005A22DA /* Assets.xcassets in Resources */,
+				CC7FBBE22CE1FB0A0030A4A9 /* nextLaunch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,30 +503,50 @@
 				CC88792F2CD4E830005A22DA /* NewsViewModel.swift in Sources */,
 				CC8879302CD4E830005A22DA /* AppError.swift in Sources */,
 				CC8879312CD4E830005A22DA /* LaunchDetailsViewModel.swift in Sources */,
+				CC7FBBEF2CE333CE0030A4A9 /* Launcher.swift in Sources */,
 				CC8879322CD4E830005A22DA /* LaunchViewModel.swift in Sources */,
+				CC7FBBE82CE200FB0030A4A9 /* RocketConfiguration.swift in Sources */,
+				CCFBAC2C2CDE57910048FEFD /* FakeApiService.swift in Sources */,
+				CCA9DFDF2CE3A3B600272F69 /* Spacecraft.swift in Sources */,
+				CCFBAC362CDE62530048FEFD /* FakeDataSource.swift in Sources */,
+				CC01BAA92CE60FB800F7A027 /* SpacecraftConfiguration.swift in Sources */,
 				CC8879332CD4E830005A22DA /* ThemeProtocol.swift in Sources */,
 				CC17D38F2CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */,
+				CCFBAC2A2CDE550E0048FEFD /* IApiService.swift in Sources */,
 				CC8879342CD4E830005A22DA /* MainTheme.swift in Sources */,
+				CC7FBBF42CE345680030A4A9 /* ApiImage.swift in Sources */,
 				CC8879352CD4E830005A22DA /* HttpLogger.swift in Sources */,
-				CC8879362CD4E830005A22DA /* Webcast.swift in Sources */,
-				CC8879372CD4E830005A22DA /* WebcastType.swift in Sources */,
+				CC8879362CD4E830005A22DA /* Videos.swift in Sources */,
+				CC8879372CD4E830005A22DA /* VideoType.swift in Sources */,
 				CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */,
+				CC7FBBE52CE200400030A4A9 /* Rocket.swift in Sources */,
+				CC3EF0F62CE0A6B400633F6C /* Orbit.swift in Sources */,
 				CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */,
 				CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */,
 				CC88793D2CD4E830005A22DA /* ContentView.swift in Sources */,
+				CC3EF0EF2CE0959800633F6C /* Status.swift in Sources */,
 				CC88793E2CD4E830005A22DA /* NewsArticle.swift in Sources */,
 				CC88793F2CD4E830005A22DA /* NextLaunchView.swift in Sources */,
+				CC3EF0F82CE0A7D400633F6C /* MissionPatch.swift in Sources */,
+				CC01BAAC2CE6235100F7A027 /* RocketView.swift in Sources */,
 				CC8879402CD4E830005A22DA /* DatePrecision.swift in Sources */,
+				CCA9DFDD2CE3A38D00272F69 /* SecondStage.swift in Sources */,
+				CC7FBBF12CE3389E0030A4A9 /* Manufacturer.swift in Sources */,
+				CC7FBBEC2CE3318C0030A4A9 /* FirstStage.swift in Sources */,
+				CC3EF0F22CE095B300633F6C /* Mission.swift in Sources */,
+				CCA9DFE22CE3F1D300272F69 /* Program.swift in Sources */,
 				CC8879412CD4E830005A22DA /* HTTPMethod.swift in Sources */,
 				CC8879422CD4E830005A22DA /* LaunchDetails.swift in Sources */,
 				CC8879432CD4E830005A22DA /* AppState.swift in Sources */,
-				CC8879442CD4E830005A22DA /* PreviousLaunchesView.swift in Sources */,
+				CC01BA9E2CE491D900F7A027 /* LaunchScrollView.swift in Sources */,
 				CC8879452CD4E830005A22DA /* DetailMode.swift in Sources */,
 				CC8879462CD4E830005A22DA /* LaunchOverview.swift in Sources */,
+				CCFBAC3D2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */,
 				CC8879472CD4E830005A22DA /* ThemeManager.swift in Sources */,
 				CC8879482CD4E830005A22DA /* NavigationDestination.swift in Sources */,
 				CC8879492CD4E830005A22DA /* LaunchDetailsView.swift in Sources */,
 				CC88794A2CD4E830005A22DA /* LaunchesView.swift in Sources */,
+				CCFBAC272CDE38A00048FEFD /* Selection.swift in Sources */,
 				CC88794B2CD4E830005A22DA /* NewsView.swift in Sources */,
 				CC88794C2CD4E830005A22DA /* CountdownView.swift in Sources */,
 				CC17D3932CDA661E00547433 /* WebView.swift in Sources */,
@@ -443,37 +559,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8879512CD4E88B005A22DA /* Webcast.swift in Sources */,
+				CC3EF0F02CE0959800633F6C /* Status.swift in Sources */,
+				CC8879512CD4E88B005A22DA /* Videos.swift in Sources */,
 				CC8879522CD4E88B005A22DA /* NavigationDestination.swift in Sources */,
+				CCFBAC372CDE62530048FEFD /* FakeDataSource.swift in Sources */,
+				CC01BA9B2CE48A8500F7A027 /* NextLaunchView.swift in Sources */,
 				CC8879532CD4E88B005A22DA /* Endpoint.swift in Sources */,
 				CC8879542CD4E88B005A22DA /* AppState.swift in Sources */,
-				CC8879552CD4E88B005A22DA /* NextLaunchView.swift in Sources */,
 				CC17D3902CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */,
-				CC8879562CD4E88B005A22DA /* WebcastType.swift in Sources */,
+				CC8879562CD4E88B005A22DA /* VideoType.swift in Sources */,
+				CCA9DFE02CE3A3B600272F69 /* Spacecraft.swift in Sources */,
+				CC7FBBF52CE345680030A4A9 /* ApiImage.swift in Sources */,
 				CC8879572CD4E88B005A22DA /* LaunchDetails.swift in Sources */,
 				CC8879582CD4E88B005A22DA /* LaunchOverview.swift in Sources */,
 				CC8879592CD4E88B005A22DA /* Date+toLaunch.swift in Sources */,
 				CC88795A2CD4E88B005A22DA /* CountdownView.swift in Sources */,
+				CCFBAC3C2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */,
 				CC88795B2CD4E88B005A22DA /* NewsArticle.swift in Sources */,
 				CC88795C2CD4E88B005A22DA /* MainTheme.swift in Sources */,
 				CC88795D2CD4E88B005A22DA /* ThemeProtocol.swift in Sources */,
+				CC3EF0F92CE0A7D400633F6C /* MissionPatch.swift in Sources */,
 				CC88795E2CD4E88B005A22DA /* AppError.swift in Sources */,
+				CCFBAC292CDE550E0048FEFD /* IApiService.swift in Sources */,
 				CC88795F2CD4E88B005A22DA /* HTTPMethod.swift in Sources */,
+				CCFBAC262CDE38A00048FEFD /* Selection.swift in Sources */,
+				CC01BA9D2CE491D900F7A027 /* LaunchScrollView.swift in Sources */,
 				CC8879602CD4E88B005A22DA /* ContentView.swift in Sources */,
+				CC7FBBE62CE200400030A4A9 /* Rocket.swift in Sources */,
+				CC01BAAD2CE6235100F7A027 /* RocketView.swift in Sources */,
+				CC01BAAA2CE60FB800F7A027 /* SpacecraftConfiguration.swift in Sources */,
+				CCFBAC2D2CDE57910048FEFD /* FakeApiService.swift in Sources */,
 				CC8879612CD4E88B005A22DA /* LaunchesView.swift in Sources */,
 				CC8879622CD4E88B005A22DA /* HttpLogger.swift in Sources */,
 				CC8879632CD4E88B005A22DA /* NewsViewModel.swift in Sources */,
-				CC8879642CD4E88B005A22DA /* PreviousLaunchesView.swift in Sources */,
 				CC8879652CD4E88B005A22DA /* ApiService.swift in Sources */,
 				CC8879662CD4E88B005A22DA /* LaunchDetailsViewModel.swift in Sources */,
+				CCA9DFE32CE3F1D300272F69 /* Program.swift in Sources */,
 				CC8879672CD4E88B005A22DA /* NewsView.swift in Sources */,
 				CC8879682CD4E88B005A22DA /* StellarApexApp.swift in Sources */,
 				CC8879692CD4E88B005A22DA /* DatePrecision.swift in Sources */,
 				CC88796A2CD4E88B005A22DA /* ThemeManager.swift in Sources */,
 				CC88796B2CD4E88B005A22DA /* HttpService.swift in Sources */,
 				CC88796C2CD4E88B005A22DA /* LaunchDetailsView.swift in Sources */,
+				CC7FBBEB2CE3318C0030A4A9 /* FirstStage.swift in Sources */,
+				CC7FBBE92CE200FB0030A4A9 /* RocketConfiguration.swift in Sources */,
 				CC88796D2CD4E88B005A22DA /* LaunchViewModel.swift in Sources */,
+				CC3EF0F32CE095B300633F6C /* Mission.swift in Sources */,
 				CC88796E2CD4E88B005A22DA /* DetailMode.swift in Sources */,
+				CCA9DFDC2CE3A38D00272F69 /* SecondStage.swift in Sources */,
+				CC3EF0F52CE0A6B400633F6C /* Orbit.swift in Sources */,
+				CC7FBBF22CE3389E0030A4A9 /* Manufacturer.swift in Sources */,
+				CC7FBBEE2CE333CE0030A4A9 /* Launcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +867,131 @@
 			};
 			name = Release;
 		};
+		CCFBAC312CDE59290048FEFD /* Fake */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUGFAKE $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Fake;
+		};
+		CCFBAC322CDE59290048FEFD /* Fake */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon DEV";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StellarApex/StellarApex.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StellarApex/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarApex/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.knutvalen.StellarApex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Fake;
+		};
+		CCFBAC332CDE59290048FEFD /* Fake */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS StellarApex Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 938SKSW69G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "watchOS-StellarApex-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = StellarApex;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.knutvalen.StellarApex;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.knutvalen.StellarApex.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Fake;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -738,6 +999,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC29F3882CD4DB4D00E67D7B /* Debug */,
+				CCFBAC312CDE59290048FEFD /* Fake */,
 				CC29F3892CD4DB4D00E67D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -747,6 +1009,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC29F38B2CD4DB4D00E67D7B /* Debug */,
+				CCFBAC322CDE59290048FEFD /* Fake */,
 				CC29F38C2CD4DB4D00E67D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -756,6 +1019,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC8878F92CD4E055005A22DA /* Debug */,
+				CCFBAC332CDE59290048FEFD /* Fake */,
 				CC8878FA2CD4E055005A22DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

@@ -5,53 +5,60 @@ struct LaunchesView: View {
     @ObservedObject private var viewModel = LaunchViewModel()
     @Binding var launchId: String?
     @Binding var preferredColumn: NavigationSplitViewColumn
-    @State private var displayingSettings: Bool = false
     @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
-        NavigationSplitView(preferredCompactColumn: $preferredColumn) {
-            List {
-                CountdownView(viewModel: viewModel)
-                    .environmentObject(themeManager)
-                #if !os(watchOS)
-                    .listRowSeparator(.hidden)
-                #endif
+        if let launches = viewModel.previousLaunches {
+            NavigationSplitView(preferredCompactColumn: $preferredColumn) {
+                List(launches) { launch in
+                    Button {
+                        launchId = launch.id
+                        preferredColumn = .detail
+                    } label: {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text(launch.name)
+                                .font(.headline)
+                                .fixedSize(horizontal: false, vertical: true)
 
-                NextLaunchView(viewModel: viewModel, launchId: $launchId, preferredColumn: $preferredColumn)
-                    .environmentObject(themeManager)
-                #if !os(watchOS)
-                    .listRowSeparator(.hidden)
-                #endif
-
-                PreviousLaunchesView(viewModel: viewModel, launchId: $launchId, preferredColumn: $preferredColumn)
-                    .environmentObject(themeManager)
-                #if !os(watchOS)
-                    .listRowSeparator(.hidden)
-                #endif
-            }
-            #if !os(watchOS)
-            .listStyle(.inset)
-            .padding(.horizontal, -8)
-            #endif
-            .refreshable {
-                await viewModel.getNextLaunch(ignoreCache: true)
-                await viewModel.getPreviousLaunches(ignoreCache: true)
-            }
-            .navigationTitle("Launches")
-            .onChange(of: scenePhase) { _, newPhase in
-                if newPhase == .active && viewModel.timeLeft != nil {
-                    Task {
-                        await viewModel.getNextLaunch(ignoreCache: false)
-                        await viewModel.getPreviousLaunches(ignoreCache: false)
+                            if let launchDate = launch.net.toStellarApexDateString() {
+                                Text(launchDate)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                        }
+                    }
+                }
+                .refreshable {
+                    await viewModel.getPreviousLaunches(ignoreCache: true)
+                }
+                .navigationTitle("Launches")
+                .onChange(of: scenePhase) { _, newPhase in
+                    if newPhase == .active && viewModel.previousLaunches != nil {
+                        Task {
+                            await viewModel.getPreviousLaunches(ignoreCache: false)
+                        }
+                    }
+                }
+            } detail: {
+                ZStack {
+                    if let id = Binding($launchId) {
+                        LaunchDetailsView(launchId: id)
+                    } else {
+                        ContentUnavailableView("Select a launch", image: "rocket-template-1x")
                     }
                 }
             }
-        } detail: {
-            ZStack {
-                if let id = Binding($launchId) {
-                    LaunchDetailsView(launchId: id)
-                } else {
-                    ContentUnavailableView("Select a launch", image: "rocket-template-1x")
+        } else {
+            HStack {
+                Spacer()
+
+                ProgressView()
+                    .controlSize(.large)
+
+                Spacer()
+            }
+            .onAppear {
+                Task {
+                    await viewModel.getPreviousLaunches(ignoreCache: false)
                 }
             }
         }

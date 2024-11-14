@@ -1,29 +1,37 @@
 import Foundation
 
 struct LaunchDetails: Decodable {
-    var id: String
-    var lastUpdated: Date
-    var mission: Mission
-    var name: String
-    var net: Date
-    var netPrecision: DatePrecision
-    var patch: String?
-    var status: Status
-    var webcasts: [Webcast]
+    var id: String?
+    var lastUpdated: Date?
+    var mission: Mission?
+    var name: String?
+    var net: Date?
+    var netPrecision: DatePrecision?
+    var patches: [MissionPatch]?
+    var status: Status?
+    var videos: [Videos]?
+    var rocket: Rocket?
+    var image: ApiImage?
+    var program: [Program]?
+    var launchServiceProvider: LaunchServiceProvider?
 
-    enum CodingKeys: CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
-        case lastUpdated
+        case lastUpdated = "last_updated"
         case mission
         case name
         case net
-        case netPrecision
-        case patch
+        case netPrecision = "net_precision"
+        case patches = "mission_patches"
         case status
-        case webcasts
+        case videos = "vid_urls"
+        case rocket
+        case image
+        case program
+        case launchServiceProvider = "launch_service_provider"
     }
 
-    init(from decoder: any Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
         lastUpdated = try container.decode(Date.self, forKey: .lastUpdated)
@@ -31,46 +39,12 @@ struct LaunchDetails: Decodable {
         name = try container.decode(String.self, forKey: .name)
         net = try container.decode(Date.self, forKey: .net)
         netPrecision = try container.decode(DatePrecision.self, forKey: .netPrecision)
-        patch = try container.decodeIfPresent(String.self, forKey: .patch)
+        patches = try container.decode([MissionPatch].self, forKey: .patches)
         status = try container.decode(Status.self, forKey: .status)
-        webcasts = try container.decode([Webcast].self, forKey: .webcasts)
-    }
-}
-
-struct Status: Decodable {
-    var description: String
-    var name: String
-
-    enum CodingKeys: CodingKey {
-        case description
-        case name
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        description = try container.decode(String.self, forKey: .description)
-        name = try container.decode(String.self, forKey: .name)
-    }
-}
-
-struct Mission: Decodable {
-    var description: String?
-    var name: String
-    var orbit: String
-    var type: String
-
-    enum CodingKeys: CodingKey {
-        case description
-        case name
-        case orbit
-        case type
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        description = try container.decodeIfPresent(String.self, forKey: .description)
-        name = try container.decode(String.self, forKey: .name)
-        orbit = try container.decode(String.self, forKey: .orbit)
-        type = try container.decode(String.self, forKey: .type)
+        videos = try container.decode([Videos].self, forKey: .videos)
+        rocket = try container.decode(Rocket.self, forKey: .rocket)
+        image = try container.decode(ApiImage.self, forKey: .image)
+        program = try container.decode([Program].self, forKey: .program)
+        launchServiceProvider = try container.decode(LaunchServiceProvider.self, forKey: .launchServiceProvider)
     }
 }

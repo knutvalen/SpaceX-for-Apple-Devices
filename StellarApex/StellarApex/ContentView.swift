@@ -1,31 +1,40 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection: Selection = .launches
+    @State private var selection: Selection = .nextLaunch
     @State private var launchId: String?
     @State private var preferredColumn = NavigationSplitViewColumn.sidebar
-    private var theme = ThemeManager()
-
-    enum Selection {
-        case launches
-        case news
-    }
+    private var themeManager = ThemeManager()
 
     var body: some View {
         TabView(selection: $selection) {
-            Tab("Launches", image: "rocket-template-tiny", value: Selection.launches) {
+            Tab("Next Launch", image: "rocket-template-tiny", value: Selection.nextLaunch) {
+                NextLaunchView(
+                    tabSelection: $selection,
+                    launchId: $launchId,
+                    preferredColumn: $preferredColumn
+                )
+                .environmentObject(themeManager)
+            }
+
+            Tab("Launches", systemImage: "list.bullet", value: Selection.launches) {
                 LaunchesView(
                     launchId: $launchId,
                     preferredColumn: $preferredColumn
                 )
-                .environmentObject(theme)
+                .environmentObject(themeManager)
             }
+
             Tab("News", systemImage: "newspaper", value: Selection.news) {
                 NewsView()
-                    .environmentObject(theme)
+                    .environmentObject(themeManager)
+            }
+
+            Tab("Settings", systemImage: "gear", value: Selection.settings) {
+                EmptyView()
+                    .environmentObject(themeManager)
             }
         }
-        .tabViewStyle(.automatic)
         .onOpenURL { url in
             guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
                 debugPrint("Invalid URL: \(url.absoluteString)")

@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 class NewsViewModel: ObservableObject {
-    @StateObject var appState = AppState.singleton
     @Published var news: [NewsArticle]?
     var launchServiceProviders: [LaunchServiceProvider]?
 
@@ -49,7 +48,7 @@ class NewsViewModel: ObservableObject {
     func getNews(ignoreCache: Bool) async {
         guard let launchServiceProviders else { return }
 
-        let result = await appState.api.getNewsArticles(
+        let result = await StellarApexApp.state.apiService.getNewsArticles(
             launchServiceProviders: launchServiceProviders,
             ignoreCache: ignoreCache
         )

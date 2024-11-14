@@ -3,9 +3,8 @@ import SwiftUI
 
 @MainActor
 class LaunchViewModel: ObservableObject {
-    @StateObject var appState = AppState.singleton
     var countdown: Timer?
-    @Published var nextLaunch: LaunchOverview?
+    @Published var nextLaunch: LaunchDetails?
     @Published var timeLeft: Int?
     @Published var previousLaunches: [LaunchOverview]?
 
@@ -28,20 +27,17 @@ class LaunchViewModel: ObservableObject {
         _ = try await task.value
     }
 
-    init() {
-        Task {
-            await getNextLaunch(ignoreCache: false)
-            await getPreviousLaunches(ignoreCache: false)
-        }
-    }
-
     func getNextLaunch(ignoreCache: Bool) async {
-        let result = await appState.api.getNextLaunch(ignoreCache: ignoreCache)
+        let result = await StellarApexApp.state.apiService.getNextLaunch(ignoreCache: ignoreCache)
 
         switch result {
         case let .success(nextLaunch):
             let nowTime = Date().timeIntervalSince1970
-            let nextLaunchTime = nextLaunch.net.timeIntervalSince1970
+
+            guard let nextLaunchTime = nextLaunch.net?.timeIntervalSince1970 else {
+                return debugPrint("No next launch time")
+            }
+
             let timeLeft = Int(floor(nextLaunchTime - nowTime))
 
             self.nextLaunch = nextLaunch
@@ -51,11 +47,7 @@ class LaunchViewModel: ObservableObject {
             countdown = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
                 DispatchQueue.main.async {
                     if self.timeLeft != nil {
-                        if self.timeLeft! > 0 {
-                            self.timeLeft! -= 1
-                        } else {
-                            self.countdown?.invalidate()
-                        }
+                        self.timeLeft! -= 1
                     }
                 }
             }
@@ -66,7 +58,7 @@ class LaunchViewModel: ObservableObject {
     }
 
     func getPreviousLaunches(ignoreCache: Bool) async {
-        let result = await appState.api.getPreviousLaunches(ignoreCache: ignoreCache)
+        let result = await StellarApexApp.state.apiService.getPreviousLaunches(ignoreCache: ignoreCache)
 
         switch result {
         case let .success(launches):

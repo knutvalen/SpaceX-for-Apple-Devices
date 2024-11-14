@@ -7,18 +7,15 @@ struct LaunchServiceProvider: Codable, Hashable, Comparable {
 
     var id: Int
     var name: String
-    var url: String?
+    var image: ApiImage?
+    var logo: ApiImage?
+    var socialLogo: ApiImage?
 
-    enum CodingKeys: CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
         case name
-        case url
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(Int.self, forKey: .id)
-        name = try container.decode(String.self, forKey: .name)
-        url = try container.decodeIfPresent(String.self, forKey: .url)
+        case image
+        case logo
+        case socialLogo = "social_logo"
     }
 }
