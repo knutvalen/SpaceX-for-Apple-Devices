@@ -1,6 +1,6 @@
 struct Status: Decodable {
-    var description: String
-    var name: String
+    let description: String?
+    let name: String?
 
     enum CodingKeys: CodingKey {
         case description

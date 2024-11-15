@@ -1,10 +1,10 @@
 import Foundation
 
 struct Rocket: Decodable {
-    let id: Int
-    let configuration: RocketConfiguration
-    let launcherStage: [FirstStage]
-    let spacecraftStage: [SecondStage]
+    let id: Int?
+    let configuration: RocketConfiguration?
+    let launcherStage: [FirstStage]?
+    let spacecraftStage: [SecondStage]?
 
     enum CodingKeys: String, CodingKey {
         case id

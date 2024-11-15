@@ -1,7 +1,7 @@
 import Foundation
 
 struct Launcher: Decodable {
-    let id: Int
+    let id: Int?
     let serialNumber: String?
     let details: String?
     let image: ApiImage?

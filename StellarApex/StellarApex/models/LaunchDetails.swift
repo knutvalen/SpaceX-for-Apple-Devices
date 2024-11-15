@@ -1,19 +1,20 @@
 import Foundation
 
 struct LaunchDetails: Decodable {
-    var id: String?
-    var lastUpdated: Date?
-    var mission: Mission?
-    var name: String?
-    var net: Date?
-    var netPrecision: DatePrecision?
-    var patches: [MissionPatch]?
-    var status: Status?
-    var videos: [Videos]?
-    var rocket: Rocket?
-    var image: ApiImage?
-    var program: [Program]?
-    var launchServiceProvider: LaunchServiceProvider?
+    let id: String?
+    let lastUpdated: Date?
+    let mission: Mission?
+    let name: String?
+    let net: Date?
+    let netPrecision: DatePrecision?
+    let patches: [MissionPatch]?
+    let status: Status?
+    let videos: [Videos]?
+    let rocket: Rocket?
+    let image: ApiImage?
+    let programs: [Program]?
+    let launchServiceProvider: LaunchServiceProvider?
+    let pad: Pad?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,24 +28,8 @@ struct LaunchDetails: Decodable {
         case videos = "vid_urls"
         case rocket
         case image
-        case program
+        case programs = "program"
         case launchServiceProvider = "launch_service_provider"
-    }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(String.self, forKey: .id)
-        lastUpdated = try container.decode(Date.self, forKey: .lastUpdated)
-        mission = try container.decode(Mission.self, forKey: .mission)
-        name = try container.decode(String.self, forKey: .name)
-        net = try container.decode(Date.self, forKey: .net)
-        netPrecision = try container.decode(DatePrecision.self, forKey: .netPrecision)
-        patches = try container.decode([MissionPatch].self, forKey: .patches)
-        status = try container.decode(Status.self, forKey: .status)
-        videos = try container.decode([Videos].self, forKey: .videos)
-        rocket = try container.decode(Rocket.self, forKey: .rocket)
-        image = try container.decode(ApiImage.self, forKey: .image)
-        program = try container.decode([Program].self, forKey: .program)
-        launchServiceProvider = try container.decode(LaunchServiceProvider.self, forKey: .launchServiceProvider)
+        case pad
     }
 }

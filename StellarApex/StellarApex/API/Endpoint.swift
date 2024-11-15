@@ -19,7 +19,7 @@ struct Endpoint {
 extension Endpoint {
     static let host: String = {
         #if DEBUG
-            return "lldev.thespacedevs.com"
+            return "ll.thespacedevs.com"
         #else
             return "ll.thespacedevs.com"
         #endif

@@ -15,7 +15,7 @@ struct CountdownView: View {
                         case let .success(image):
                             image.resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 64, height: 64)
+                                .frame(width: 120, height: 120)
 
                         case .failure:
                             EmptyView()
@@ -23,7 +23,7 @@ struct CountdownView: View {
                         case .empty:
                             ProgressView()
                                 .controlSize(.small)
-                                .frame(width: 64, height: 64)
+                                .frame(width: 120, height: 120)
 
                         @unknown default:
                             EmptyView()

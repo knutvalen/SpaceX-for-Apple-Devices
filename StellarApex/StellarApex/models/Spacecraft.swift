@@ -1,15 +1,13 @@
 import Foundation
 
 struct Spacecraft: Decodable {
-    let id: Int
     let name: String
-    let image: ApiImage
-    let description: String
-    let flights: Int
-    let configuration: SpacecraftConfiguration
+    let image: ApiImage?
+    let description: String?
+    let flights: Int?
+    let configuration: SpacecraftConfiguration?
 
     enum CodingKeys: String, CodingKey {
-        case id
         case name
         case image
         case description

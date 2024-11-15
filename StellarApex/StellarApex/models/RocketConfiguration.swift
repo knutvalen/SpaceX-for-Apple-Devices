@@ -1,8 +1,9 @@
 import Foundation
 
 struct RocketConfiguration: Decodable {
-    let id: Int
-    let name: String
+    let id: Int?
+    let name: String?
+    let fullName: String?
     let description: String?
     let manufacturer: Manufacturer?
     let image: ApiImage?
@@ -10,6 +11,8 @@ struct RocketConfiguration: Decodable {
     let diameter: Double?
     let launchCost: Int?
     let thrustAtLiftOff: Int?
+    let reusable: Bool?
+    let programs: [Program]?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -21,5 +24,8 @@ struct RocketConfiguration: Decodable {
         case diameter
         case launchCost = "launch_cost"
         case thrustAtLiftOff = "to_thrust"
+        case fullName = "full_name"
+        case reusable
+        case programs = "program"
     }
 }
