@@ -20,6 +20,24 @@
 		CC29F3932CD4DB6500E67D7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F38D2CD4DB6500E67D7B /* Preview Assets.xcassets */; };
 		CC29F3962CD4DB6500E67D7B /* StellarApexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */; };
 		CC29F3992CD4DB8200E67D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC29F3982CD4DB8200E67D7B /* Assets.xcassets */; };
+		CC2AFA5E2CE72E52007A0B70 /* spaceXStarlink.json in Resources */ = {isa = PBXBuildFile; fileRef = CC2AFA5D2CE72E48007A0B70 /* spaceXStarlink.json */; };
+		CC2AFA5F2CE72E52007A0B70 /* spaceXStarlink.json in Resources */ = {isa = PBXBuildFile; fileRef = CC2AFA5D2CE72E48007A0B70 /* spaceXStarlink.json */; };
+		CC2AFA612CE78E7A007A0B70 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2AFA602CE78E7A007A0B70 /* MissionView.swift */; };
+		CC2AFA622CE78E7A007A0B70 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2AFA602CE78E7A007A0B70 /* MissionView.swift */; };
+		CC2AFA642CE7942E007A0B70 /* DatePrecisionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2AFA632CE7942E007A0B70 /* DatePrecisionName.swift */; };
+		CC2AFA652CE7942E007A0B70 /* DatePrecisionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2AFA632CE7942E007A0B70 /* DatePrecisionName.swift */; };
+		CC33A6732CEDDE8600EC7856 /* LaunchSiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A6722CEDDE8600EC7856 /* LaunchSiteView.swift */; };
+		CC33A6742CEDDE8600EC7856 /* LaunchSiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A6722CEDDE8600EC7856 /* LaunchSiteView.swift */; };
+		CC33A6762CEDEA5900EC7856 /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A6752CEDEA5900EC7856 /* Landing.swift */; };
+		CC33A6772CEDEA5900EC7856 /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A6752CEDEA5900EC7856 /* Landing.swift */; };
+		CC33A6792CEDEAAB00EC7856 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A6782CEDEAAB00EC7856 /* Location.swift */; };
+		CC33A67A2CEDEAAB00EC7856 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A6782CEDEAAB00EC7856 /* Location.swift */; };
+		CC33A67F2CEDEE4400EC7856 /* Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A67E2CEDEE4400EC7856 /* Pad.swift */; };
+		CC33A6802CEDEE4400EC7856 /* Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A67E2CEDEE4400EC7856 /* Pad.swift */; };
+		CC33A6852CEF430E00EC7856 /* Progress MS-29.json in Resources */ = {isa = PBXBuildFile; fileRef = CC33A6842CEF42FE00EC7856 /* Progress MS-29.json */; };
+		CC33A6862CEF430E00EC7856 /* Progress MS-29.json in Resources */ = {isa = PBXBuildFile; fileRef = CC33A6842CEF42FE00EC7856 /* Progress MS-29.json */; };
+		CC33A68B2CEF76DC00EC7856 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A68A2CEF76DC00EC7856 /* Country.swift */; };
+		CC33A68C2CEF76DC00EC7856 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33A68A2CEF76DC00EC7856 /* Country.swift */; };
 		CC3EF0EF2CE0959800633F6C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0EE2CE0959800633F6C /* Status.swift */; };
 		CC3EF0F02CE0959800633F6C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0EE2CE0959800633F6C /* Status.swift */; };
 		CC3EF0F22CE095B300633F6C /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F12CE095B300633F6C /* Mission.swift */; };
@@ -28,8 +46,8 @@
 		CC3EF0F62CE0A6B400633F6C /* Orbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F42CE0A6B400633F6C /* Orbit.swift */; };
 		CC3EF0F82CE0A7D400633F6C /* MissionPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */; };
 		CC3EF0F92CE0A7D400633F6C /* MissionPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */; };
-		CC7FBBE22CE1FB0A0030A4A9 /* nextLaunch.json in Resources */ = {isa = PBXBuildFile; fileRef = CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */; };
-		CC7FBBE32CE1FB0A0030A4A9 /* nextLaunch.json in Resources */ = {isa = PBXBuildFile; fileRef = CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */; };
+		CC7FBBE22CE1FB0A0030A4A9 /* Starship.json in Resources */ = {isa = PBXBuildFile; fileRef = CC7FBBE12CE1FB040030A4A9 /* Starship.json */; };
+		CC7FBBE32CE1FB0A0030A4A9 /* Starship.json in Resources */ = {isa = PBXBuildFile; fileRef = CC7FBBE12CE1FB040030A4A9 /* Starship.json */; };
 		CC7FBBE52CE200400030A4A9 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBE42CE200400030A4A9 /* Rocket.swift */; };
 		CC7FBBE62CE200400030A4A9 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBE42CE200400030A4A9 /* Rocket.swift */; };
 		CC7FBBE82CE200FB0030A4A9 /* RocketConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FBBE72CE200FB0030A4A9 /* RocketConfiguration.swift */; };
@@ -56,7 +74,7 @@
 		CC8879352CD4E830005A22DA /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791E2CD4E830005A22DA /* HttpLogger.swift */; };
 		CC8879362CD4E830005A22DA /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792C2CD4E830005A22DA /* Videos.swift */; };
 		CC8879372CD4E830005A22DA /* VideoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* VideoType.swift */; };
-		CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toLaunch.swift */; };
+		CC8879382CD4E830005A22DA /* Date+toStellarApexDateString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toStellarApexDateString.swift */; };
 		CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791F2CD4E830005A22DA /* HttpService.swift */; };
 		CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88791D2CD4E830005A22DA /* Endpoint.swift */; };
 		CC88793D2CD4E830005A22DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790D2CD4E830005A22DA /* ContentView.swift */; };
@@ -83,7 +101,7 @@
 		CC8879562CD4E88B005A22DA /* VideoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792D2CD4E830005A22DA /* VideoType.swift */; };
 		CC8879572CD4E88B005A22DA /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879282CD4E830005A22DA /* LaunchDetails.swift */; };
 		CC8879582CD4E88B005A22DA /* LaunchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879292CD4E830005A22DA /* LaunchOverview.swift */; };
-		CC8879592CD4E88B005A22DA /* Date+toLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toLaunch.swift */; };
+		CC8879592CD4E88B005A22DA /* Date+toStellarApexDateString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879212CD4E830005A22DA /* Date+toStellarApexDateString.swift */; };
 		CC88795A2CD4E88B005A22DA /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88790E2CD4E830005A22DA /* CountdownView.swift */; };
 		CC88795B2CD4E88B005A22DA /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88792B2CD4E830005A22DA /* NewsArticle.swift */; };
 		CC88795C2CD4E88B005A22DA /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8879132CD4E830005A22DA /* MainTheme.swift */; };
@@ -110,6 +128,10 @@
 		CCA9DFE02CE3A3B600272F69 /* Spacecraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFDE2CE3A3B600272F69 /* Spacecraft.swift */; };
 		CCA9DFE22CE3F1D300272F69 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFE12CE3F1D300272F69 /* Program.swift */; };
 		CCA9DFE32CE3F1D300272F69 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9DFE12CE3F1D300272F69 /* Program.swift */; };
+		CCB15D012CEB300B00C44525 /* ProgramType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB15D002CEB300B00C44525 /* ProgramType.swift */; };
+		CCB15D022CEB300B00C44525 /* ProgramType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB15D002CEB300B00C44525 /* ProgramType.swift */; };
+		CCB15D042CEB31A100C44525 /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB15D032CEB31A100C44525 /* Agency.swift */; };
+		CCB15D052CEB31A100C44525 /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB15D032CEB31A100C44525 /* Agency.swift */; };
 		CCFBAC212CDB739E0048FEFD /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = CCFBAC202CDB739E0048FEFD /* YouTubePlayerKit */; };
 		CCFBAC262CDE38A00048FEFD /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC252CDE38A00048FEFD /* Selection.swift */; };
 		CCFBAC272CDE38A00048FEFD /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC252CDE38A00048FEFD /* Selection.swift */; };
@@ -119,8 +141,8 @@
 		CCFBAC2D2CDE57910048FEFD /* FakeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC2B2CDE57910048FEFD /* FakeApiService.swift */; };
 		CCFBAC362CDE62530048FEFD /* FakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */; };
 		CCFBAC372CDE62530048FEFD /* FakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */; };
-		CCFBAC3C2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */; };
-		CCFBAC3D2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */; };
+		CCFBAC3C2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift */; };
+		CCFBAC3D2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,11 +181,20 @@
 		CC29F3912CD4DB6500E67D7B /* StellarApexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarApexApp.swift; sourceTree = "<group>"; };
 		CC29F3972CD4DB7100E67D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CC29F3982CD4DB8200E67D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC2AFA5D2CE72E48007A0B70 /* spaceXStarlink.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spaceXStarlink.json; sourceTree = "<group>"; };
+		CC2AFA602CE78E7A007A0B70 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		CC2AFA632CE7942E007A0B70 /* DatePrecisionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePrecisionName.swift; sourceTree = "<group>"; };
+		CC33A6722CEDDE8600EC7856 /* LaunchSiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSiteView.swift; sourceTree = "<group>"; };
+		CC33A6752CEDEA5900EC7856 /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
+		CC33A6782CEDEAAB00EC7856 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CC33A67E2CEDEE4400EC7856 /* Pad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pad.swift; sourceTree = "<group>"; };
+		CC33A6842CEF42FE00EC7856 /* Progress MS-29.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Progress MS-29.json"; sourceTree = "<group>"; };
+		CC33A68A2CEF76DC00EC7856 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		CC3EF0EE2CE0959800633F6C /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		CC3EF0F12CE095B300633F6C /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		CC3EF0F42CE0A6B400633F6C /* Orbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orbit.swift; sourceTree = "<group>"; };
 		CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionPatch.swift; sourceTree = "<group>"; };
-		CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nextLaunch.json; sourceTree = "<group>"; };
+		CC7FBBE12CE1FB040030A4A9 /* Starship.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Starship.json; sourceTree = "<group>"; };
 		CC7FBBE42CE200400030A4A9 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		CC7FBBE72CE200FB0030A4A9 /* RocketConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketConfiguration.swift; sourceTree = "<group>"; };
 		CC7FBBEA2CE3318C0030A4A9 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
@@ -192,7 +223,7 @@
 		CC88791D2CD4E830005A22DA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CC88791E2CD4E830005A22DA /* HttpLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpLogger.swift; sourceTree = "<group>"; };
 		CC88791F2CD4E830005A22DA /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
-		CC8879212CD4E830005A22DA /* Date+toLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toLaunch.swift"; sourceTree = "<group>"; };
+		CC8879212CD4E830005A22DA /* Date+toStellarApexDateString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toStellarApexDateString.swift"; sourceTree = "<group>"; };
 		CC8879232CD4E830005A22DA /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		CC8879252CD4E830005A22DA /* DatePrecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePrecision.swift; sourceTree = "<group>"; };
 		CC8879262CD4E830005A22DA /* DetailMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMode.swift; sourceTree = "<group>"; };
@@ -206,11 +237,13 @@
 		CCA9DFDB2CE3A38D00272F69 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		CCA9DFDE2CE3A3B600272F69 /* Spacecraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacecraft.swift; sourceTree = "<group>"; };
 		CCA9DFE12CE3F1D300272F69 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		CCB15D002CEB300B00C44525 /* ProgramType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramType.swift; sourceTree = "<group>"; };
+		CCB15D032CEB31A100C44525 /* Agency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agency.swift; sourceTree = "<group>"; };
 		CCFBAC252CDE38A00048FEFD /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		CCFBAC282CDE550E0048FEFD /* IApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IApiService.swift; sourceTree = "<group>"; };
 		CCFBAC2B2CDE57910048FEFD /* FakeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiService.swift; sourceTree = "<group>"; };
 		CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataSource.swift; sourceTree = "<group>"; };
-		CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+custom.swift"; sourceTree = "<group>"; };
+		CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+launchLibrary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,8 +306,10 @@
 				CC8879102CD4E830005A22DA /* LaunchDetailsViewModel.swift */,
 				CC8879112CD4E830005A22DA /* LaunchesView.swift */,
 				CC01BA9C2CE491D900F7A027 /* LaunchScrollView.swift */,
+				CC33A6722CEDDE8600EC7856 /* LaunchSiteView.swift */,
 				CC8879122CD4E830005A22DA /* LaunchViewModel.swift */,
 				CC8879132CD4E830005A22DA /* MainTheme.swift */,
+				CC2AFA602CE78E7A007A0B70 /* MissionView.swift */,
 				CC8879142CD4E830005A22DA /* NewsView.swift */,
 				CC8879152CD4E830005A22DA /* NewsViewModel.swift */,
 				CC8879162CD4E830005A22DA /* NextLaunchView.swift */,
@@ -335,8 +370,8 @@
 		CC8879222CD4E830005A22DA /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CC8879212CD4E830005A22DA /* Date+toLaunch.swift */,
-				CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift */,
+				CC8879212CD4E830005A22DA /* Date+toStellarApexDateString.swift */,
+				CCFBAC3B2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -344,23 +379,30 @@
 		CC88792E2CD4E830005A22DA /* models */ = {
 			isa = PBXGroup;
 			children = (
+				CCB15D032CEB31A100C44525 /* Agency.swift */,
 				CC7FBBF32CE345680030A4A9 /* ApiImage.swift */,
 				CC8879232CD4E830005A22DA /* AppError.swift */,
+				CC33A68A2CEF76DC00EC7856 /* Country.swift */,
 				CC8879252CD4E830005A22DA /* DatePrecision.swift */,
+				CC2AFA632CE7942E007A0B70 /* DatePrecisionName.swift */,
 				CC8879262CD4E830005A22DA /* DetailMode.swift */,
 				CC7FBBEA2CE3318C0030A4A9 /* FirstStage.swift */,
 				CC8879272CD4E830005A22DA /* HTTPMethod.swift */,
+				CC33A6752CEDEA5900EC7856 /* Landing.swift */,
 				CC8879282CD4E830005A22DA /* LaunchDetails.swift */,
 				CC7FBBED2CE333CE0030A4A9 /* Launcher.swift */,
 				CC8879292CD4E830005A22DA /* LaunchOverview.swift */,
 				CC17D38E2CDA3F7200547433 /* LaunchServiceProvider.swift */,
+				CC33A6782CEDEAAB00EC7856 /* Location.swift */,
 				CC7FBBF02CE3389E0030A4A9 /* Manufacturer.swift */,
 				CC3EF0F12CE095B300633F6C /* Mission.swift */,
 				CC3EF0F72CE0A7D400633F6C /* MissionPatch.swift */,
 				CC88792A2CD4E830005A22DA /* NavigationDestination.swift */,
 				CC88792B2CD4E830005A22DA /* NewsArticle.swift */,
 				CC3EF0F42CE0A6B400633F6C /* Orbit.swift */,
+				CC33A67E2CEDEE4400EC7856 /* Pad.swift */,
 				CCA9DFE12CE3F1D300272F69 /* Program.swift */,
+				CCB15D002CEB300B00C44525 /* ProgramType.swift */,
 				CC7FBBE42CE200400030A4A9 /* Rocket.swift */,
 				CC7FBBE72CE200FB0030A4A9 /* RocketConfiguration.swift */,
 				CCA9DFDB2CE3A38D00272F69 /* SecondStage.swift */,
@@ -377,7 +419,9 @@
 		CCFBAC342CDE5B4A0048FEFD /* FakeData */ = {
 			isa = PBXGroup;
 			children = (
-				CC7FBBE12CE1FB040030A4A9 /* nextLaunch.json */,
+				CC33A6842CEF42FE00EC7856 /* Progress MS-29.json */,
+				CC2AFA5D2CE72E48007A0B70 /* spaceXStarlink.json */,
+				CC7FBBE12CE1FB040030A4A9 /* Starship.json */,
 				CCFBAC352CDE62530048FEFD /* FakeDataSource.swift */,
 			);
 			path = FakeData;
@@ -478,7 +522,9 @@
 			files = (
 				CC29F3992CD4DB8200E67D7B /* Assets.xcassets in Resources */,
 				CC29F3932CD4DB6500E67D7B /* Preview Assets.xcassets in Resources */,
-				CC7FBBE32CE1FB0A0030A4A9 /* nextLaunch.json in Resources */,
+				CC7FBBE32CE1FB0A0030A4A9 /* Starship.json in Resources */,
+				CC2AFA5F2CE72E52007A0B70 /* spaceXStarlink.json in Resources */,
+				CC33A6862CEF430E00EC7856 /* Progress MS-29.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,8 +534,10 @@
 			files = (
 				CC8879072CD4E085005A22DA /* Assets.xcassets in Resources */,
 				CC8879022CD4E05F005A22DA /* Preview Assets.xcassets in Resources */,
+				CC33A6852CEF430E00EC7856 /* Progress MS-29.json in Resources */,
+				CC2AFA5E2CE72E52007A0B70 /* spaceXStarlink.json in Resources */,
 				CC88794F2CD4E88B005A22DA /* Assets.xcassets in Resources */,
-				CC7FBBE22CE1FB0A0030A4A9 /* nextLaunch.json in Resources */,
+				CC7FBBE22CE1FB0A0030A4A9 /* Starship.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +554,7 @@
 				CC7FBBEF2CE333CE0030A4A9 /* Launcher.swift in Sources */,
 				CC8879322CD4E830005A22DA /* LaunchViewModel.swift in Sources */,
 				CC7FBBE82CE200FB0030A4A9 /* RocketConfiguration.swift in Sources */,
+				CC33A6732CEDDE8600EC7856 /* LaunchSiteView.swift in Sources */,
 				CCFBAC2C2CDE57910048FEFD /* FakeApiService.swift in Sources */,
 				CCA9DFDF2CE3A3B600272F69 /* Spacecraft.swift in Sources */,
 				CCFBAC362CDE62530048FEFD /* FakeDataSource.swift in Sources */,
@@ -514,21 +563,25 @@
 				CC17D38F2CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */,
 				CCFBAC2A2CDE550E0048FEFD /* IApiService.swift in Sources */,
 				CC8879342CD4E830005A22DA /* MainTheme.swift in Sources */,
+				CC2AFA622CE78E7A007A0B70 /* MissionView.swift in Sources */,
 				CC7FBBF42CE345680030A4A9 /* ApiImage.swift in Sources */,
 				CC8879352CD4E830005A22DA /* HttpLogger.swift in Sources */,
 				CC8879362CD4E830005A22DA /* Videos.swift in Sources */,
 				CC8879372CD4E830005A22DA /* VideoType.swift in Sources */,
-				CC8879382CD4E830005A22DA /* Date+toLaunch.swift in Sources */,
+				CC8879382CD4E830005A22DA /* Date+toStellarApexDateString.swift in Sources */,
 				CC7FBBE52CE200400030A4A9 /* Rocket.swift in Sources */,
 				CC3EF0F62CE0A6B400633F6C /* Orbit.swift in Sources */,
 				CC88793A2CD4E830005A22DA /* HttpService.swift in Sources */,
 				CC88793C2CD4E830005A22DA /* Endpoint.swift in Sources */,
 				CC88793D2CD4E830005A22DA /* ContentView.swift in Sources */,
 				CC3EF0EF2CE0959800633F6C /* Status.swift in Sources */,
+				CCB15D022CEB300B00C44525 /* ProgramType.swift in Sources */,
 				CC88793E2CD4E830005A22DA /* NewsArticle.swift in Sources */,
 				CC88793F2CD4E830005A22DA /* NextLaunchView.swift in Sources */,
 				CC3EF0F82CE0A7D400633F6C /* MissionPatch.swift in Sources */,
+				CCB15D052CEB31A100C44525 /* Agency.swift in Sources */,
 				CC01BAAC2CE6235100F7A027 /* RocketView.swift in Sources */,
+				CC33A6772CEDEA5900EC7856 /* Landing.swift in Sources */,
 				CC8879402CD4E830005A22DA /* DatePrecision.swift in Sources */,
 				CCA9DFDD2CE3A38D00272F69 /* SecondStage.swift in Sources */,
 				CC7FBBF12CE3389E0030A4A9 /* Manufacturer.swift in Sources */,
@@ -540,8 +593,10 @@
 				CC8879432CD4E830005A22DA /* AppState.swift in Sources */,
 				CC01BA9E2CE491D900F7A027 /* LaunchScrollView.swift in Sources */,
 				CC8879452CD4E830005A22DA /* DetailMode.swift in Sources */,
+				CC33A6802CEDEE4400EC7856 /* Pad.swift in Sources */,
+				CC2AFA652CE7942E007A0B70 /* DatePrecisionName.swift in Sources */,
 				CC8879462CD4E830005A22DA /* LaunchOverview.swift in Sources */,
-				CCFBAC3D2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */,
+				CCFBAC3D2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift in Sources */,
 				CC8879472CD4E830005A22DA /* ThemeManager.swift in Sources */,
 				CC8879482CD4E830005A22DA /* NavigationDestination.swift in Sources */,
 				CC8879492CD4E830005A22DA /* LaunchDetailsView.swift in Sources */,
@@ -551,6 +606,8 @@
 				CC88794C2CD4E830005A22DA /* CountdownView.swift in Sources */,
 				CC17D3932CDA661E00547433 /* WebView.swift in Sources */,
 				CC88794D2CD4E830005A22DA /* ApiService.swift in Sources */,
+				CC33A6792CEDEAAB00EC7856 /* Location.swift in Sources */,
+				CC33A68B2CEF76DC00EC7856 /* Country.swift in Sources */,
 				CC29F3962CD4DB6500E67D7B /* StellarApexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +621,8 @@
 				CC8879522CD4E88B005A22DA /* NavigationDestination.swift in Sources */,
 				CCFBAC372CDE62530048FEFD /* FakeDataSource.swift in Sources */,
 				CC01BA9B2CE48A8500F7A027 /* NextLaunchView.swift in Sources */,
+				CC33A6742CEDDE8600EC7856 /* LaunchSiteView.swift in Sources */,
+				CC33A67A2CEDEAAB00EC7856 /* Location.swift in Sources */,
 				CC8879532CD4E88B005A22DA /* Endpoint.swift in Sources */,
 				CC8879542CD4E88B005A22DA /* AppState.swift in Sources */,
 				CC17D3902CDA3F7200547433 /* LaunchServiceProvider.swift in Sources */,
@@ -572,14 +631,18 @@
 				CC7FBBF52CE345680030A4A9 /* ApiImage.swift in Sources */,
 				CC8879572CD4E88B005A22DA /* LaunchDetails.swift in Sources */,
 				CC8879582CD4E88B005A22DA /* LaunchOverview.swift in Sources */,
-				CC8879592CD4E88B005A22DA /* Date+toLaunch.swift in Sources */,
+				CC8879592CD4E88B005A22DA /* Date+toStellarApexDateString.swift in Sources */,
+				CC33A68C2CEF76DC00EC7856 /* Country.swift in Sources */,
 				CC88795A2CD4E88B005A22DA /* CountdownView.swift in Sources */,
-				CCFBAC3C2CDEA6A50048FEFD /* DateDecodingStrategy+custom.swift in Sources */,
+				CCFBAC3C2CDEA6A50048FEFD /* DateDecodingStrategy+launchLibrary.swift in Sources */,
 				CC88795B2CD4E88B005A22DA /* NewsArticle.swift in Sources */,
 				CC88795C2CD4E88B005A22DA /* MainTheme.swift in Sources */,
 				CC88795D2CD4E88B005A22DA /* ThemeProtocol.swift in Sources */,
+				CC2AFA642CE7942E007A0B70 /* DatePrecisionName.swift in Sources */,
+				CCB15D012CEB300B00C44525 /* ProgramType.swift in Sources */,
 				CC3EF0F92CE0A7D400633F6C /* MissionPatch.swift in Sources */,
 				CC88795E2CD4E88B005A22DA /* AppError.swift in Sources */,
+				CC33A6762CEDEA5900EC7856 /* Landing.swift in Sources */,
 				CCFBAC292CDE550E0048FEFD /* IApiService.swift in Sources */,
 				CC88795F2CD4E88B005A22DA /* HTTPMethod.swift in Sources */,
 				CCFBAC262CDE38A00048FEFD /* Selection.swift in Sources */,
@@ -592,6 +655,8 @@
 				CC8879612CD4E88B005A22DA /* LaunchesView.swift in Sources */,
 				CC8879622CD4E88B005A22DA /* HttpLogger.swift in Sources */,
 				CC8879632CD4E88B005A22DA /* NewsViewModel.swift in Sources */,
+				CC2AFA612CE78E7A007A0B70 /* MissionView.swift in Sources */,
+				CC33A67F2CEDEE4400EC7856 /* Pad.swift in Sources */,
 				CC8879652CD4E88B005A22DA /* ApiService.swift in Sources */,
 				CC8879662CD4E88B005A22DA /* LaunchDetailsViewModel.swift in Sources */,
 				CCA9DFE32CE3F1D300272F69 /* Program.swift in Sources */,
@@ -599,6 +664,7 @@
 				CC8879682CD4E88B005A22DA /* StellarApexApp.swift in Sources */,
 				CC8879692CD4E88B005A22DA /* DatePrecision.swift in Sources */,
 				CC88796A2CD4E88B005A22DA /* ThemeManager.swift in Sources */,
+				CCB15D042CEB31A100C44525 /* Agency.swift in Sources */,
 				CC88796B2CD4E88B005A22DA /* HttpService.swift in Sources */,
 				CC88796C2CD4E88B005A22DA /* LaunchDetailsView.swift in Sources */,
 				CC7FBBEB2CE3318C0030A4A9 /* FirstStage.swift in Sources */,

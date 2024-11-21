@@ -22,37 +22,93 @@ struct NextLaunchView: View {
     }
 
     var body: some View {
-        if viewModel.nextLaunch != nil, viewModel.timeLeft != nil {
+        if viewModel.nextLaunch != nil,
+           viewModel.timeLeft != nil
+        {
             NavigationSplitView(preferredCompactColumn: $preferredColumn) {
                 List {
                     VStack(alignment: .leading, spacing: 16) {
                         CountdownView(viewModel: viewModel)
                             .padding(.horizontal)
+                            .padding(.top)
+
+                        if let logo = viewModel.nextLaunch?.launchServiceProvider?.logo?.url {
+                            HStack(alignment: .center) {
+                                Spacer()
+
+                                CachedAsyncImage(url: URL(string: logo)) { phase in
+                                    switch phase {
+                                    case let .success(image):
+                                        image.resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(maxHeight: 120)
+
+                                    case .failure:
+                                        EmptyView()
+
+                                    case .empty:
+                                        ProgressView()
+                                            .controlSize(.small)
+                                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+                                    @unknown default:
+                                        EmptyView()
+                                    }
+                                }
+
+                                Spacer()
+                            }
+                        }
 
                         if let youTubePlayer = youTubePlayer {
                             YouTubePlayerView(youTubePlayer) { state in
                                 switch state {
                                 case .idle:
                                     ProgressView {
-                                        Text("Loading stream")
+                                        Text("Loading YouTube player")
                                     }
 
                                 case .ready:
                                     EmptyView()
 
                                 case .error:
-                                    Text("YouTube player could not be loaded.")
+                                    Text("YouTube player failed to load")
                                 }
                             }
                             .aspectRatio(contentMode: .fit)
                             .fixedSize(horizontal: false, vertical: true)
-                            .cornerRadius(4)
-                            .padding(.horizontal)
+                            .padding(.horizontal, 0)
                         }
+
+                        Text("Rocket")
+                            .font(.largeTitle)
+                            .padding(.horizontal)
+                            .padding(.top)
 
                         RocketView(viewModel: viewModel)
                             .environmentObject(themeManager)
                             .padding(.horizontal)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Text("Mission")
+                            .font(.largeTitle)
+                            .padding(.horizontal)
+                            .padding(.top)
+
+                        MissionView(viewModel: viewModel)
+                            .environmentObject(themeManager)
+                            .padding(.horizontal)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Text("Launch site")
+                            .font(.largeTitle)
+                            .padding(.horizontal)
+                            .padding(.top)
+
+                        LaunchSiteView(viewModel: viewModel)
+                            .environmentObject(themeManager)
+                            .padding(.horizontal)
+                            .fixedSize(horizontal: false, vertical: true)
 
                         HStack {
                             Spacer()
@@ -72,17 +128,24 @@ struct NextLaunchView: View {
                     }
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets())
+                    .padding(.bottom)
                 }
                 .listStyle(.inset)
                 .navigationTitle("Next Launch")
                 .refreshable {
+                    await viewModel.getNextLaunch(ignoreCache: true)
+
+                    if let url = viewModel.nextLaunch?.videos?.first(where: {
+                        $0.source?.contains("youtube") ?? false
+                    })?.url {
+                        youTubePlayer?.source = .url(url)
+                    }
+
                     do {
                         try await youTubePlayer?.reload()
                     } catch {
                         debugPrint("Error reloading YouTube player: \(error)")
                     }
-
-                    await viewModel.getNextLaunch(ignoreCache: true)
                 }
                 .onChange(of: scenePhase) { _, newPhase in
                     if newPhase == .active && viewModel.timeLeft != nil {
@@ -92,7 +155,9 @@ struct NextLaunchView: View {
                     }
                 }
                 .onAppear {
-                    if let url = viewModel.nextLaunch?.videos?.first(where: { $0.source?.contains("youtube") ?? false })?.url {
+                    if let url = viewModel.nextLaunch?.videos?.first(where: {
+                        $0.source?.contains("youtube") ?? false
+                    })?.url {
                         youTubePlayer = .init(
                             source: .url(url),
                             configuration: .init(autoPlay: false)

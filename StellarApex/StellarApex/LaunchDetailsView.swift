@@ -28,11 +28,11 @@ struct LaunchDetailsView: View {
            launch.id == launchId
         {
             List {
-                if let patch = launch.patches?.first {
+                if let patch = launch.patches?.first?.imageURL {
                     HStack {
                         Spacer()
 
-                        CachedAsyncImage(url: URL(string: patch.imageURL)) { phase in
+                        CachedAsyncImage(url: URL(string: patch)) { phase in
                             switch phase {
                             case let .success(image):
                                 image.resizable()
@@ -88,14 +88,6 @@ struct LaunchDetailsView: View {
                         Text(launchDate)
                             .font(.subheadline)
                     }
-
-//                    VStack(alignment: .leading) {
-//                        Text("Launch date precision")
-//                            .font(.headline)
-//
-//                        Text(launch.netPrecision?.name.rawValue)
-//                            .font(.subheadline)
-//                    }
                 }
 
                 if let missionName = launch.mission?.name {
@@ -128,7 +120,7 @@ struct LaunchDetailsView: View {
                     }
                 }
 
-                if let orbit = launch.mission?.orbit.name {
+                if let orbit = launch.mission?.orbit?.name {
                     VStack(alignment: .leading) {
                         Text("Orbit")
                             .font(.headline)
@@ -159,8 +151,8 @@ struct LaunchDetailsView: View {
                         Text("Stream")
                             .font(.headline)
 
-                        if let webcast = launch.videos?.first(where: { $0.source?.contains("youtube") ?? false }) {
-                            let player = YouTubePlayer(stringLiteral: webcast.url)
+                        if let url = launch.videos?.first(where: { $0.source?.contains("youtube") ?? false })?.url {
+                            let player = YouTubePlayer(stringLiteral: url)
                             YouTubePlayerView(player) { state in
                                 switch state {
                                 case .idle:

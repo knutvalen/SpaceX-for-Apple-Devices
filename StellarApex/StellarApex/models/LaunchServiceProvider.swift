@@ -5,11 +5,11 @@ struct LaunchServiceProvider: Codable, Hashable, Comparable {
         return lhs.name < rhs.name
     }
 
-    var id: Int
-    var name: String
-    var image: ApiImage?
-    var logo: ApiImage?
-    var socialLogo: ApiImage?
+    let id: Int
+    let name: String
+    let image: ApiImage?
+    let logo: ApiImage?
+    let socialLogo: ApiImage?
 
     enum CodingKeys: String, CodingKey {
         case id

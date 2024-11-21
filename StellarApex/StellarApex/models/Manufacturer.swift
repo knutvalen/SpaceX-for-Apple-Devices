@@ -3,6 +3,15 @@ import Foundation
 struct Manufacturer: Decodable {
     let id: Int
     let name: String
-    var image: ApiImage?
-    var logo: ApiImage?
+    let countries: [Country]?
+    let image: ApiImage?
+    let logo: ApiImage?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case countries = "country"
+        case image
+        case logo
+    }
 }

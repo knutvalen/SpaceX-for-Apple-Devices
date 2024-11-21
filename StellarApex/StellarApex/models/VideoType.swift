@@ -1,5 +1,6 @@
 import Foundation
 
 struct VideoType: Codable {
-    var name: String
+    let id: Int?
+    let name: String?
 }
